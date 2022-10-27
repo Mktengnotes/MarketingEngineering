@@ -2,6 +2,8 @@
 
 ## Introducción
 
-## Problemas
+## Logit
 
-## Soluciones
+## Probit
+
+## *Mixed Logit*

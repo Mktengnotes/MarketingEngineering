@@ -1,25 +1,19 @@
 --- 
-title: "Apunte Problemas Resueltos"
-author: "Marcel Goic - Jocelyn Linares"
+title: "Apunte Marketing II"
+author: "Marcel Goic"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
-description: "Apunte de ejercicios realizados durante el curso de Marketing II"
+description: "Apunte Marketing II"
 
 ---
 
 # Prólogo {-}
 
-Dentro del contexto de Marketing, estamos interesados ene estudiar el comportamiento de las personas, de modo de comprenderlo y finalmente, tomar decisiones estratégicas en función de los aprendizajes adquiridos. 
-
-En esta línea, se pueden definir dos tipos de enfoques a utilizar, los cuales dependen de los supuestos que tomemos acerca del comportamiento de los agentes (tomadores de decisiones):
-
-- *Modelos Probabilísticos*: En este, se asume que los agentes se comportan en base a decisiones aleatorias. Usualmente se utiliza  cuando se tiene información reducida y/o agregada respecto al comportamiento de los agentes de estudio. 
-
-- *Enfoque Estructural*: En este, se asume que los agentes se comportan de manera racional, lo cual se traduce a que toman decisiones con el objetivo de maximizar sus utilidades (no necesariamente monetarias)
+-----
 
 ```{r include=FALSE}
 # automatically create a bib database for R packages
