@@ -23,7 +23,7 @@
 <meta name="author" content="Marcel Goic" />
 
 
-<meta name="date" content="2022-10-27" />
+<meta name="date" content="2022-11-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -79,6 +79,8 @@
 <li class="chapter" data-level="1.2" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelos-de-duración"><i class="fa fa-check"></i><b>1.2</b> Modelos de Duración</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelos-de-duración-de-tiempo-discreto"><i class="fa fa-check"></i><b>1.2.1</b> Modelos de duración de tiempo discreto</a></li>
+<li class="chapter" data-level="1.2.2" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración"><i class="fa fa-check"></i><b>1.2.2</b> Modelos de duración en tiempo continuo sin dependencia en la duración</a></li>
+<li class="chapter" data-level="1.2.3" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración"><i class="fa fa-check"></i><b>1.2.3</b> Modelos de duración en tiempo continuo con dependencia en la duración</a></li>
 </ul></li>
 <li class="chapter" data-level="1.3" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelos-de-conteo"><i class="fa fa-check"></i><b>1.3</b> Modelos de Conteo</a></li>
 <li class="chapter" data-level="1.4" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelos-de-elección"><i class="fa fa-check"></i><b>1.4</b> Modelos de Elección</a></li>
@@ -182,8 +184,8 @@ considerar:</p>
 <li><p>Un cliente se suscribe a un plan telefónico o de internet. ¿Por cuántos periodos se mantendrá
 suscrito?</p></li>
 </ul>
-<div id="modelo-geométrico-desplazado" class="section level4 hasAnchor" number="1.2.1.1">
-<h4><span class="header-section-number">1.2.1.1</span> Modelo Geométrico Desplazado<a href="modelos-probabilísticos.html#modelo-geométrico-desplazado" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="modelo-geométrico-desplazado" class="section level4 unnumbered hasAnchor">
+<h4>Modelo Geométrico Desplazado<a href="modelos-probabilísticos.html#modelo-geométrico-desplazado" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Asumamos que se tiene una cartera de clientes que van abandonando la relación comercial para nunca más retomarla en cualquier periodo definido. De acuerdo a lo descrito en las secciones anteriores, intentaremos describir de manera probabilística la situación. Supongamos que al final de cada periodo, un cliente decide de manera aleatoria si continúa afiliado a una determinada compañía, esto es, de acuerdo a un proceso de Bernoulli, decide con cierta probabilidad si cancela la relación comercial con la empresa (y con el coplemento respectivo decide su permanencia). Para cada individuo, asumiremos que la probabilidad con la cuál decide no cambia en el tiempo, denotándola <span class="math inline">\(\theta\)</span>. Finalmente, y como primer acercamiento, asumiremos que dicha probabilidad es de igual forma idéntica a lo largo de individuos distintos (modelo homogéneo). Sea T la variable aleatoria relativa a la duración de la relación comercial entre el cliente y la compañía, es decir la variable que describe el instante en el cual esta relación se acaba. De acuerdo a la descripción anterior, la variable aleatoria T sigue una distribución Geométrica Desplazada (sG) con parámetro <span class="math inline">\(\theta\)</span>, es decir, el comportamiento de los individuos puede ser descrito formalmente de acuerdo a la siguiente relación:</p>
 <ol style="list-style-type: decimal">
 <li>Probabilidad de que un individuo cualquiera abandone la relación comercial exactamente
@@ -361,8 +363,8 @@ individuos, la decisión de abandonar o permanecer se identifica a partir de un 
 <p><span class="math display">\[P(T&gt;t|\theta_1, \theta_2, \pi)= (1-\theta_1)^{t} \pi + (1-\theta_2)^{t}(1-\pi)\]</span></p>
 <p>En el modelo anterior <span class="math inline">\(\pi\)</span> representa el porcentaje de la población que pertenece al segmento 1, de tal forma que su complemento <span class="math inline">\(1-\pi\)</span> representa el porcentaje de la población que pertenece al segmento 2.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
 </div>
-<div id="modelo-beta-geométrico-desplazado" class="section level4 hasAnchor" number="1.2.1.2">
-<h4><span class="header-section-number">1.2.1.2</span> Modelo Beta Geométrico desplazado<a href="modelos-probabilísticos.html#modelo-beta-geométrico-desplazado" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="modelo-beta-geométrico-desplazado" class="section level4 unnumbered hasAnchor">
+<h4>Modelo Beta Geométrico desplazado<a href="modelos-probabilísticos.html#modelo-beta-geométrico-desplazado" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Los modelos anteriores funcionan bien cuando la población se comporta de manera distinta entre clases latentes, y similar al interior de cada clase latente. Sin embargo, puede ser mucho más realista e interesante el asumir que existe una heterogeneidad continua en la población, es decir que existe un número infinito de segmentos (o al menos tendiente a infinito) de manera de capturar todas las preferencias individuales de cada miembro de la población considerada.</p>
 <p>Para estos propósitos, ya no asumiremos que la probabilidad de abandono <span class="math inline">\(\theta\)</span> sigue una distribución discreta de Bernoulli (éxito-fracaso), sino que asumiremos que el parámetro proviene de una distribución continua Beta de parámetros <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span>.</p>
 <p>Por tanto, es posible calcular las probabilidades antes presentadas en forma análoga, aplicando el enfoque antes mencionado (probabilidades totales):</p>
@@ -377,12 +379,134 @@ Recordar que:</p>
 <p><span class="math display">\[P(T&gt;t|\alpha,\beta) = \int_0^1 (T&gt;t|\theta)B(\theta|\alpha,\beta)d\theta\]</span>
 Al desarrollar la primera integral antes mencionada, y reconociendo las relaciones de la distribución <em>Beta</em>, se tiene que:</p>
 <p><span class="math display">\[P(T=t|\alpha,\beta)= \frac{B(\alpha + 1, \beta + t -1)}{B(\alpha,\beta)}\]</span>
-Notar que, se usa indistintamente el <span class="math inline">\(B(\alpha,\beta)\)</span> para hacer alusión tanto a la <strong>función</strong> como a la <strong>distribución Beta</strong>. <em>Bajo ninguna circunstancia dichos objetos son iguales.</em></p>
+Notar que, se usa indistintamente el <span class="math inline">\(B(\alpha,\beta)\)</span> para hacer alusión tanto a la <strong>función</strong> como a la <strong>distribución Beta</strong>. Bajo ninguna circunstancia dichos objetos son iguales.</p>
+<p><strong>Ejemplo 3:</strong> Considerando la misma situación que se presentó en el ejemplo anterior (clientes que año a año abandonan la relación comercial), pero ahora asumiendo que existe un comportamiento heterogéneo en la población, es posible reconocer que existe una recursividad en la fórmula del cálculo de la probabilidad de abandono en cada período de la siguiente forma:</p>
+<span class="math display">\[\begin{array}{cc}
+P(T=t|\alpha,\beta) =
+\begin{cases}
+\frac{\alpha}{\alpha+\beta} &amp; t=1
+\\
+P(T=t -1|\alpha,\beta) \frac{\beta + t -2}{\alpha + \beta + t -1} &amp; t&gt;1
+\end{cases}
+\end{array}\]</span>
+<p>Modelo que al ser evaluado, da el siguiente resultado:</p>
+<span class="math display">\[\begin{array}{c}
+\hat{\alpha} = 0,7041\\
+\hat{\beta}= 1,1820\\
+\hat{l} = -1680,27
+\end{array}\]</span>
+<p>Notar que existe una notoria diferencia en cuanto al valor de la log verosimilitud obtenida por el modelo heterogéneo respecto al modelo homogéneo. Si bien, esto indica una mejora del modelo, es necesario realizar la comparación en base a métricas de evaluación mas precisas (AIC; BIC, etc.)</p>
+</div>
+</div>
+<div id="modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Modelos de duración en tiempo continuo sin dependencia en la duración<a href="modelos-probabilísticos.html#modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para algunos modelos, el medir el tiempo como si fueran períodos discretos puede ser un buena aproximación de acuerdo a los objetivos del análisis que se desea llevar a cabo.</p>
+<p>En otros casos, puede ser en cambio más útil considerar el tiempo como una variable continua, debido a que podría interesar el medir la ocurrencia de un suceso de manera más exacta. Algunos casos relativos a este enfoque son:</p>
+<ul>
+<li><p>Tiempos de respuesta a una campaña promocional de marketing directo.</p></li>
+<li><p>Tiempo entre visitas a nuestro website.</p></li>
+<li><p>Tiempos entre llamadas en un call center.</p></li>
+<li><p>Tiempos de operación en la industria de servicios.</p></li>
+</ul>
+<p>Al igual que en el caso de los modelos en tiempo discreto, lo que interesa es poder implementar un modelo que tenga una forma funcional flexible para ser trabajada y modificada fácilmente, que logre ajustar a la data histórica que se tiene, y que logre además proyectar el comportamiento futuro de los clientes, es decir, que sea un buen modelo predictivo para tomar acciones en función de aquello.</p>
+<div id="modelo-exponencial" class="section level4 unnumbered hasAnchor">
+<h4>Modelo Exponencial<a href="modelos-probabilísticos.html#modelo-exponencial" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Supongamos que nos interesa medir el tiempo que pasa desde que se lanza un producto hasta que el consumidor decide adquirirlo. Existen muchos factores externos que determinan esta decisión: exposición a publicidad, número de visitas a la tienda, llamadas recibidas por call center, entre otras. Nuevamente asumiremos que el comportamiento es aleatorio, es decir, que los consumidores deciden el momento en el cuál van a consumira partir de una distribución de probabilidades.</p>
+<p>Esto podemos modelarlo a partir de la distribución exponencial.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p>Supongamos la variable aleatoria T definida como el tiempo en que un cliente va a consumir nuestro producto por primera vez. Asumiremos que esta variable está exponencialmente distribuida con una tasa <span class="math inline">\(\lambda\)</span>. De esta forma, se tiene que la función de distribución acumulada de la variable aleatoria será:</p>
+<p><span class="math display">\[F(t) = P(T \leq t) = 1 - e^{-\lambda t}\]</span></p>
+<p>Notar que el término anterior representa la probabilidad que un cliente consuma el producto <strong>antes</strong> de t.</p>
+<p>Ahora bien, esto inmediatamente deja en evidencia una limitante a este modelo: para un t muy grande, todos los consumidores van a probar^{Recordar que lím e^{-t}=0}, lo cual no es una situación del todo realista. Es necesario, en consecuencia, imponer que existe una fracción de clientes dentro de la muestra considerada que nunca probará el producto y así es posible solucionar la limitante encontrada (2 clases latentes).</p>
+<ol style="list-style-type: decimal">
+<li>Segmeto que prueba: Tamaño <span class="math inline">\(\pi\)</span></li>
+</ol>
+<span class="math display">\[\begin{array}{c}
+\lambda = \theta\\
+\Rightarrow P(T \leq t) = 1 - e^{-\theta t}
+\end{array}\]</span>
+<ol start="2" style="list-style-type: decimal">
+<li>Segmento que no prueba: Tamaño(1-<span class="math inline">\(\pi\)</span>)</li>
+</ol>
+<span class="math display">\[\begin{array}{c}
+\lambda = 0\\
+\Rightarrow P(T \leq t) = 0
+\end{array}\]</span>
+<p>Luego, la probabilidad total será:</p>
+<span class="math display">\[\begin{array}{c}
+P(T \leq t) = P(T \leq t | \text{Prueba}) P(\text{Prueba}) + P(T \leq t | \text{No Prueba}) P(\text{No Prueba}) \\
+= 1 - e^{-\theta t}\pi
+\end{array}\]</span>
+<p>Es importante notar que si bien el modelo describe probabilidades en tiempo continuo, la data aún se presenta y obtiene en tiempo discreto. Incorporando esto, es posible construir la función de log verosimilitud calculando las probabilidades de adopción del producto entre los limites del
+intervalo temporal definido por el periodo de medición, es decir:</p>
+<p><span class="math display">\[P(t_0 \leq T \leq t_1) = F(t_1) - F(t_0)\]</span>
+Por lo que la función de log verosimilitud se define como (considerando n periodos discretos para el cálculo):</p>
+<p><span class="math display">\[LL(\pi,\theta|\text{data}) = N_1 ln[P(1\leq T \leq 2)] + ... + (N_{panel} - \sum_{i=1}^{n}N_i)ln[P(T&gt;n)]\]</span>
+Adicionalmente, es de interés calcular los valores predichos por el modelo, de modo de realizar predicciones futuras. F(t) representa la probabilidad que un cliente escogido aleatoriamente pruebe el producto en t (tal que t = 0 corresponde al instante de lanzamiento del producto. La estimación del futuro se puede hacer a través de la esperanza:</p>
+<p><span class="math display">\[\mathbb{E}[T(t)] = N_{\text{panel }} \cdot \hat{F}(t) \]</span></p>
+<p>Antes de avanzar, es importante aclarar la distinción de un modelo <em>sin dependencia en la duración</em>. Esto se puede explicar con la propiedad fundamental de la distribución exponencial:</p>
+<p><strong>Propiedad fundamental:</strong> La distribución exponencial no tiene memoria, es decir, poseer información de que un elemento ha sobrevivido un tiempo ’s’ hasta este momento no modifica la probabilidad de que sobreviva un periodo t más. Es decir la probabilidad de que ocurra un suceso no depende del tiempo en que aún no ha ocurrido. Se puede demostrar matemáticamente:</p>
+<p><span class="math display">\[P(T &gt; s + t|T&gt;s) = \frac{P(T&gt; s+t)}{P(T&gt; s)} = \frac{1-P(T \leq s+t)}{1-P(T \leq s)}= \frac{e^{-\lambda(s+t)}}{e^{-\lambda s}} = e^{-\lambda t}\]</span>
+#### Modelo Gamma Exponencial {-}</p>
+<p>Análogamente a la situación anterior, ahora se asume que el comportamiento de la población es heterogéneo, es decir, que existen diferentes clases de clientes en la población. Esto busca complejizar la suposición que antes hicimos al considerar un grupo de clientes que nunca consume.</p>
+<p>Por tanto, el modelo heterogéneo ahora considerará que la tasa de prueba <span class="math inline">\(\lambda\)</span> se distribuye <em>Gamma</em> en la población:</p>
+<p><span class="math display">\[g(\lambda) = \frac{\alpha^r \lambda^{r-1} e^{-\alpha \lambda}}{\Gamma(r)}\]</span>
+Dónde r es un parámetro de forma y <span class="math inline">\(\alpha\)</span> es un parámetro de escala.</p>
+<p>Al incorporar la heterogeneidad mencionada, la probabilidad que un cliente adquiera un producto antes de un tiempo t es la siguiente:</p>
+<span class="math display">\[\begin{array}{cc}
+P(T\leq t) &amp;= \int_{0}^{\infty} P(T \leq t|\lambda) g(\lambda)d \lambda\\
+&amp;= 1 - (\frac{\alpha}{\alpha + t})^r
+\end{array}\]</span>
+<p>Este modelo lo llamaremos <em>Gamma Exponencial</em>.</p>
+</div>
+</div>
+<div id="modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Modelos de duración en tiempo continuo con dependencia en la duración<a href="modelos-probabilísticos.html#modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Otra de las grandes limitantes del modelo <em>Exponencial</em> es que posee pérdida de memoria, es decir la probabilidad de adopción de un cliente no cambia a medida que pasa el tiempo. Se necesita incorporar esta distinción, es decir, la probabilidad de que un evento ocurra dado que hasta este momento no ha ocurrido. Esto último se conoce como <em>tasa de riesgo</em> o <em>hazard rate</em>:</p>
+<p><span class="math display">\[h(t) = \frac{f(t)}{1 - F(t)}\]</span></p>
+<p>Gráficamente, la tasa de riesgo se comporta de la siguiente manera 1.1:</p>
+<p><strong>AQUÍ VA UN SET DE GRÁFICOS, PREGUNTAR</strong></p>
+<p>En el primer caso, la intuición es que si una persona no ha respondido a un e-mail, cada vez es menos probable que lo responda, pues en general las personas tienden a ignorar los correos con una antigüedad superior a un par de días. En la llegada de un bus - si bien en ramos pasados se ha modelado con una exponencial, es decir, sin memoria - se asume que a medida que más se demora en llegar al paradero, cada vez la espera debe ser menor, pues tarde o temprano este deberá llegar.
+Los otros análisis quedan propuestos, pero la intuición es fácil de comprender.</p>
+<p>A partir de la tasa de riesgo, se puede definir unívocamente la distribución de una variable aleatoria no negativa a través de la siguiente integral:</p>
+<p><span class="math display">\[F(t) = 1 - exp \left( -\int_{0}^{t} h(u)du \right)\]</span>
+Este concepto será útil para definir los modelos de duración en tiempo continuo en que la duración sí es un factor relevante</p>
+<div id="modelo-weibull" class="section level4 unnumbered hasAnchor">
+<h4>Modelo Weibull<a href="modelos-probabilísticos.html#modelo-weibull" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A pesar de las generalizaciones de las funciones de tasas de riesgo para generar modelos de tiempo de ocurrencia, nos enfocaremos en la distribución Weibull debido a que es fácil de trabajar y entrega una fórmula cerrada muy similar a la de la distribución exponencial. Se tiene que para la misma variable aleatoria T que se definió en la sección anterior, la probabilidad de ocurrencia de que un cliente pruebe nuestro producto en un tiempo inferior a t será:</p>
+<p><span class="math display">\[F(t) = P(T \leq t) = 1 - e^{-\lambda t ^c}\]</span>
+Y la tasa de riesgo asociada a esta distribución:</p>
+<p><span class="math display">\[h(t) = c \lambda t ^{c-1}\]</span>
+El primer parámetro <span class="math inline">\(\lambda\)</span> que compone la fórmula lo interpretamos como un parámetro de escala, mientras que el parámetro c le llamamos parámetro de forma. Es importante notar que para c = 1, la distribución se convierte en la distribución exponencial, por lo que se puede decir que la distribución Weibull es una generalización de la exponencial. Notar además que para c = 1, la tasa de riesgo es constante, lo que es consistente con la propiedad de pérdida de memoria de la
+distribución exponencial.</p>
+<p><strong>AQUÍ FIGURA 1.2</strong></p>
+<p>En la distribución de Weibull generalizada por tanto, la propiedad de pérdida de memoria no aplica como en el caso de la exponencial, es decir, la probabilidad de ocurrencia varía a medida que pasa el tiempo:</p>
+<p><span class="math display">\[P(T &gt; s + t|T&gt;s) = \frac{P(T&gt; s+t)}{P(T&gt; s)} = \frac{1-P(T \leq s+t)}{1-P(T \leq s)}= \frac{e^{-\lambda(s+t)^c}}{e^{-\lambda s^c}} \]</span>
+#### Modelo Gamma Weibull {-}</p>
+<p>Una de las propiedades interesantes de la distribución Weibull, es que es sencillo introducir heterogeneidad sobre los parámetros, y de esa forma capturar los distintos posibles comportamientos de la población.</p>
+<p>Al igual que en el modelo Gamma-Exponencial, asumiremos que el parámetro de escala λ está distribuido <span class="math inline">\(\text{Gamma}(\alpha,r)\)</span> en la población. La probabilidad de ocurrencia del consumo de los clientes se puede modelar por tanto de la siguiente forma:</p>
+<span class="math display">\[\begin{array}{cc}
+F(t) = P(T\leq t) &amp;= \int_{0}^{\infty} \frac{(1 - e^{-\lambda t^c}) \alpha ^r \lambda ^{r-1}e^{-\alpha \lambda}}{\Gamma(r)} d \lambda\\
+&amp;= 1 - (\frac{\alpha}{\alpha + t^c})^r
+\end{array}\]</span>
 </div>
 </div>
 </div>
 <div id="modelos-de-conteo" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> Modelos de Conteo<a href="modelos-probabilísticos.html#modelos-de-conteo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Permiten modelar cuantas veces los consumidores incurrirán en un comportamiento determinado en un período de tiempo (ejemplo: problema exposición publicitaria).</p>
+<p>Algunas medidas de efectividad son:</p>
+<ul>
+<li><p><strong>Alcance:</strong> Proporción de la población expuesta al evento al menos una vez durante el período: <span class="math inline">\(1 − P(X_t = 0)\)</span></p></li>
+<li><p><strong>Frecuencia promedio:</strong> número promedio de exposiciones en el período entre aquellos que han experimentado el evento (por ejemplo, ver la valla publicitaria). <span class="math display">\[\frac{\mathbb{E}(X_t)}{1-P(X_t =0)}\]</span></p></li>
+<li><p><strong>Puntos de rating brutos (GRPs):</strong> número promedio de exposiciones por cada 100 personas.</p></li>
+</ul>
+<p><span class="math display">\[100 \cdot \mathbb{E}(X_t)\]</span></p>
+<p><span class="math display" id="eq:poisson">\[\begin{equation}
+  P(N_t=m|\lambda) = \frac{(\lambda  t)^m e^{-\lambda t}}{m!}
+  \tag{1.1}
+\end{equation}\]</span></p>
+<p>lo cual corresponde a la probabilidad de que el número de exposiciones sea m en un intervalo de largo t.</p>
+<p>Al igual que en los modelos anteriores, es posible incluir heterogeneidad asumiendo que el parámetro <span class="math inline">\(\lambda\)</span> distribuye de acuerdo a una determinada distribución. Suponiendo que dicha distribución es <em>Gamma</em>.</p>
 </div>
 <div id="modelos-de-elección" class="section level2 hasAnchor" number="1.4">
 <h2><span class="header-section-number">1.4</span> Modelos de Elección<a href="modelos-probabilísticos.html#modelos-de-elección" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -406,6 +530,7 @@ Notar que, se usa indistintamente el <span class="math inline">\(B(\alpha,\beta)
 <ol start="1">
 <li id="fn1"><p>Se puede hacer fácilmente en excel a través de la herramienta solver. PROPUESTO<a href="modelos-probabilísticos.html#fnref1" class="footnote-back">↩︎</a></p></li>
 <li id="fn2"><p>Este modelamiento es fácilmente expandible a 2 o más segmentos. PROPUESTO.<a href="modelos-probabilísticos.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Recordar el curso de Investigación de Operaciones<a href="modelos-probabilísticos.html#fnref3" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

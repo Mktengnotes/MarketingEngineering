@@ -1,9 +1,10 @@
+eq:poisson
 modelos-probabilísticos
 introducción
 modelos-de-duración
 modelos-de-duración-de-tiempo-discreto
-modelo-geométrico-desplazado
-modelo-beta-geométrico-desplazado
+modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración
+modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración
 modelos-de-conteo
 modelos-de-elección
 esperanzas-condicionales
