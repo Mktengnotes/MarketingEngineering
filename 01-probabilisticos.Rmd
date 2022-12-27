@@ -444,7 +444,8 @@ respuesta esperada de la población y la observada, es decir,
   (\#eq:tasa)
 \end{equation} 
 
-donde $\mathbb{E}(Beta(\alpha,\beta)) =\frac{\alpha}{\alpha+\beta} $
+
+donde $\mathbb{E}(Beta(\alpha,\beta)) =\frac{\alpha}{\alpha+\beta}$
 
 Recordemos que la distribución de $\theta$ condicionado a un número de respuestas recibidas, por Bayes, es
 
