@@ -78,3 +78,4 @@ incorporación-de-restricciones-estructurales
 fig:my-fig
 fig:riesgoc
 fig:probelec
+modelos-probabilisticos

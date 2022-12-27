@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 1 Modelos Probabilisticos | Apunte Marketing II</title>
+  <meta name="description" content="Capítulo 1 Modelos Probabilisticos | Apunte Marketing II" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 1 Modelos Probabilisticos | Apunte Marketing II" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Capítulo 1 Modelos Probabilisticos | Apunte Marketing II" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 1 Modelos Probabilisticos | Apunte Marketing II" />
+  
+  <meta name="twitter:description" content="Capítulo 1 Modelos Probabilisticos | Apunte Marketing II" />
+  
+
+<meta name="author" content="Marcel Goic" />
+
+
+<meta name="date" content="2022-12-27" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="modelos-estructurales.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Apunte Marketing II</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
+<li class="chapter" data-level="1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html"><i class="fa fa-check"></i><b>1</b> Modelos Probabilisticos</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#introducción"><i class="fa fa-check"></i><b>1.1</b> Introducción</a></li>
+<li class="chapter" data-level="1.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración"><i class="fa fa-check"></i><b>1.2</b> Modelos de Duración</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración-de-tiempo-discreto"><i class="fa fa-check"></i><b>1.2.1</b> Modelos de duración de tiempo discreto</a></li>
+<li class="chapter" data-level="1.2.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración"><i class="fa fa-check"></i><b>1.2.2</b> Modelos de duración en tiempo continuo sin dependencia en la duración</a></li>
+<li class="chapter" data-level="1.2.3" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración"><i class="fa fa-check"></i><b>1.2.3</b> Modelos de duración en tiempo continuo con dependencia en la duración</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-conteo"><i class="fa fa-check"></i><b>1.3</b> Modelos de Conteo</a></li>
+<li class="chapter" data-level="1.4" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-elección"><i class="fa fa-check"></i><b>1.4</b> Modelos de Elección</a></li>
+<li class="chapter" data-level="1.5" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#esperanzas-condicionales"><i class="fa fa-check"></i><b>1.5</b> Esperanzas Condicionales</a></li>
+<li class="chapter" data-level="1.6" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#variables-explicativas"><i class="fa fa-check"></i><b>1.6</b> Variables explicativas</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-sin-dependencia-de-la-duración"><i class="fa fa-check"></i><b>1.6.1</b> Variables explicativas en modelos de duración en tiempo continuo sin dependencia de la duración</a></li>
+<li class="chapter" data-level="1.6.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-con-dependencia-de-la-duración"><i class="fa fa-check"></i><b>1.6.2</b> Variables explicativas en modelos de duración en tiempo continuo con dependencia de la duración</a></li>
+<li class="chapter" data-level="1.6.3" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#caso-modelo-de-conteo-khakichinos.com"><i class="fa fa-check"></i><b>1.6.3</b> Caso Modelo de Conteo: KhakiChinos.com</a></li>
+</ul></li>
+<li class="chapter" data-level="1.7" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-integrados"><i class="fa fa-check"></i><b>1.7</b> Modelos Integrados</a></li>
+<li class="chapter" data-level="1.8" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#customer-lifetime-value-caso-contractual"><i class="fa fa-check"></i><b>1.8</b> Customer Lifetime Value: Caso Contractual</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelo-contractual-a-tiempo-discreto"><i class="fa fa-check"></i><b>1.8.1</b> Modelo contractual a tiempo discreto</a></li>
+<li class="chapter" data-level="1.8.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelo-contractual-a-tiempo-continuo"><i class="fa fa-check"></i><b>1.8.2</b> Modelo contractual a tiempo continuo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html"><i class="fa fa-check"></i><b>2</b> Modelos Estructurales</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#introducción-a-modelos-estructurales"><i class="fa fa-check"></i><b>2.1</b> Introducción a Modelos Estructurales</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#introducción-1"><i class="fa fa-check"></i><b>2.1.1</b> Introducción</a></li>
+<li class="chapter" data-level="2.1.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#modelos-estructurales-en-marketing"><i class="fa fa-check"></i><b>2.1.2</b> Modelos Estructurales en Marketing</a></li>
+<li class="chapter" data-level="2.1.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#taxonomía-de-modelos-estrucuturales"><i class="fa fa-check"></i><b>2.1.3</b> Taxonomía de Modelos Estrucuturales</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#logit"><i class="fa fa-check"></i><b>2.2</b> Logit</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#modelos-de-elección-discreta"><i class="fa fa-check"></i><b>2.2.1</b> Modelos de Elección Discreta</a></li>
+<li class="chapter" data-level="2.2.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#modelo-logit"><i class="fa fa-check"></i><b>2.2.2</b> Modelo Logit</a></li>
+<li class="chapter" data-level="2.2.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#estimación"><i class="fa fa-check"></i><b>2.2.3</b> Estimación</a></li>
+<li class="chapter" data-level="" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#apéndice"><i class="fa fa-check"></i>Apéndice</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#probit"><i class="fa fa-check"></i><b>2.3</b> Probit</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#definición"><i class="fa fa-check"></i><b>2.3.1</b> Definición</a></li>
+<li class="chapter" data-level="2.3.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#patrones-de-substitución"><i class="fa fa-check"></i><b>2.3.2</b> Patrones de substitución</a></li>
+<li class="chapter" data-level="2.3.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#identificación"><i class="fa fa-check"></i><b>2.3.3</b> Identificación</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#mixed-logit"><i class="fa fa-check"></i><b>2.4</b> <em>Mixed Logit</em></a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html"><i class="fa fa-check"></i><b>3</b> Apéndices Técnicos</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html#métodos-de-estimación-y-evaluación-de-modelos"><i class="fa fa-check"></i><b>3.1</b> Métodos de Estimación y Evaluación de modelos</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Apunte Marketing II</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="modelos-probabilisticos" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Capítulo 1</span> Modelos Probabilisticos<a href="modelos-probabilisticos.html#modelos-probabilisticos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introducción" class="section level2 hasAnchor" number="1.1">
+<h2><span class="header-section-number">1.1</span> Introducción<a href="modelos-probabilisticos.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Usualmente, y en el contexto de Marketing, estamos interesados en estudiar el comportamiento de las personas, de modo de entenderlo y realizar acciones estratégicas en función de los aprendizajes adquiridos. Así, se pueden definir dos tipos de enfoques a usar según distintos supuestos en el comportamiento de los agentes (tomadores de decisiones):</p>
+<ul>
+<li><p><em>Enfoque Estructural</em>: Este enfoque asume que los los agentes se comportan de manera racional, tomando decisiones de modo de maximizar sus utilidades. Usualmente aparece cuando
+hay disponibilidad de largos volumenes de datos.</p></li>
+<li><p><em>Modelos Probabilísticos</em>: Este enfoque asume que los agentes se comportan en base a decisiones aleatorias. Usualmente aparece cuando se tiene información reducida y/o agregada
+respecto al comportamiento de los agentes en estudio.</p></li>
+</ul>
+<p>En primera instancia, se estudiará el enfoque probabilistico, esto es, el enfoque en cual se asume que los tomadores de decisiones se comportan de manera aleatoria. Dicho enfoque posee una
+metodología de modelamiento sugerida, que comparten todos los modelos que se verán a lo largo
+del curso.</p>
+<p><strong>Metodología</strong></p>
+<p>La metodología consiste en:</p>
+<ol style="list-style-type: decimal">
+<li><p>Determinar el problema de decisión a estudiar y la información requerida.</p></li>
+<li><p>Identificar el comportamiento observable de interés a nivel individual.</p></li>
+<li><p>Seleccionar la distribución de probabilidad que caracterice el comportamiento individual. Se consideran los parámetros de esta distribución, como características latentes a nivel individual.</p></li>
+<li><p>Escoger la distribución que caracterice cómo las características latentes están distribuidas en la población. Se le llama distribución mixta o heterogénea. Típicamente, se denota con <span class="math inline">\(g(\theta)\)</span></p></li>
+<li><p>Derivar la distribución agregada, o distribución observable, del comportamiento de interés.</p></li>
+</ol>
+<span class="math display">\[\begin{array}{cc}
+
+f(x) = \int f(x|\theta) g(\theta) d\theta &amp; \text{, para el caso continuo.}\\
+p(x) = \sum_{i} f(x|\theta)Pr(\theta = \theta_{i}) &amp; \text{
+, para el caso discreto.}
+
+\end{array}\]</span>
+<ol start="6" style="list-style-type: decimal">
+<li><p>Estimar los parámetros del modelo (de la distribución mixta), mediante el ajuste de la distribución agregada a los datos observados.</p></li>
+<li><p>Usar los resultados para tomar una decisión sobre el problema de marketing en cuestión.</p></li>
+</ol>
+<p>El enfoque de modelos probabilísticos permite abordar una gran cantidad de problemas asociados al Marketing, de entre los cuales se considerarán:</p>
+<ul>
+<li><p><em>Timing</em>: Situaciones ligadas a la duración de una determinada conducta de un cliente, como por ejemplo: tiempo de permanencia en una compañía y tiempo de adopción de un cierto producto innovador.</p></li>
+<li><p><em>Conteo</em>: Situaciones ligadas al estudio de llegadas de clientes y contabilización de una determinada conducta, como por ejemplo: número de visitas a un portal web y la cantidad de productos comprados en una tienda de retail.</p></li>
+<li><p><em>Elección</em>: Situaciones asociadas a las decisiones de elección de un determinado cliente, como por ejemplo: clientes que eligen responder una campaña publicitaria y la elección de cambiar o no de canal de televisión.</p></li>
+</ul>
+</div>
+<div id="modelos-de-duración" class="section level2 hasAnchor" number="1.2">
+<h2><span class="header-section-number">1.2</span> Modelos de Duración<a href="modelos-probabilisticos.html#modelos-de-duración" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>En años recientes, las mejoras en las tecnologías de información han dado como resultado un aumento en la disponibilidad de data acerca de los individuos en determinadas situaciones de consumo. Esta tendencia se relaciona íntimamente con el creciente deseo de los gerentes de marketing respecto a utilizar esta data disponible para aprender de manera exhaustiva sobre el comportamiento de los clientes. Muchos analistas tratan de describir y predecir el comportamiento de los consumidores usando variables observables, como lo son variables transaccionales (monto gastado, tienda donde se adquirió un determinado producto, fecha de la compra, etc.) como
+así también variables que caracterizan a los individuos (edad, nivel socio-económico, estado civil, etc.). A partir de esta información es posible aplicar modelos de regresión lineal o árboles de decisión, con el objetivo de poder proyectar comportamientos o bien comprobar o rebatir hipótesis que previamente se tenían respecto a un escenario determinado.</p>
+<p>En este capítulo, se considera un enfoque distinto al anterior, en el cual las decisiones de los individuos se desprenden de un comportamiento <strong>aleatorio</strong>, en que las decisiones no dependen únicamente de variables descriptivas del modelo, sino que también provienen del resultado de un proceso estocástico no observable que opera intrínsecamente en los individuos, es decir, la asunción que el comportamiento se desprende de una distribución de probabilidades que puede variar dependiendo del modelo a estimar y de la complejidad del mismo (alternativamente se puede considerar el enfoque racionalista que considera que los individuos siempre actúan en forma racional, lo que de acuerdo a la experiencia empírica, no se cumple siempre).</p>
+<p><strong>Ejemplo 1</strong>: Supongamos que un cliente hizo 2 compras el año pasado de nuestro producto. ¿Esto implica inmediatamente que el consumidor mantendrá ese patrón y este año volverá a ese nivel de consumo? ¿O existe alguna posibilidad de que el cliente incremente o disminuya su consumo? ¿Cuál es el proceso que hay detrás?</p>
+<p>En lo que sigue, consideraremos 3 tipos de modelos a estimar:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Modelos de duración en tiempo discreto.</strong></p></li>
+<li><p><strong>Modelos de duración en tiempo continuo sin dependencia en la duración.</strong></p></li>
+<li><p><strong>Modelos de duración en tiempo continuo con dependencia en la duración.</strong></p></li>
+</ol>
+<div id="modelos-de-duración-de-tiempo-discreto" class="section level3 hasAnchor" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Modelos de duración de tiempo discreto<a href="modelos-probabilisticos.html#modelos-de-duración-de-tiempo-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Supongamos el siguiente escenario: A través de una propuesta de valor atractiva, adquirimos
+un cliente. ¿Durante cuántos periodos estará afiliado a la compañía? Se considera que cada periodo se puede cuantificar en términos discretos (días, semanas, meses, años). Algunos ejemplos a
+considerar:</p>
+<ul>
+<li><p>Un usuario descarga una aplicación para su teléfono inteligente. ¿Por cuántos meses la utilizará?</p></li>
+<li><p>Adquirimos un cliente en un banco. ¿Durante cuántos años permanecerá como cliente?</p></li>
+<li><p>Un cliente se suscribe a un plan telefónico o de internet. ¿Por cuántos periodos se mantendrá
+suscrito?</p></li>
+</ul>
+<div id="modelo-geométrico-desplazado" class="section level4 unnumbered hasAnchor">
+<h4>Modelo Geométrico Desplazado<a href="modelos-probabilisticos.html#modelo-geométrico-desplazado" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Asumamos que se tiene una cartera de clientes que van abandonando la relación comercial para nunca más retomarla en cualquier periodo definido. De acuerdo a lo descrito en las secciones anteriores, intentaremos describir de manera probabilística la situación. Supongamos que al final de cada periodo, un cliente decide de manera aleatoria si continúa afiliado a una determinada compañía, esto es, de acuerdo a un proceso de Bernoulli, decide con cierta probabilidad si cancela la relación comercial con la empresa (y con el coplemento respectivo decide su permanencia). Para cada individuo, asumiremos que la probabilidad con la cuál decide no cambia en el tiempo, denotándola <span class="math inline">\(\theta\)</span>. Finalmente, y como primer acercamiento, asumiremos que dicha probabilidad es de igual forma idéntica a lo largo de individuos distintos (modelo homogéneo). Sea T la variable aleatoria relativa a la duración de la relación comercial entre el cliente y la compañía, es decir la variable que describe el instante en el cual esta relación se acaba. De acuerdo a la descripción anterior, la variable aleatoria T sigue una distribución Geométrica Desplazada (sG) con parámetro <span class="math inline">\(\theta\)</span>, es decir, el comportamiento de los individuos puede ser descrito formalmente de acuerdo a la siguiente relación:</p>
+<ol style="list-style-type: decimal">
+<li>Probabilidad de que un individuo cualquiera abandone la relación comercial exactamente
+en el periodo t:</li>
+</ol>
+<p><span class="math display">\[P(T=t| \theta) = \theta (1 - \theta)^{t-1}\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>Probabilidad de que un individuo cualquiera abandone la relación comercial en un periodo
+posterior al periodo t:</li>
+</ol>
+<p><span class="math display">\[P(T&gt;t| \theta) = \theta (1 - \theta)^{t-1}\]</span></p>
+<p>No es muy difícil aplicar un modelamiento a partir de lo anterior para intentar dilucidar de
+qué forma se debería comportar un determinado grupo de individuos a partir de la data transaccional que se tiene. Veámoslo a partir de un ejemplo práctico:</p>
+<p><strong>Ejemplo 2:</strong> Consideremos un cohorte inicial de 1000 clientes (indexado por el número 0). Supongamos que año a año, un determinado número de clientes se retira del negocio por razones que se desconocen a priori, pero que asumimos provienen de un proceso estocástico en el que cada cliente en forma independiente toma la decisión de permanecer o abandonar a partir del lanzamiento de una moneda (Bernoulli), esto es, con probabilidad <span class="math inline">\(\theta\)</span> abandona y con probabilidad <span class="math inline">\(1 - \theta\)</span> permanece en la compañía. La data histórica se presenta a continuación:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Año</th>
+<th align="center"># de Clientes</th>
+<th align="center">% de Permanencia</th>
+<th align="center">% de Retención</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">0</td>
+<td align="center">1000</td>
+<td align="center">100%</td>
+<td align="center">-</td>
+</tr>
+<tr class="even">
+<td align="center">1</td>
+<td align="center">631</td>
+<td align="center">63%</td>
+<td align="center">63%</td>
+</tr>
+<tr class="odd">
+<td align="center">2</td>
+<td align="center">468</td>
+<td align="center">47%</td>
+<td align="center">74%</td>
+</tr>
+<tr class="even">
+<td align="center">3</td>
+<td align="center">382</td>
+<td align="center">38%</td>
+<td align="center">82%</td>
+</tr>
+<tr class="odd">
+<td align="center">4</td>
+<td align="center">326</td>
+<td align="center">33%</td>
+<td align="center">85%</td>
+</tr>
+<tr class="even">
+<td align="center">5</td>
+<td align="center">289</td>
+<td align="center">29%</td>
+<td align="center">89%</td>
+</tr>
+<tr class="odd">
+<td align="center">6</td>
+<td align="center">262</td>
+<td align="center">26%</td>
+<td align="center">91%</td>
+</tr>
+<tr class="even">
+<td align="center">7</td>
+<td align="center">241</td>
+<td align="center">24%</td>
+<td align="center">92%</td>
+</tr>
+</tbody>
+</table>
+<p>Entendiéndose el % de Retención como el porcentaje de clientes que se mantuvo en la relación comercial respecto al periodo anterior.</p>
+<p>Sin embargo, aún no sabemos cuanto vale <span class="math inline">\(\theta\)</span> (es un parámetro poblacional). Dicho valor lo estimaremos mediante el método de máxima verosimilitud, para el cual es necesario determinar la probabilidad de observar lo que efectivamente se está observando (densidad conjunta) asumiendo independencia entre las muestras:</p>
+<ul>
+<li>Densidad de probabilidades conjunta:</li>
+</ul>
+<p><span class="math display">\[f(x_1,x_2,...,x_n|\theta) = f(x_1|\theta) \cdot f(x_2|\theta) \cdot ... \cdot f(x_n|\theta)\]</span></p>
+<ul>
+<li>Función de verosimilitud:</li>
+</ul>
+<p><span class="math display">\[L(\theta|x_1,x_2,...,x_n) = \prod_{i=1}^n f(x_i|\theta) \]</span>
+A partir de esto y de la data disponible, las contribuciones a la verosimilitud son las siguientes
+(asumiendo como modelo de comportamiento la distribución geométrica desplazada)</p>
+<table>
+<colgroup>
+<col width="5%" />
+<col width="15%" />
+<col width="16%" />
+<col width="63%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Año</th>
+<th># de Clientes</th>
+<th># de Abandonos</th>
+<th>Pr</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>1000</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>631</td>
+<td>369</td>
+<td><span class="math inline">\(P(T=1\|\theta) = \theta^{369}\)</span></td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>468</td>
+<td>163</td>
+<td><span class="math inline">\(P(T=2\|\theta) = ((1 - \theta)^{(2-1)} \cdot \theta)^{163}\)</span></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>382</td>
+<td>86</td>
+<td><span class="math inline">\(P(T=3\|\theta) = ((1 - \theta)^{(3-1)} \cdot \theta)^{86}\)</span></td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>326</td>
+<td>56</td>
+<td><span class="math inline">\(P(T=4\|\theta) = ((1 - \theta)^{(4-1)} \cdot \theta)^{56}\)</span></td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>289</td>
+<td>37</td>
+<td><span class="math inline">\(P(T=5\|\theta) = ((1 - \theta)^{(5-1)} \cdot \theta)^{37}\)</span></td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>262</td>
+<td>27</td>
+<td><span class="math inline">\(P(T=6\|\theta) = ((1 - \theta)^{(6-1)} \cdot \theta)^{27}\)</span></td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>241</td>
+<td>21</td>
+<td><span class="math inline">\(P(T=7\|\theta) = ((1 - \theta)^{(7-1)} \cdot \theta)^{21}\)</span></td>
+</tr>
+<tr class="odd">
+<td>&gt;7</td>
+<td>-</td>
+<td>-</td>
+<td><span class="math inline">\(P(T&gt;7\|\theta) = ((1-\theta)^7)^{241}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Dado que maximizar un producto es complicado, aplicamos logaritmo a lo anterior, de modo de construir la función de log verosimilitud:</p>
+<ul>
+<li>Función de log verosimilitud:</li>
+</ul>
+<p><span class="math display">\[\hat{l}(\theta|x_1,x_2,...,x_n) = ln(L(\theta|x_1,x_2,...,x_n)) = \sum_{i=1}^n ln f(x_i|\theta)\]</span>
+Con lo anterior, es sencillo maximizar la función de log verosimilitud para un θ desconocido, con lo que se tiene:<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p><span class="math display">\[\hat{\theta} = 0, 226027\]</span>
+<span class="math display">\[\hat{l} = −1794, 62\]</span>
+El modelo antes presentado, si bien permite tomar medidas de gestión a partir de un modelo sencillo, es poco realista (pues se asume que la población posee igual probabilidad de abandono).</p>
+<p>Una manera de incluir mayor complejidad al modelo y hacerlo más robusto, es asumiendo que la población no es homogénea, sino que existen segmentos de individuos quienes al ser agrupados, presentan un comportamiento similar. La forma más sencilla de modelar esto es asumiendo que la población presenta 2 patrones de comportamiento (2 segmentos), es decir, para un segmento de
+individuos, la decisión de abandonar o permanecer se identifica a partir de un parámetro <span class="math inline">\(\theta_1\)</span> (del mismo modo que en el caso anterior), y para el otro segmento la decisión se determina a partir de un parámetro <span class="math inline">\(\theta_2\)</span> distinto de <span class="math inline">\(\theta_1\)</span>. Formalmente, las relaciones que describen de mejor manera esto son las siguientes:</p>
+<ol style="list-style-type: decimal">
+<li>Probabilidad de que un individuo cualquiera abandone la relación comercial exactamente en el periodo t en una población con 2 segmentos:</li>
+</ol>
+<p><span class="math display">\[P(T=t|\theta_1, \theta_2, \pi)= \theta_1 (1-\theta_1)^{t-1} \pi + \theta_2(1-\theta_2)^{t-1}(1-\pi)\]</span>
+2. Probabilidad de que un individuo cualquiera abandone la relación comercial en un periodo posterior al periodo t en una población con 2 segmentos:</p>
+<p><span class="math display">\[P(T&gt;t|\theta_1, \theta_2, \pi)= (1-\theta_1)^{t} \pi + (1-\theta_2)^{t}(1-\pi)\]</span></p>
+<p>En el modelo anterior <span class="math inline">\(\pi\)</span> representa el porcentaje de la población que pertenece al segmento 1, de tal forma que su complemento <span class="math inline">\(1-\pi\)</span> representa el porcentaje de la población que pertenece al segmento 2.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></p>
+</div>
+<div id="modelo-beta-geométrico-desplazado" class="section level4 unnumbered hasAnchor">
+<h4>Modelo Beta Geométrico desplazado<a href="modelos-probabilisticos.html#modelo-beta-geométrico-desplazado" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Los modelos anteriores funcionan bien cuando la población se comporta de manera distinta entre clases latentes, y similar al interior de cada clase latente. Sin embargo, puede ser mucho más realista e interesante el asumir que existe una heterogeneidad continua en la población, es decir que existe un número infinito de segmentos (o al menos tendiente a infinito) de manera de capturar todas las preferencias individuales de cada miembro de la población considerada.</p>
+<p>Para estos propósitos, ya no asumiremos que la probabilidad de abandono <span class="math inline">\(\theta\)</span> sigue una distribución discreta de Bernoulli (éxito-fracaso), sino que asumiremos que el parámetro proviene de una distribución continua Beta de parámetros <span class="math inline">\(\alpha\)</span> y <span class="math inline">\(\beta\)</span>.</p>
+<p>Por tanto, es posible calcular las probabilidades antes presentadas en forma análoga, aplicando el enfoque antes mencionado (probabilidades totales):</p>
+<ol style="list-style-type: decimal">
+<li>Probabilidad de que un individuo cualquiera abandone la relación comercial exactamente en el periodo t:</li>
+</ol>
+<p><span class="math display">\[P(T=t|\alpha,\beta) = \int_0^1 (T=t|\theta)B(\theta|\alpha,\beta)d\theta\]</span>
+Recordar que:</p>
+<p><span class="math display">\[B(\theta|\alpha,\beta) = \frac{\theta^{\alpha-1}(1-\theta)^{\beta-1}}{B(\alpha,\beta)}\]</span></p>
+<p><span class="math display">\[B(\alpha,\beta) = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}\]</span>
+2. Probabilidad de que un individuo cualquiera abandone la relación comercial en un periodo posterior al periodo t:</p>
+<p><span class="math display">\[P(T&gt;t|\alpha,\beta) = \int_0^1 (T&gt;t|\theta)B(\theta|\alpha,\beta)d\theta\]</span>
+Al desarrollar la primera integral antes mencionada, y reconociendo las relaciones de la distribución <em>Beta</em>, se tiene que:</p>
+<p><span class="math display">\[P(T=t|\alpha,\beta)= \frac{B(\alpha + 1, \beta + t -1)}{B(\alpha,\beta)}\]</span>
+Notar que, se usa indistintamente el <span class="math inline">\(B(\alpha,\beta)\)</span> para hacer alusión tanto a la <strong>función</strong> como a la <strong>distribución Beta</strong>. Bajo ninguna circunstancia dichos objetos son iguales.</p>
+<p><strong>Ejemplo 3:</strong> Considerando la misma situación que se presentó en el ejemplo anterior (clientes que año a año abandonan la relación comercial), pero ahora asumiendo que existe un comportamiento heterogéneo en la población, es posible reconocer que existe una recursividad en la fórmula del cálculo de la probabilidad de abandono en cada período de la siguiente forma:</p>
+<span class="math display">\[\begin{array}{cc}
+P(T=t|\alpha,\beta) =
+\begin{cases}
+\frac{\alpha}{\alpha+\beta} &amp; t=1
+\\
+P(T=t -1|\alpha,\beta) \frac{\beta + t -2}{\alpha + \beta + t -1} &amp; t&gt;1
+\end{cases}
+\end{array}\]</span>
+<p>Modelo que al ser evaluado, da el siguiente resultado:</p>
+<span class="math display">\[\begin{array}{c}
+\hat{\alpha} = 0,7041\\
+\hat{\beta}= 1,1820\\
+\hat{l} = -1680,27
+\end{array}\]</span>
+<p>Notar que existe una notoria diferencia en cuanto al valor de la log verosimilitud obtenida por el modelo heterogéneo respecto al modelo homogéneo. Si bien, esto indica una mejora del modelo, es necesario realizar la comparación en base a métricas de evaluación mas precisas (AIC; BIC, etc.)</p>
+</div>
+</div>
+<div id="modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración" class="section level3 hasAnchor" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Modelos de duración en tiempo continuo sin dependencia en la duración<a href="modelos-probabilisticos.html#modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para algunos modelos, el medir el tiempo como si fueran períodos discretos puede ser un buena aproximación de acuerdo a los objetivos del análisis que se desea llevar a cabo.</p>
+<p>En otros casos, puede ser en cambio más útil considerar el tiempo como una variable continua, debido a que podría interesar el medir la ocurrencia de un suceso de manera más exacta. Algunos casos relativos a este enfoque son:</p>
+<ul>
+<li><p>Tiempos de respuesta a una campaña promocional de marketing directo.</p></li>
+<li><p>Tiempo entre visitas a nuestro website.</p></li>
+<li><p>Tiempos entre llamadas en un call center.</p></li>
+<li><p>Tiempos de operación en la industria de servicios.</p></li>
+</ul>
+<p>Al igual que en el caso de los modelos en tiempo discreto, lo que interesa es poder implementar un modelo que tenga una forma funcional flexible para ser trabajada y modificada fácilmente, que logre ajustar a la data histórica que se tiene, y que logre además proyectar el comportamiento futuro de los clientes, es decir, que sea un buen modelo predictivo para tomar acciones en función de aquello.</p>
+<div id="modelo-exponencial" class="section level4 unnumbered hasAnchor">
+<h4>Modelo Exponencial<a href="modelos-probabilisticos.html#modelo-exponencial" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Supongamos que nos interesa medir el tiempo que pasa desde que se lanza un producto hasta que el consumidor decide adquirirlo. Existen muchos factores externos que determinan esta decisión: exposición a publicidad, número de visitas a la tienda, llamadas recibidas por call center, entre otras. Nuevamente asumiremos que el comportamiento es aleatorio, es decir, que los consumidores deciden el momento en el cuál van a consumira partir de una distribución de probabilidades.</p>
+<p>Esto podemos modelarlo a partir de la distribución exponencial.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<p>Supongamos la variable aleatoria T definida como el tiempo en que un cliente va a consumir nuestro producto por primera vez. Asumiremos que esta variable está exponencialmente distribuida con una tasa <span class="math inline">\(\lambda\)</span>. De esta forma, se tiene que la función de distribución acumulada de la variable aleatoria será:</p>
+<p><span class="math display">\[F(t) = P(T \leq t) = 1 - e^{-\lambda t}\]</span></p>
+<p>Notar que el término anterior representa la probabilidad que un cliente consuma el producto <strong>antes</strong> de t.</p>
+<p>Ahora bien, esto inmediatamente deja en evidencia una limitante a este modelo: para un t muy grande, todos los consumidores van a probar^{Recordar que lím e^{-t}=0}, lo cual no es una situación del todo realista. Es necesario, en consecuencia, imponer que existe una fracción de clientes dentro de la muestra considerada que nunca probará el producto y así es posible solucionar la limitante encontrada (2 clases latentes).</p>
+<ol style="list-style-type: decimal">
+<li>Segmeto que prueba: Tamaño <span class="math inline">\(\pi\)</span></li>
+</ol>
+<span class="math display">\[\begin{array}{c}
+\lambda = \theta\\
+\Rightarrow P(T \leq t) = 1 - e^{-\theta t}
+\end{array}\]</span>
+<ol start="2" style="list-style-type: decimal">
+<li>Segmento que no prueba: Tamaño(1-<span class="math inline">\(\pi\)</span>)</li>
+</ol>
+<span class="math display">\[\begin{array}{c}
+\lambda = 0\\
+\Rightarrow P(T \leq t) = 0
+\end{array}\]</span>
+<p>Luego, la probabilidad total será:</p>
+<span class="math display">\[\begin{array}{c}
+P(T \leq t) = P(T \leq t | \text{Prueba}) P(\text{Prueba}) + P(T \leq t | \text{No Prueba}) P(\text{No Prueba}) \\
+= 1 - e^{-\theta t}\pi
+\end{array}\]</span>
+<p>Es importante notar que si bien el modelo describe probabilidades en tiempo continuo, la data aún se presenta y obtiene en tiempo discreto. Incorporando esto, es posible construir la función de log verosimilitud calculando las probabilidades de adopción del producto entre los limites del
+intervalo temporal definido por el periodo de medición, es decir:</p>
+<p><span class="math display">\[P(t_0 \leq T \leq t_1) = F(t_1) - F(t_0)\]</span>
+Por lo que la función de log verosimilitud se define como (considerando n periodos discretos para el cálculo):</p>
+<p><span class="math display">\[LL(\pi,\theta|\text{data}) = N_1 ln[P(1\leq T \leq 2)] + ... + (N_{panel} - \sum_{i=1}^{n}N_i)ln[P(T&gt;n)]\]</span>
+Adicionalmente, es de interés calcular los valores predichos por el modelo, de modo de realizar predicciones futuras. F(t) representa la probabilidad que un cliente escogido aleatoriamente pruebe el producto en t (tal que t = 0 corresponde al instante de lanzamiento del producto. La estimación del futuro se puede hacer a través de la esperanza:</p>
+<p><span class="math display">\[\mathbb{E}[T(t)] = N_{\text{panel }} \cdot \hat{F}(t) \]</span></p>
+<p>Antes de avanzar, es importante aclarar la distinción de un modelo <em>sin dependencia en la duración</em>. Esto se puede explicar con la propiedad fundamental de la distribución exponencial:</p>
+<p><strong>Propiedad fundamental:</strong> La distribución exponencial no tiene memoria, es decir, poseer información de que un elemento ha sobrevivido un tiempo ’s’ hasta este momento no modifica la probabilidad de que sobreviva un periodo t más. Es decir la probabilidad de que ocurra un suceso no depende del tiempo en que aún no ha ocurrido. Se puede demostrar matemáticamente:</p>
+<p><span class="math display">\[P(T &gt; s + t|T&gt;s) = \frac{P(T&gt; s+t)}{P(T&gt; s)} = \frac{1-P(T \leq s+t)}{1-P(T \leq s)}= \frac{e^{-\lambda(s+t)}}{e^{-\lambda s}} = e^{-\lambda t}\]</span>
+#### Modelo Gamma Exponencial {-}</p>
+<p>Análogamente a la situación anterior, ahora se asume que el comportamiento de la población es heterogéneo, es decir, que existen diferentes clases de clientes en la población. Esto busca complejizar la suposición que antes hicimos al considerar un grupo de clientes que nunca consume.</p>
+<p>Por tanto, el modelo heterogéneo ahora considerará que la tasa de prueba <span class="math inline">\(\lambda\)</span> se distribuye <em>Gamma</em> en la población:</p>
+<p><span class="math display">\[g(\lambda) = \frac{\alpha^r \lambda^{r-1} e^{-\alpha \lambda}}{\Gamma(r)}\]</span>
+Dónde r es un parámetro de forma y <span class="math inline">\(\alpha\)</span> es un parámetro de escala.</p>
+<p>Al incorporar la heterogeneidad mencionada, la probabilidad que un cliente adquiera un producto antes de un tiempo t es la siguiente:</p>
+<span class="math display">\[\begin{array}{cc}
+P(T\leq t) &amp;= \int_{0}^{\infty} P(T \leq t|\lambda) g(\lambda)d \lambda\\
+&amp;= 1 - (\frac{\alpha}{\alpha + t})^r
+\end{array}\]</span>
+<p>Este modelo lo llamaremos <em>Gamma Exponencial</em>.</p>
+</div>
+</div>
+<div id="modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración" class="section level3 hasAnchor" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Modelos de duración en tiempo continuo con dependencia en la duración<a href="modelos-probabilisticos.html#modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Otra de las grandes limitantes del modelo <em>Exponencial</em> es que posee pérdida de memoria, es decir la probabilidad de adopción de un cliente no cambia a medida que pasa el tiempo. Se necesita incorporar esta distinción, es decir, la probabilidad de que un evento ocurra dado que hasta este momento no ha ocurrido. Esto último se conoce como <em>tasa de riesgo</em> o <em>hazard rate</em>:</p>
+<p><span class="math display">\[h(t) = \frac{f(t)}{1 - F(t)}\]</span></p>
+<p>Gráficamente, la tasa de riesgo se comporta de la siguiente manera:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="modelos-probabilisticos.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">rep</span>(<span class="st">&quot;images/tasa_riesgo.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:my-fig"></span>
+<img src="images/tasa_riesgo.png" alt="Ejemplos de tasas de riesgo" width="50%" />
+<p class="caption">
+Figure 1.1: Ejemplos de tasas de riesgo
+</p>
+</div>
+<p>En el primer caso, la intuición es que si una persona no ha respondido a un e-mail, cada vez es menos probable que lo responda, pues en general las personas tienden a ignorar los correos con una antigüedad superior a un par de días. En la llegada de un bus - si bien en ramos pasados se ha modelado con una exponencial, es decir, sin memoria - se asume que a medida que más se demora en llegar al paradero, cada vez la espera debe ser menor, pues tarde o temprano este deberá llegar.
+Los otros análisis quedan propuestos, pero la intuición es fácil de comprender.</p>
+<p>A partir de la tasa de riesgo, se puede definir unívocamente la distribución de una variable aleatoria no negativa a través de la siguiente integral:</p>
+<p><span class="math display">\[F(t) = 1 - exp \left( -\int_{0}^{t} h(u)du \right)\]</span>
+Este concepto será útil para definir los modelos de duración en tiempo continuo en que la duración sí es un factor relevante</p>
+<div id="modelo-weibull" class="section level4 unnumbered hasAnchor">
+<h4>Modelo Weibull<a href="modelos-probabilisticos.html#modelo-weibull" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A pesar de las generalizaciones de las funciones de tasas de riesgo para generar modelos de tiempo de ocurrencia, nos enfocaremos en la distribución Weibull debido a que es fácil de trabajar y entrega una fórmula cerrada muy similar a la de la distribución exponencial. Se tiene que para la misma variable aleatoria T que se definió en la sección anterior, la probabilidad de ocurrencia de que un cliente pruebe nuestro producto en un tiempo inferior a t será:</p>
+<p><span class="math display">\[F(t) = P(T \leq t) = 1 - e^{-\lambda t ^c}\]</span>
+Y la tasa de riesgo asociada a esta distribución:</p>
+<p><span class="math display">\[h(t) = c \lambda t ^{c-1}\]</span>
+El primer parámetro <span class="math inline">\(\lambda\)</span> que compone la fórmula lo interpretamos como un parámetro de escala, mientras que el parámetro c le llamamos parámetro de forma. Es importante notar que para c = 1, la distribución se convierte en la distribución exponencial, por lo que se puede decir que la distribución Weibull es una generalización de la exponencial. Notar además que para c = 1, la tasa de riesgo es constante, lo que es consistente con la propiedad de pérdida de memoria de la
+distribución exponencial.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="modelos-probabilisticos.html#cb2-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">rep</span>(<span class="st">&quot;images/tasa_riesgo_c.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:riesgoc"></span>
+<img src="images/tasa_riesgo_c.png" alt="Ejemplos de tasas de riesgo para distintos valores de c" width="50%" />
+<p class="caption">
+Figure 1.2: Ejemplos de tasas de riesgo para distintos valores de c
+</p>
+</div>
+<p>En la distribución de Weibull generalizada por tanto, la propiedad de pérdida de memoria no aplica como en el caso de la exponencial, es decir, la probabilidad de ocurrencia varía a medida que pasa el tiempo:</p>
+<p><span class="math display">\[P(T &gt; s + t|T&gt;s) = \frac{P(T&gt; s+t)}{P(T&gt; s)} = \frac{1-P(T \leq s+t)}{1-P(T \leq s)}= \frac{e^{-\lambda(s+t)^c}}{e^{-\lambda s^c}} \]</span></p>
+</div>
+<div id="modelo-gamma-weibull" class="section level4 unnumbered hasAnchor">
+<h4>Modelo Gamma Weibull<a href="modelos-probabilisticos.html#modelo-gamma-weibull" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Una de las propiedades interesantes de la distribución Weibull, es que es sencillo introducir heterogeneidad sobre los parámetros, y de esa forma capturar los distintos posibles comportamientos de la población.</p>
+<p>Al igual que en el modelo Gamma-Exponencial, asumiremos que el parámetro de escala λ está distribuido <span class="math inline">\(\text{Gamma}(\alpha,r)\)</span> en la población. La probabilidad de ocurrencia del consumo de los clientes se puede modelar por tanto de la siguiente forma:</p>
+<span class="math display">\[\begin{array}{cc}
+F(t) = P(T\leq t) &amp;= \int_{0}^{\infty} \frac{(1 - e^{-\lambda t^c}) \alpha ^r \lambda ^{r-1}e^{-\alpha \lambda}}{\Gamma(r)} d \lambda\\
+&amp;= 1 - (\frac{\alpha}{\alpha + t^c})^r
+\end{array}\]</span>
+</div>
+</div>
+</div>
+<div id="modelos-de-conteo" class="section level2 hasAnchor" number="1.3">
+<h2><span class="header-section-number">1.3</span> Modelos de Conteo<a href="modelos-probabilisticos.html#modelos-de-conteo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Permiten modelar cuantas veces los consumidores incurrirán en un comportamiento determinado en un período de tiempo (ejemplo: problema exposición publicitaria).</p>
+<p>Algunas medidas de efectividad son:</p>
+<ul>
+<li><p><strong>Alcance:</strong> Proporción de la población expuesta al evento al menos una vez durante el período: <span class="math inline">\(1 − P(X_t = 0)\)</span></p></li>
+<li><p><strong>Frecuencia promedio:</strong> número promedio de exposiciones en el período entre aquellos que han experimentado el evento (por ejemplo, ver la valla publicitaria). <span class="math display">\[\frac{\mathbb{E}(X_t)}{1-P(X_t =0)}\]</span></p></li>
+<li><p><strong>Puntos de rating brutos (GRPs):</strong> número promedio de exposiciones por cada 100 personas.</p></li>
+</ul>
+<p><span class="math display">\[100 \cdot \mathbb{E}(X_t)\]</span></p>
+<p>El fenómeno que se quiere estudiar es el número de veces que cada individuo ve la valla publicitaria. Para ello, se define el modelo individual <em>Poisson</em>.</p>
+<p><span class="math display" id="eq:poisson">\[\begin{equation}
+  P(N_t=m|\lambda) = \frac{(\lambda  t)^m e^{-\lambda t}}{m!}
+  \tag{1.1}
+\end{equation}\]</span></p>
+<p>lo cual corresponde a la probabilidad de que el número de exposiciones sea m en un intervalo de largo t.</p>
+<p>Al igual que en los modelos anteriores, es posible incluir heterogeneidad asumiendo que el parámetro <span class="math inline">\(\lambda\)</span> distribuye de acuerdo a una determinada distribución. Suponiendo que dicha distribución es <em>Gamma</em>.</p>
+<p><span class="math display" id="eq:gamma">\[\begin{equation}
+g(\lambda|\alpha, r) = \frac{\alpha^r \lambda^{r-1}e^{-\alpha \lambda}}{\Gamma(r)}
+  \tag{1.2}
+\end{equation}\]</span></p>
+<p>Usando el modelo individual en 1.2 y la distribución en 1.3, se puede estimar la probabilidad de un número de exposiciones:</p>
+<p><span class="math display" id="eq:gammita">\[\begin{equation}
+  \begin{aligned}
+   P(N_t = m) &amp;= \int_{0}^{\infty} P(N_t = m|\lambda) g(\lambda)d\lambda \\
+&amp;= \int_{0}^{\infty} \frac{(\lambda  t)^m e^{-\lambda t}}{m} \cdot \frac{\alpha^r \lambda^{r-1}e^{-\alpha \lambda}}{\Gamma(r)}d\lambda \\
+&amp;= \left( \frac{\alpha}{\alpha+t}\right) ^r \cdot (\frac{t}{\alpha + t})^m \cdot \frac{\Gamma(r+m)}{\Gamma(r)m!}
+  \end{aligned}  
+  \tag{1.3}
+\end{equation}\]</span></p>
+</div>
+<div id="modelos-de-elección" class="section level2 hasAnchor" number="1.4">
+<h2><span class="header-section-number">1.4</span> Modelos de Elección<a href="modelos-probabilisticos.html#modelos-de-elección" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Permiten modelar la probabilidad de que los individuos elijan un determinado comportamiento, como por ejemplo, compra en una visita a una tienda, respuesta a una campaña de marketing
+directo, uso de un producto, etc.</p>
+<p>Consideremos como variable de interés la probabilidad de que un individuo perteneciente a un segmento responda positivamente a una campaña de marketing. En el enfoque tradicional, se realiza una segmentación de clientes en grupos homogéneos, se envía mensajes a muestras aleatorias
+de cada segmento y se implementa un campaña en segmentos con tasa de respuesta (TR) sobre cierto corte, por ejemplo, <span class="math inline">\(TR &gt; \frac{\text{Costo de envío}}{\text{Margen unitario}}\)</span>.</p>
+<p>Sin embargo, es posible incorporar un enfoque de modelos probabilísticos de manera de abordar el problema. Si se considera la probabilidad de responder de manera positiva que tiene un segmento s en particular, <span class="math inline">\(p_s\)</span>, es posible interpretar de manera sencilla la cantidad de respuestas
+obtenidas. Recordando que, la suma de experimentos de Bernoulli corresponde a una variable aleatoria Binomial, es posible interpretar <span class="math inline">\(X_s\)</span>, la cantidad de respuestas obtenidas de un total de <span class="math inline">\(m_s\)</span> enviadas, como una variable aleatoria <span class="math inline">\(Bin(m_s,p_s)\)</span>, luego</p>
+<p><span class="math display" id="eq:bin">\[\begin{equation}
+P(X_s = x_s|m_s,p_s) = \binom{m_s}{x_s} p_s^{x_s}(1-p_s)^{m_s-x_s}
+  \tag{1.4}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(m_s\)</span> es la población del segmento <span class="math inline">\(s\)</span> y <span class="math inline">\(p_s\)</span> es la probabilidad de respuesta del segmento <span class="math inline">\(s\)</span>.</p>
+<p>Luego se introduce heterogeneidad a través de la distribución <span class="math inline">\(B(\alpha,\beta)\)</span>;</p>
+<p><span class="math display" id="eq:distri">\[\begin{equation}
+  \begin{aligned}
+   P(X_s = x_s) &amp;= \int_{0}^{1} P(X_s = x_s|m_s,p_s) \cdot g(p_s|\alpha,\beta)dp_s \\
+&amp;= \int_{0}^{1} \binom{m_s}{x_s} p_s^{x_s}(1-p_s)^{m_s-x_s} \cdot \frac{p_s^{\alpha-1}(1-p_s)^{\beta -1}}{B(\alpha,\beta)}dp_s \\
+&amp;= \binom{m_s}{x_s} \frac{B(\alpha + x, \beta + m_s - x_s)}{B(\alpha,\beta)}
+  \end{aligned}  
+  \tag{1.5}
+\end{equation}\]</span></p>
+</div>
+<div id="esperanzas-condicionales" class="section level2 hasAnchor" number="1.5">
+<h2><span class="header-section-number">1.5</span> Esperanzas Condicionales<a href="modelos-probabilisticos.html#esperanzas-condicionales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Permiten tomar decisiones a nivel desagregado. Por ejemplo, en el modelo de elección en donde la <span class="math inline">\(P(X_s = x_s)\)</span> quedaba definida en <a href="modelos-probabilisticos.html#eq:distri">(1.5)</a>. Una pregunta válida que nos podríamos hacer es cúal es la tasa de respuesta de un segmento <span class="math inline">\(s\)</span> determinado. Intuitivamente debería estar entre la tasa de
+respuesta esperada de la población y la observada, es decir,</p>
+<p><span class="math display" id="eq:tasa">\[\begin{equation}
+\mathbb{E}(\theta_s|m_s,x_s)=\gamma \frac{\alpha}{\alpha+\beta} + (1-\gamma) \frac{x_s}{m_s}
+  \tag{1.6}
+\end{equation}\]</span></p>
+<p>donde $(Beta(,)) = $</p>
+<p>Recordemos que la distribución de <span class="math inline">\(\theta\)</span> condicionado a un número de respuestas recibidas, por Bayes, es</p>
+<p><span class="math display" id="eq:thetabayes">\[\begin{equation}
+g(\theta|x) = \frac{f(x|\theta)g(\theta)}{\int(x|\theta)g(\theta)d\theta}
+  \tag{1.7}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(g(\theta)\)</span> es la distribución del parámetro, definida a priori, y <span class="math inline">\(f(x|\theta)\)</span> es la distribución de la probabilidad de la data dado los parámetros, es decir, la función de verosimilitud. De esto se deduce</p>
+<p><span class="math display" id="eq:bayesdeduce">\[\begin{equation}
+g(\theta_s|x_s) \sim B(\alpha + x_s, \beta + m_s - x_s)
+  \tag{1.8}
+\end{equation}\]</span></p>
+<p>Teniendo clara la distribución condicionada es fácil deducir la esperanza</p>
+<p><span class="math display" id="eq:espdist">\[\begin{equation}
+  \begin{aligned}
+  \mathbb{E}(\theta_s|x_s) &amp;=\frac{\alpha + x_s}{\alpha + \beta + m_s} \\
+&amp;= \frac{\alpha}{\alpha + \beta + m_s}  + \frac{x_s}{\alpha + \beta + m_s} \\
+&amp;= \frac{\alpha}{\alpha + \beta} \cdot \frac{\alpha + \beta}{\alpha + \beta + m_s} + \frac{x_s}{m_s}\cdot \frac{m_s}{\alpha + \beta + m_s}  \\
+&amp;= \gamma \frac{\alpha}{\alpha + \beta} + (1-\gamma)\frac{x_s}{m_s}
+  \end{aligned}  
+  \tag{1.9}
+\end{equation}\]</span></p>
+<p>Esta última igualdad se encuentra al hacer el reemplazo <span class="math inline">\(\gamma = \frac{\alpha + \beta}{\alpha + \beta + m_s}\)</span>, la cual coincide con <a href="modelos-probabilisticos.html#eq:thetabayes">(1.7)</a>, resultado que esperábamos encontrar.</p>
+<p>Se podría replantear la regla de decisión, y enviar catálogos a los segmentos <span class="math inline">\(s\)</span> tales que</p>
+<p><span class="math display">\[\mathbb{E} (\theta_s|x_s) =\frac{\alpha + x_s}{\alpha + \beta + m_s} &gt; \frac{\text{costo de envío}}{\text{margen unitario}}\]</span></p>
+</div>
+<div id="variables-explicativas" class="section level2 hasAnchor" number="1.6">
+<h2><span class="header-section-number">1.6</span> Variables explicativas<a href="modelos-probabilisticos.html#variables-explicativas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-sin-dependencia-de-la-duración" class="section level3 hasAnchor" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> Variables explicativas en modelos de duración en tiempo continuo sin dependencia de la duración<a href="modelos-probabilisticos.html#variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-sin-dependencia-de-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>En secciones anteriores, hemos expuesto modelos que intentan explicar y predecir el tiempo en que los individuos realizarán una determinada acción (e.g: tiempo de prueba de un producto), considerando que el comportamiento de los agentes se debe netamente a factores aleatorios. En esta sección se incorporará heterogeneidad observable a un modelo de duración en tiempo continuo sin dependencia en la duración. Entendemos por heterogeneidad observable, aquellos factores observables (que están en los datos) intrínsecos a los individuos que los hacen distintos y, por ejemplo: sexo, edad, entre otras</p>
+<p>Sea <span class="math inline">\(T_i\)</span> la variable aleatoria que describe el instante en que el individuo <span class="math inline">\(i\)</span> realiza una determinada acción. Modelaremos dicha variable aleatoria con una distribución exponencial de parámetro <span class="math inline">\(\lambda_i\)</span>:</p>
+<p><span class="math display">\[\mathbb{P}(T_i&lt;t_i|\lambda_i) = 1-e^{-\lambda_it_i}\]</span>
+Cabe destacar que, dada la naturaleza de los datos, el comportamiento descrito se realizará de manera desagregada (dependencia de <span class="math inline">\(i\)</span> en el parámetro), es decir, dado que existe información individual para cada individuo, es posible estimar el parámetro de cada uno de éstos (no así en
+los casos agregados vistos anteriormente).</p>
+<p>Sea <span class="math inline">\(x_i\)</span> el vector que contiene las variables explicativas pertinentes del individuo <span class="math inline">\(i\)</span>. Modelaremos la tasa de llegada de <span class="math inline">\(i\)</span>, de la siguiente manera:</p>
+<p><span class="math display">\[\lambda_i = exp(\beta_0 + \beta&#39;x_i) = \lambda_0 exp(\beta&#39;x_i)\]</span>
+Donde <span class="math inline">\(\beta\)</span> corresponde al vector de coeficientes asociados a las variables explicativas en cuestión.</p>
+<p>La inclusión de la exponencial se debe a que, por a razones de convergencia e interpretación, la tasa de respuesta individual debe ser positiva. De esta forma, se puede capturar el efecto marginal de las variables demográficas sin restricción de signos, esto es, será posible obtener valores de <span class="math inline">\(\beta\)</span> negativos.</p>
+<div id="modelo-sin-heterogeneidad-no-observable" class="section level4 unnumbered hasAnchor">
+<h4>Modelo sin Heterogeneidad no observable<a href="modelos-probabilisticos.html#modelo-sin-heterogeneidad-no-observable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>La probabilidad que un individuo <span class="math inline">\(i\)</span> realice un evento determinado antes del tiempo <span class="math inline">\(t_i\)</span>, incluyendo su información observable, es:</p>
+<span class="math display">\[\begin{aligned}
+\mathbb{P}(T_i &lt; t_i|\beta,\lambda_0) &amp;= 1 - e^{-\lambda_it_i}\\
+&amp;= 1 - e^{-\lambda_0 exp(\beta&#39;x_i)t_i}
+\end{aligned}\]</span>
+<p>Con lo cual (considerando instantes de tiempo <span class="math inline">\(t_i^-\)</span> y <span class="math inline">\(t_i^+\)</span> para discretizar el tiempo, un panel de <span class="math inline">\(N\)</span> individuos y un vector de parámetros <span class="math inline">\(\theta = (\beta,\lambda_0)\)</span>), la log verosimilitud del problema resulta:</p>
+<span class="math display">\[\begin{aligned}
+LL(\theta) &amp;= \sum_{i=1}^{N} ln(\mathbb{P}(t_i^- &lt; T_i &lt; t_i^+|\beta,\lambda_0)) \\
+&amp;= \sum_{i=1}^{N} ln((\mathbb{P}(T_i &lt; t_i^+|\beta,\lambda_0)) - \mathbb{P}(T_i &lt; t_i^-|\beta,\lambda_0)) \\
+&amp;=  \sum_{i=1}^{N} ln \left((1 - e^{-\lambda_0 exp(\beta&#39;x_i)t_i^+}) - (1 - e^{-\lambda_0 exp(\beta&#39;x_i)t_i^-}) \right)\\
+&amp;= \sum_{i=1}^{N} ln (e^{-\lambda_0 exp(\beta&#39;x_i)t_i^-} - e^{-\lambda_0 exp(\beta&#39;x_i)t_i^+})
+\end{aligned}\]</span>
+</div>
+<div id="modelo-con-heterogeneidad-no-observable" class="section level4 unnumbered hasAnchor">
+<h4>Modelo con Heterogeneidad no observable<a href="modelos-probabilisticos.html#modelo-con-heterogeneidad-no-observable" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Para introducir heterogeneidad no observable en el modelo, se dejará el parámetro <span class="math inline">\(\lambda_0\)</span> distribuyendo de manera continua en la población según una ley <span class="math inline">\(\Gamma(\alpha,r)\)</span>, pues de esta forma, es posible mezclar tanto la heterogeneidad no observable, como la observable.</p>
+<p>De este modo, La probabilidad que un individuo <span class="math inline">\(i\)</span> realice un evento determinado antes del tiempo <span class="math inline">\(t_i\)</span> es:</p>
+<span class="math display">\[\begin{aligned}
+\mathbb{P} (T_i&lt;t_i|\alpha,r,\beta) &amp;= \int_0^{\infty} \mathbb{P} (T_i&lt;t_i|\alpha,r,\beta,\lambda_0)f(\lambda_0)d\lambda_0\\
+&amp;= \int_0^{\infty} (1 - e^{-\lambda_0 exp(\beta&#39;x_i)t_i}) \left( \frac{\alpha^r \lambda_0^{r-1} e^{-\alpha\lambda_0}}{\Gamma(r)} \right) d\lambda_0\\
+&amp;= 1 - \frac{\alpha^r}{\Gamma(r)} \int_0^{\infty} \lambda_0^{r-1} e^{-\lambda_0 ( \alpha + exp(\beta&#39;z_i)t_i)}d\lambda_0
+\end{aligned}\]</span>
+<p>Luego, basta con multiplicar y dividir por <span class="math inline">\(( \alpha + exp(\beta&#39;z_i)t_i)^r\)</span> para obtener como resultado:</p>
+<span class="math display">\[\begin{aligned}
+\mathbb{P} (T_i&lt;t_i|\alpha,r,\beta) &amp;= 1 - \left(\frac{\alpha}{ \alpha + exp(\beta&#39;z_i)t_i}\right)^r \int_{0}^{\infty} f(\lambda_0| \alpha + exp(\beta&#39;z_i)t_i,r) d\lambda_0\\
+&amp;= 1 - \left(\frac{\alpha}{ \alpha + exp(\beta&#39;z_i)t_i}\right)^r
+\end{aligned}\]</span>
+<p>Finalmente, la función de log verosimilitud resulta, con <span class="math inline">\(\theta = (\beta,\alpha,r)\)</span>:</p>
+<span class="math display">\[\begin{aligned}
+LL(\theta) &amp;= \sum_{i=1}^{N} ln(\mathbb{P} (t_i^-&lt;T_i&lt;t_i^+|\alpha,r,\beta))\\
+&amp;= \sum_{i=1}^{N} ln \left(\left(\frac{\alpha}{ \alpha + exp(\beta&#39;z_i)t_i^-}\right)^r - \left(\frac{\alpha}{ \alpha + exp(\beta&#39;z_i)t_i^+}\right)^r\right)
+\end{aligned}\]</span>
+</div>
+</div>
+<div id="variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-con-dependencia-de-la-duración" class="section level3 hasAnchor" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> Variables explicativas en modelos de duración en tiempo continuo con dependencia de la duración<a href="modelos-probabilisticos.html#variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-con-dependencia-de-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Cuando el tiempo en que ocurre un determinado suceso posee dependencia en la duración, el procedimiento es análogo que en el caso sin dicha dependencia, pero considerando que <span class="math inline">\(T_i\)</span> distribuye según una ley Weibull.</p>
+<p><span class="math display">\[\mathbb{P}(T_i &lt; t_i|\lambda_i,c) = 1 - e^{-\lambda_it_i^c}\]</span>
+#### Modelo sin Heterogeneidad no observable {-}</p>
+<p>La probabilidad que un individuo <span class="math inline">\(i\)</span> realice un evento determinado antes del tiempo <span class="math inline">\(t_i\)</span>, incluyendo su información observable, es:</p>
+<span class="math display">\[\begin{aligned}
+\mathbb{P}(T_i &lt; t_i|\beta,\lambda_0,c) &amp;= 1 - e^{-\lambda_i t_i}\\
+&amp;= 1 - e^{-\lambda_0 exp(\beta&#39;x_i) t_i^c}
+\end{aligned}\]</span>
+<p>Por lo que, la fucnión de log verosimilitud toma la siguiente forma:</p>
+<span class="math display">\[\begin{aligned}
+LL(\theta) &amp;= \sum_{i=1}^{N} ln(\mathbb{P}(t_i^- &lt; T_i &lt; t_i^+|\beta,\lambda_0,c)) \\
+&amp;= \sum_{i=1}^{N} ln((\mathbb{P}(T_i &lt; t_i^+|\beta,\lambda_0,c)) - \mathbb{P}(T_i &lt; t_i^-|\beta,\lambda_0,c)) \\
+&amp;=  \sum_{i=1}^{N} ln \left((1 - e^{-\lambda_0 exp(\beta&#39;x_i)(t_i^+)^c}) - (1 - e^{-\lambda_0 exp(\beta&#39;x_i)(t_i^-)^c}) \right)\\
+&amp;= \sum_{i=1}^{N} ln (e^{-\lambda_0 exp(\beta&#39;x_i)(t_i^-)^c} - e^{-\lambda_0 exp(\beta&#39;x_i)(t_i^+)^c})
+\end{aligned}\]</span>
+<div id="modelo-con-heterogeneidad-no-observable-1" class="section level4 unnumbered hasAnchor">
+<h4>Modelo con Heterogeneidad no observable<a href="modelos-probabilisticos.html#modelo-con-heterogeneidad-no-observable-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>De manera análoga al caso anterior, se introduce heterogeneidad no observable mediante el parámetro <span class="math inline">\(\lambda_0\)</span> según una distribución <span class="math inline">\(\Gamma(\alpha,r)\)</span>. Luego:</p>
+<span class="math display">\[\begin{aligned}
+\mathbb{P} (T_i&lt;t_i|\beta,\alpha,r,c) &amp;= \int_0^{\infty} \mathbb{P} (T_i&lt;t_i|\beta,\lambda_0,c)f(\lambda_0|\alpha,r)d\lambda_0\\
+&amp;= \int_0^{\infty} \left(1 - e^{-\lambda_0 exp(\beta&#39;z_i)t_i^c}\right)  \frac{\alpha^r \lambda_0^{r-1} e^{-\alpha\lambda_0}}{\Gamma(r)}  d\lambda_0\\
+&amp;= 1 - \frac{\alpha^r}{\Gamma(r)} \int_0^{\infty} \lambda_0^{r-1} e^{-\lambda_0 ( \alpha + exp(\beta&#39;z_i)t_i^c)}d\lambda_0
+\end{aligned}\]</span>
+<p>Luego, basta con multiplicar y dividir por <span class="math inline">\((\alpha + exp(\beta&#39;z_i)t_i^c)^r\)</span> Para obtener como resultado:</p>
+<p><span class="math display">\[\mathbb{P} (T_i&lt;t_i|\beta,\alpha,r,c) = 1 - \left(\frac{\alpha}{\alpha + exp(\beta&#39;z_i)t_i^c}\right)^r\]</span>
+Notar que, cuando <span class="math inline">\(\beta=0\)</span> se obtiene el modelo Gamma-Weibull usual.</p>
+<p>De esta forma, la log verosimilitud es:</p>
+<span class="math display">\[\begin{aligned}
+LL(\theta) &amp;= \sum_{i=1}^{N} ln(\mathbb{P}(t_i^- &lt; T_i &lt; t_i^+|\beta,\lambda_0,r,c)) \\
+&amp;= \sum_{i=1}^{N} ln((\frac{\alpha}{\alpha + exp(\beta&#39;z_i)(t_i^-)^c})^r - (\frac{\alpha}{\alpha + exp(\beta&#39;z_i)(t_i^+)^c})^r)
+\end{aligned}\]</span>
+</div>
+</div>
+<div id="caso-modelo-de-conteo-khakichinos.com" class="section level3 hasAnchor" number="1.6.3">
+<h3><span class="header-section-number">1.6.3</span> Caso Modelo de Conteo: KhakiChinos.com<a href="modelos-probabilisticos.html#caso-modelo-de-conteo-khakichinos.com" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Khaki Chinos, INC, es una compañía de ventas de ropa por catálogo con presencia en internet. La empresa posee información respecto al comportamiento de compras de los clientes registrados en su página web, sin embargo, desconoce los patrones de visita de los usuarios en general.</p>
+<p>Para estudiar el patrón de visitas, la empresa compró un panel de N = 2728 usuarios de internet con al menos una visita a la tienda de ropa. El set de datos entrega el número de visitas <span class="math inline">\(y_i\)</span> de cada individuo <span class="math inline">\(i\)</span> y las siguientes variables demográficas agrupadas en el vector <span class="math inline">\(x_i\)</span>:</p>
+<ul>
+<li><p><span class="math inline">\(log(I_i)\)</span> representando el logaritmo del ingreso del individuo <span class="math inline">\(i\)</span>.</p></li>
+<li><p>La variable binaria <span class="math inline">\(G_i\)</span> igual a 0 si el individuo <span class="math inline">\(i\)</span> es mujer y 1 si no.</p></li>
+<li><p><span class="math inline">\(log(E_i)\)</span> representando el logaritmo de la edad del individuo <span class="math inline">\(i\)</span>.</p></li>
+<li><p>El tamaño del hogar del individuo <span class="math inline">\(i\)</span>, dado por <span class="math inline">\(S_i\)</span>.</p></li>
+</ul>
+<div id="modelo-de-regresión-de-poisson" class="section level4 unnumbered hasAnchor">
+<h4>Modelo de Regresión de Poisson<a href="modelos-probabilisticos.html#modelo-de-regresión-de-poisson" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Se puede describir el número de de visitas de cada individuo mediante una distribución de Poisson. Para esto, sea <span class="math inline">\(Y_i\)</span> la variable aleatoria que cuenta el número de veces que el individuo <span class="math inline">\(i\)</span> visita el sitio en una unidad de tiempo.</p>
+<p>A nivel individual, se asume que <span class="math inline">\(Y_i\)</span> se distribuye Poisson con media <span class="math inline">\(\lambda_i\)</span>:</p>
+<p><span class="math display">\[\mathbb{P}(Y_i = y_i|\lambda_0,\beta) = \frac{(\lambda_0 e^{\beta&#39;x_i})^y e^{-\lambda_0e^{\beta&#39;xi}}}{y!}\]</span>
+Siendo la log-verosimilitud a maximizar:</p>
+<p><span class="math display">\[LL(\theta) = \sum_{i=1}^{N} ln(\mathbb{P}(Y_i=y|\lambda_i))\]</span></p>
+<p>Donde <span class="math inline">\(\theta = (\lambda_0,\beta)\)</span> corresponde a los parámetros a estimar.</p>
+</div>
+<div id="modelo-de-regresión-nbd" class="section level4 unnumbered hasAnchor">
+<h4>Modelo de Regresión NBD<a href="modelos-probabilisticos.html#modelo-de-regresión-nbd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Una transición natural es agregar heterogeneidad no observable al modelo anteriormente descrito. Para esto, se asumirá que a nivel individual <span class="math inline">\(Y_i ∼ Poisson(λ_i)\)</span> y <span class="math inline">\(λ_0 ∼ Γ(α, r)\)</span>. De esta forma, se mantiene la heterogeneidad observable dada por las variables demográficas y, adicionalmente, se agrega una componente no observable distribuyendo de manera continua a lo largo de la población, que incorpora efectos aleatorios.</p>
+<p>Así:</p>
+<p><span class="math display">\[\mathbb{P} (Y_i = y_i|\alpha,r) = \int_{0}^{\infty} \mathbb{P} (Y_i = y_i|\lambda_0)f(\lambda_0|\alpha,r)d\lambda_0 \]</span></p>
+<p>Desarrollando el termino al interior de la integral:</p>
+<span class="math display">\[\begin{aligned}
+\mathbb{P} (Y_i = y_i|\lambda_0)f(\lambda_0) &amp;= (\frac{(\lambda_0 e^{\beta&#39;x_i})^y e^{-\lambda_0e^{\beta&#39;xi}}}{y_i!})(\frac{\alpha^r\lambda_0^{r-1}e^{-\alpha\lambda_0}}{\Gamma(r)})\\
+&amp;= \left(\frac{\alpha^r(e^{\beta&#39;x_i})^{y_i}}{y_i!\Gamma(r)}\right) \lambda_0^{r+y_i-1} e^{-\lambda_0(\alpha + e^{\beta&#39;x_i})}
+\end{aligned}\]</span>
+<p>Reconociendo términos, es fácil ver que para recuperar una densidad Gamma, es necesario
+multiplicar y dividir por <span class="math inline">\(\frac{(\alpha+e^{\beta&#39;x_i})^{r+y_i}}{\Gamma(r+y_i)}\)</span></p>
+<span class="math display">\[\begin{aligned}
+\mathbb{P} (Y_i = y_i|\lambda_0)f(\lambda_0) &amp;= \left(\frac{\alpha^r \Gamma(r+y)(e^{\beta&#39;x_i})y_i}{y_i!\Gamma(r)(\alpha + e^{\beta&#39;x_i})^{r+y_i}}\right) \frac{(\alpha + e^{\beta&#39;x_i})^{r+y_i}\lambda_0^{r+y_i-1}e^{-\lambda_0(\alpha + e^{\beta&#39;x_i})}}{\Gamma(r + y_i)}\\
+&amp;= \frac{\Gamma(r+y)}{\Gamma(r)y_i!} \left(\frac{\alpha}{\alpha + e^{\beta&#39;x_i}}\right)^r \left(\frac{e^{\beta&#39;x_i}}{\alpha + e^{\beta&#39;x_i}}\right)^{y_i}f(\lambda_0|r+y_i,\alpha + e^{\beta&#39;x_i})
+\end{aligned}\]</span>
+<p>Finalmente, al integrar sobre todos los valores de <span class="math inline">\(λ_0\)</span> se obtiene:</p>
+<p><span class="math display">\[\mathbb{P} (Y_i = y_i|\alpha,r) = \frac{\Gamma(r+y)}{\Gamma(r)y_i!} \left(\frac{\alpha}{\alpha + e^{\beta&#39;x_i}}\right)^r \left(\frac{e^{\beta&#39;x_i}}{\alpha + e^{\beta&#39;x_i}}\right)^{y_i}\]</span></p>
+<p>Notar que, cuando <span class="math inline">\(β = 0\)</span> se recupera el modelo NBD tradicional.</p>
+</div>
+</div>
+</div>
+<div id="modelos-integrados" class="section level2 hasAnchor" number="1.7">
+<h2><span class="header-section-number">1.7</span> Modelos Integrados<a href="modelos-probabilisticos.html#modelos-integrados" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Permiten modelar fenómenos complejos que incorporan más de uno de los modelos básicos planteados anteriormente.</p>
+<p>Supongamos el caso de items no reportados. Supondremos que la cantidad de items comprados sigue una distribución de <em>Poisson</em> y la elección para escoger cuántos items declarar sigue una distribución <em>Binomial</em>. La heterogeneidad se incluye con una distribución <em>Gamma</em> para la tasa del
+modelo de conteo y con una distribución Beta para la probabilidad de declaración. Entonces:</p>
+<p><span class="math display" id="eq:integrado">\[\begin{equation}
+  \begin{aligned}
+  P(X=k) &amp;= \sum_{n=0}^{\infty} P(X=k|N=n)\cdot P(N=n)\\
+&amp;= \sum_{n=0}^{\infty} \int_{0}^{1} \binom{n}{k} \theta^k(1 - \theta)^{n-k} \cdot \frac{\theta^{\alpha-1}(1-\theta)^{\beta-1}}{B(\alpha,\beta)} d\theta \\
+&amp;\cdot \int_{0}^{\infty} \frac{\lambda^ne^{-n}}{n!}\cdot \frac{\alpha^r\lambda^{r-1}e^{\alpha\lambda}}{\Gamma(r)}d\lambda\\
+&amp;= \frac{\Gamma(r+x)}{\Gamma(r)x!} \left(\frac{\alpha}{\alpha+1}\right)\left(\frac{1}{\alpha+1}\right) \frac{\Gamma(a+x)}{\Gamma(a)} \cdot \frac{\Gamma(a+b)}{\Gamma(a+b+x)}\\
+&amp;\text{    }\cdot_2 F_1 \left(r+x,b;a+b+x;\frac{1}{\alpha+1}\right)
+  \end{aligned}  
+  \tag{1.10}
+\end{equation}\]</span></p>
+<p>El último termino es la función <em>Hypergeométrica Gaussiana</em>. Esta función queda definida como</p>
+<p><span class="math display" id="eq:hypergauss">\[\begin{equation}
+  \begin{aligned}
+  _2 F_1 = \frac{\Gamma(c)}{\Gamma(a)(b)} \sum_{j=0}^{\infty} \frac{\Gamma(a+j)\Gamma(b+j) z^j}{\Gamma(c+j)j!}
+  \end{aligned}  
+  \tag{1.11}
+\end{equation}\]</span></p>
+<p>Como su cálculo puede ser complicado, puede usarse la siguiente recursión:</p>
+<p><span class="math display" id="eq:recursion">\[\begin{equation}
+  \begin{aligned}
+  _2 F_1 (a,b;v;z) = \sum_{j=0}^{\infty} u_j \approx \sum_{j=0}^{M} u_j
+  \end{aligned}  
+  \tag{1.12}
+\end{equation}\]</span></p>
+<p>donde</p>
+<ul>
+<li><span class="math display">\[u_0=1\]</span></li>
+<li></li>
+</ul>
+<p><span class="math display">\[\frac{u_j}{u_{j-1}}=\frac{(a+j-1)(b+j-1)}{(c+j-1)j} \text{           ,} \forall j \geq 1\]</span></p>
+</div>
+<div id="customer-lifetime-value-caso-contractual" class="section level2 hasAnchor" number="1.8">
+<h2><span class="header-section-number">1.8</span> Customer Lifetime Value: Caso Contractual<a href="modelos-probabilisticos.html#customer-lifetime-value-caso-contractual" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><em>Database Marketing</em> posee dos elementos esenciales, tiempo de permanencia con la firma e intensidad de compra mientras el cliente está en la firma. Para el caso determinista se define Life Time Value (CLV) como</p>
+<p><span class="math display" id="eq:clv">\[\begin{equation}
+  \begin{aligned}
+  CLV = \sum_{t=0}^T m \cdot \frac{r^t}{(1+d)^t}
+  \end{aligned}  
+  \tag{1.13}
+\end{equation}\]</span></p>
+<p>donde <span class="math inline">\(m\)</span> es el flujo neto por período (si el cliente está activo); <span class="math inline">\(r\)</span> es la tasa de retención; <span class="math inline">\(d\)</span> es la tasa de descuento; y T es el horizonte de evaluación.</p>
+<p>Para el caso estocástico, sean <span class="math inline">\(\mathbb{E}(v(t))\)</span> valor esperado de los flujos del cliente en el instante <span class="math inline">\(t\)</span> (asumiendo que está activo); <span class="math inline">\(S(t)\)</span> la probabilidad que el cliente siga activo en el instante <span class="math inline">\(t\)</span>; y <span class="math inline">\(d(t)\)</span> el factor de descuento que refleja el valor presente del dinero recibido en el instante <span class="math inline">\(t\)</span>. El cálculo de CLV es</p>
+<p><span class="math display" id="eq:eclv">\[\begin{equation}
+  \begin{aligned}
+  \mathbb{E}(CLV) = \int_{0}^{\infty} \mathbb{E}(v(t))S(t)d(t)dt
+  \end{aligned}  
+  \tag{1.14}
+\end{equation}\]</span></p>
+<p>Esta definición es inútil a menos que operacionalicemos <span class="math inline">\(\mathbb{E}(v(t))\)</span>, <span class="math inline">\(S(t)\)</span> y <span class="math inline">\(d(t)\)</span> para la situación
+particular.</p>
+<p>Es importante distinguir entre situaciones contractuales y no contractuales:</p>
+<ul>
+<li><p><strong>Contractual:</strong> Observamos cuando un cliente deja de estar activo. Ejemplo: suscripción a una revista, plan VTR, etc.</p></li>
+<li><p><strong>No Contractual:</strong> No observamos cuando un cliente deja de estarlo.</p></li>
+</ul>
+<p>El desafío de lo mercados contractuales: ¿Cómo diferenciamos aquellos clientes que han terminado su relación con la firma, de aquellos que simplemente están en un largo período de inactividad?</p>
+<p>También se debe distinguir según la oportunidad de hacer la transacción:</p>
+<ul>
+<li><p><strong>Discreta:</strong> La acción puede realizarse en un número discreto de ocasiones.</p></li>
+<li><p><strong>Continua:</strong> La acción puede realizarse en cualquier momento. Ejemplo, transacción con una tarjeta de crédito.</p></li>
+</ul>
+<div id="modelo-contractual-a-tiempo-discreto" class="section level3 hasAnchor" number="1.8.1">
+<h3><span class="header-section-number">1.8.1</span> Modelo contractual a tiempo discreto<a href="modelos-probabilisticos.html#modelo-contractual-a-tiempo-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>En el mercado de las revistas, típicamente el 30 % renueva al final de su primera suscripción, pero ese número salta al 50 % para la segunda renovación y hasta el 75 % para subscriptores de mayor antigüedad (Fielding, Michael (2005), “Get Circulation Going: DM Redesign Increases Renewal Rates for Magazines”, Marketing News, September 1, 9-10).</em></p>
+<p>Al evaluar las tasas de retención de una base de clientes es necesario considerar las diferencias entre los cohortes y proyectar los comportamientos más allá de los que observamos.</p>
+<p>Explicaciones alternativas (y complementarias) para el incremento de las tasas de retención: Dinámicas a nivel individual (incremento de lealtad) y un cambio en la mezcla de la composición de la población.</p>
+<p><strong>Ejemplo:</strong> Supongamos que analizamos un cohorte de 10.000 clientes que en promedio gastan $100 por período y que corresponden a dos tipos de clientes:</p>
+<ul>
+<li><p><strong>Segmento 1:</strong> Un tercio de los clientes tiene una tasa de retención (constante en el tiempo) de 0.9.</p></li>
+<li><p><strong>Segmento 2:</strong> Dos tercios de los clientes tienen una tasa de retención anual de 0.5.</p></li>
+</ul>
+<table style="width:100%;">
+<colgroup>
+<col width="7%" />
+<col width="26%" />
+<col width="9%" />
+<col width="9%" />
+<col width="26%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>#Clientes activos</th>
+<th></th>
+<th></th>
+<th>Tasa de retención</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Año</td>
+<td>Seg-1</td>
+<td>Seg-2</td>
+<td>Total</td>
+<td>Seg-1</td>
+<td>Seg-2</td>
+<td>Total</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>3.333</td>
+<td>6.667</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>3</td>
+<td>3.334</td>
+<td>6.334</td>
+<td>0.9</td>
+<td>0.5</td>
+<td><span style="color: red;">0.633</span></td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>2.7</td>
+<td>1.667</td>
+<td>4.367</td>
+<td>0.9</td>
+<td>0.5</td>
+<td><span style="color: red;">0.689</span></td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>2.43</td>
+<td>0.834</td>
+<td>3.264</td>
+<td>0.9</td>
+<td>0.5</td>
+<td><span style="color: red;">0.747</span></td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>2.187</td>
+<td>0.417</td>
+<td>2.604</td>
+<td>0.9</td>
+<td>0.5</td>
+<td><span style="color: red;">0.798</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[\text{Cuadro 1.1: Rol de la heterogeneidad}\]</span></p>
+<p>En el Cuadro 1.1 la tasa de retención agregada (en rojo en la tabla) es decreciente aún cuando a nivel individual las retenciones son constantes en el tiempo.</p>
+<p>El valor residual de un cliente activo del cohorte, si pertenece al segmento 1 es</p>
+<p><span class="math display" id="eq:erlv1">\[\begin{equation}
+  \begin{aligned}
+  \mathbb{E}(RLV) = \sum_{t=1}^{\infty} \$100 \cdot \frac{0.9^t}{(1+0.1)^{t-1}} = \$495
+  \end{aligned}  
+  \tag{1.15}
+\end{equation}\]</span></p>
+<p>Si el cliente pertenece al segmento 2:</p>
+<p><span class="math display" id="eq:erlv2">\[\begin{equation}
+  \begin{aligned}
+  \mathbb{E}(RLV) = \sum_{t=1}^{\infty} \$100 \cdot \frac{0.5^t}{(1+0.1)^{t-1}} = \$92
+  \end{aligned}  
+  \tag{1.16}
+\end{equation}\]</span></p>
+<p>Sin embargo, la regla de Bayes nos permite mostrar que, condicional en estar activo, un cliente es más probable que tenga una alta tasa de retención.</p>
+<span class="math display">\[\begin{aligned}
+P(\text{seg-1|renovar 4 veces}) &amp;= \frac{P(\text{renovar 4 veces|seg-1}) P(seg-1)}{P(\text{renovar 4 veces)}}\\
+&amp;= \frac{0.9^4 \cdot 0.3333}{0.9^4 \cdot 0.333 + 0.5^4 \cdot 0.6667}\\
+
+&amp;= 0.84
+
+\end{aligned}\]</span>
+<p>Luego, el <em>Lifetime Value Residual</em> viene dado por:</p>
+<p><span class="math display">\[\mathbb{E}(RLV) = 0.84 \cdot  \$495 + (1.0.84) \cdot \$ 92 = \$430 \]</span>
+En mercados contractuales, ¿cuánto perdemos si no consideramos la heterogeneidad? Veamos el ejemplo que hemos usado. Si tomamos en cuenta la tasa de retención agregada, el valor de la base de clientes es $4.945.049. En cambio, si distinguimos por segmentos, este valor asciende a $7.940.992.</p>
+<p>En estudios con bases de datos reales muestran que el error en el CLV se eleva hasta el 50%. El impacto sobre el CLV de aumentar las tasas de retención de hasta un 50%.</p>
+<p>Para calcular CLV tenemos que hacerlo condicional en la duración. Veamos primero el caso continuo.</p>
+<p>Se postulan los siguientes supuestos:</p>
+<ol style="list-style-type: decimal">
+<li><p>La tasa de retención a nivel individual es 1 − θ
+<span class="math display" id="eq:treti">\[\begin{equation}
+  \begin{array}{cc}
+  S(t|\theta) = (1-\theta)^t, &amp;t=1,2,3,...
+  \end{array}  
+  \tag{1.17}
+\end{equation}\]</span></p></li>
+<li><p>La heterogeneidad en θ es capturada por una distribución <em>Beta</em></p></li>
+</ol>
+<p><span class="math display" id="eq:hetebeta">\[\begin{equation}
+f(\theta|\alpha,\beta) = \frac{\theta^{\alpha -1}}{(1-\theta)^{\beta -1}} B(\alpha,\beta)
+  \tag{1.18}
+\end{equation}\]</span></p>
+La probabilidad de que el cliente siga activo en t
+<span class="math display">\[\begin{array}{cc}
+S(t|\alpha,\beta) = \int_{0}^{1} S(t|\theta) f(\theta|\alpha,\beta) d\theta = \frac{B(\alpha,\beta+t)}{B(\alpha,\beta)}, &amp;t = 1,2,3,...
+\end{array}\]</span>
+<p>Consideremos un cliente que ha estado activo por n períodos</p>
+<p><span class="math display" id="eq:erlvactivo">\[\begin{equation}
+  \begin{aligned}
+   \mathbb{E}(RLV(d| \text{activo en } n \text{ períodos})) &amp;= \sum_{t=n}^{\infty} E(v(t)) \cdot \frac{S(t|t&gt;n - 1)}{(1+d)^t-n}\\
+&amp;=  
+\bar{v}  \sum_{t=n}^{\infty} \frac{S(t|t&gt;n - 1)}{(1+d)^t-n}, \text{Asumiendo flujos constantes}
+     
+  \end{aligned}
+  \tag{1.19}
+\end{equation}\]</span></p>
+<p>DERL es el valor esperado residual del cliente (condicional en la antigüedad). Para el caso de la distribución geométrica desplazada</p>
+<p><span class="math display" id="eq:derl">\[\begin{equation}
+  \begin{aligned}
+  DERL(d| \text{activo en } n \text{ períodos}) &amp;= \sum_{t=n}^{\infty} \frac{S(t)}{S(n-1)} \cdot \left(\frac{a}{a+d}\right)^{t-n}\\
+  &amp;= \frac{(1-\theta)(1+d)}{d+\theta}
+  \end{aligned}  
+  \tag{1.20}
+\end{equation}\]</span></p>
+<p>Cuando la tasa de abandono θ no es observable, debemos encontrar la distribución de esta variable en la población. Para ello usamos la regla de Bayes para calcular la distribución posterior condicional en la antigüedad.</p>
+<p><span class="math display" id="eq:derlno">\[\begin{equation}
+  \begin{aligned}
+  DERL(d|\alpha,\beta, \text{activo en } n \text{períodos}) &amp;= \int_0^1 \frac{(1-\theta)(1+d)}{d+\theta} \cdot \frac{S(n-1|\theta)f(\theta|\alpha,\beta)}{S(n-1|\alpha, \beta)}\\
+  &amp;= \left(\frac{\beta + n + 1}{\alpha + \beta + n - 1}\right) \\
+  &amp;\cdot_2 F_1 \left( 1,\beta + n: \alpha + \beta + n; \frac{
+  1}{1+d}\right)
+  \end{aligned}  
+  \tag{1.21}
+\end{equation}\]</span></p>
+</div>
+<div id="modelo-contractual-a-tiempo-continuo" class="section level3 hasAnchor" number="1.8.2">
+<h3><span class="header-section-number">1.8.2</span> Modelo contractual a tiempo continuo<a href="modelos-probabilisticos.html#modelo-contractual-a-tiempo-continuo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Algunos supuestos son:</p>
+<ol style="list-style-type: decimal">
+<li>La duración de la relación de un cliente con la firma está caracterizada por una distribución exponencial, con densidad y función de sobrevivencia dadas por:</li>
+</ol>
+<p><span class="math display" id="eq:fsur">\[\begin{equation}
+f(t|\lambda) = \lambda e^{-\lambda t}
+  \tag{1.22}
+\end{equation}\]</span></p>
+<p><span class="math display" id="eq:ssur">\[\begin{equation}
+S(t|\lambda) = e^{-\lambda t}
+  \tag{1.23}
+\end{equation}\]</span></p>
+<ol start="2" style="list-style-type: decimal">
+<li>La heterogeneidad en λ es capturada por una distribución <em>Gamma</em></li>
+</ol>
+<p><span class="math display" id="eq:hgamma">\[\begin{equation}
+  g(\lambda|r,\alpha) = \frac{\alpha^r\lambda^{r-1}e^{-\alpha\lambda}}{\Gamma(r)}
+  \tag{1.24}
+\end{equation}\]</span></p>
+<p>Entonces, la probabilidad de seguir activo en t es</p>
+<p><span class="math display" id="eq:sactiv">\[\begin{equation}
+  \begin{aligned}
+S(t|r,\alpha) &amp;= \int_0^{\infty} S(t|\lambda)g(\lambda|r,\alpha)d\lambda\\
+&amp;= \left(\frac{\alpha}{\alpha+t}\right)
+  \end{aligned}
+  \tag{1.25}
+\end{equation}\]</span></p>
+<p>El valor esperado de <em>Residual Lifetime Value</em></p>
+<p><span class="math display" id="eq:sactiv">\[\begin{equation}
+  \begin{aligned}
+\mathbb{E}(RLV(\delta|\text{activo en }s)) &amp;= \int_{0}^{\infty} E(v(t))S(t|t&gt;s)\delta(t)dt\\
+&amp;= \bar{v} \cdot DERL(\delta|r,\alpha,\text{activo en }s)
+  \end{aligned}
+  \tag{1.25}
+\end{equation}\]</span></p>
+<p>donde</p>
+<p><span class="math display" id="eq:drldos">\[\begin{equation}
+  DERL(\delta|r,\alpha,\text{activo en}s) = (\alpha,s)^r\delta \Psi (r;r;(\alpha +s) \delta)
+  \tag{1.26}
+\end{equation}\]</span></p>
+<p><span class="math inline">\(\Psi\)</span> es la <em>función hiper geométrica confluyente del segundo tipo</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>Se puede hacer fácilmente en excel a través de la herramienta solver. PROPUESTO<a href="modelos-probabilisticos.html#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Este modelamiento es fácilmente expandible a 2 o más segmentos. PROPUESTO.<a href="modelos-probabilisticos.html#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Recordar el curso de Investigación de Operaciones<a href="modelos-probabilisticos.html#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="modelos-estructurales.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/01-probabilisticos.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
