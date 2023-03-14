@@ -1,5 +1,5 @@
 --- 
-title: "Apunte Marketing II"
+title: "Marketing Engineering"
 author: "Marcel Goic"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -7,7 +7,7 @@ output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
-description: "Apunte Marketing II"
+description: "Marketing Engineering"
 
 ---
 
