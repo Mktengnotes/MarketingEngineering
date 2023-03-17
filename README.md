@@ -4,4 +4,4 @@ This is a minimal example of a book based on R Markdown and **bookdown** (https:
 
 You can find the preview of this example at https://bookdown.org/yihui/bookdown-demo/.
 
-Lo anterior es una invitacion para investigar si quieres crear un nuevo apunte
+Lo anterior es una invitacion para investigar si quieres crear un nuevo apunte. Para tener info referente a si quieres actualizar el apunte, existe otro archivo llamado 'actualizar' 
