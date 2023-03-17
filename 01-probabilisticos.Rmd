@@ -922,4 +922,4 @@ donde
 
 $\Psi$ es la *función hiper geométrica confluyente del segundo tipo*.
 
-
+Actualizado hasta la página 100
