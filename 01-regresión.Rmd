@@ -1,0 +1,433 @@
+# Modelos de Regresión
+
+## Conceptos básicos de regresión
+
+Como bien ya se ha estudiado en otros cursos de la carrera de ingeniería industrial, una **regresión** es una técnica para calcular el valor esperado de una variable condicional en la realización de otras.
+
+Por ejemplo: - ¿Cuál debería ser el precio de venta de una casa en la comuna de la Providencia, con 4 dormitorios, 170m2 de superficie construida? -¿Cuáles deberían ser las ventas de Leche semidescremada Nestlé en la última semana del mes de Abril si el precio es \$723? - ¿Cuál debería ser el número de clientes que ve un aviso publicitario si se despliega en 4 programas durante 3 semanas y el rating promedio de los programas es 8.7 puntos?
+
+### Notación
+
+En general se denota con $y$ al vector que representa todas las variables dependientes en un único vector columna, mientras que $X$ representa la matriz que incluye todas las variables independientes (esto incluye una columna de 1s si se desea incluir un intercepto).
+
+Es importante notar que: - Cada columna corresponde a una variable - Cada fila corresponde a un caso - Las dimensiones de las filas del vector $y$ y la matriz $X$ deben ser consistentes. - Todos los elementos de una misma fila deben tener los mismos índices.
+
+Para estimar los parámetros de la recta de regresión, se utilizan diferentes métodos, siendo uno de los más populares el método de Mínimos Cuadrados Ordinarios (OLS).
+
+## Mínimos Cuadrados Ordinarios (OLS) y supuestos
+
+OLS proporciona una estimación óptima de los parámetros de la recta de regresión, al encontrar la recta que minimiza la suma de los cuadrados de las diferencias entre los valores reales y los valores estimados de la variable dependiente. Sin embargo, para que este método sea un estimador adecuado de los parámetros, se deben cumplir ciertos supuestos:
+
+1.  Existe una **relación lineal** entre la variable dependiente y las variables independientes. Debido a esto, la relación entre las variables se puede modelar mediante una recta. Sin este supuesto, OLS no es apropiado y se debe recurrir a otros métodos.
+
+2.  Los errores tienen una **distribución normal y tienen una media igual a cero**. Es decir, los errores son insesgados y distribuyen de forma simétrica alrededor del cero. Si los errores no siguen una distribución normal, los resultados de la regresión pueden no ser confiables.
+
+3.  Los errores tienen una **varianza constante** (homocedasticidad). Esto significa que la varianza de los errores es la misma para todos los valores de las variables independientes. Si no se cumple este supuesto, los errores pueden estar influenciados por alguna variable independiente y los resultados pueden ser incorrectos.
+
+4.  Los errores son **independientes entre sí**. Es decir, no están correlacionados con los errores de otra observación. Si los errores están correlacionados, la varianza de los coeficientes puede ser demasiado baja, lo que puede llevar a una sobreestimación de la significancia estadística.
+
+5.  No existe **multicolinealidad** perfecta entre las variables independientes. La multicolinealidad perfecta se refiere a la existencia de una relación lineal exacta entre las variables independientes. Esto puede ocurrir cuando dos o más variables independientes están altamente correlacionadas. Si no se cumple este supuesto, los coeficientes estimados pueden no ser confiables y los resultados pueden ser incorrectos.
+
+En general, utilizamos OLS se utiliza porque proporciona una estimación óptima de los parámetros de la recta de regresión, es decir, los valores que mejor se ajustan a los datos. El método OLS minimiza la suma de los cuadrados de las diferencias entre los valores reales y los valores estimados de la variable dependiente. Esto se logra al encontrar los valores de los parámetros de la recta que minimizan esta suma de cuadrados.
+
+### Estimación
+
+Supongamos que queremos estimar los parámetros $\beta_0, \beta_1, \ldots, \beta_n$ de la recta de regresión $Y = \beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n + \epsilon$, donde $\epsilon$ es el término de error e $Y$ es la variable dependiente. Queremos encontrar los valores de los parámetros $\beta_0, \beta_1, \ldots, \beta_n$ que minimizan la suma de los cuadrados de las diferencias entre los valores reales y los valores estimados de $Y$.
+
+La idea detrás del método de Mínimos Cuadrados Ordinarios (OLS) es minimizar la función de pérdida $S(\beta_0, \beta_1, \ldots, \beta_n) = \sum_{i=1}^N (Y_i - \beta_0 - \beta_1 x_{i1} - \cdots - \beta_n x_{in})^2$. La solución de este problema de optimización se puede encontrar a través del cálculo de las derivadas parciales de $S$ con respecto a cada uno de los parámetros $\beta_j$, e igualar a cero. Esto nos lleva al siguiente sistema de ecuaciones
+
+$$X^TX\hat{\beta}=X^TY$$
+
+donde $X$ es la matriz de variables independientes, $Y$ es el vector de la variable dependiente y $\hat{\beta}$ es el vector de estimadores de mínimos cuadrados.
+
+La solución de este sistema entrega los valores de los parámetros $\beta_0, \beta_1, \ldots, \beta_n$ que minimizan la función de pérdida $S(\beta_0, \beta_1, \ldots, \beta_n)$. Estos valores se conocen como los estimadores de mínimos cuadrados de los parámetros de la recta de regresión. De manera matricial esto se escribe como $\hat{\beta} = (X^TX)^{-1} X^TY$, donde $\hat{\beta}$ es el vector de estimadores de mínimos cuadrados, $X$ es la matriz de variables independientes e $Y$ es el vector de la variable dependiente.
+
+### Propiedades
+
+Si se cumplen los supuestos anteriormente mencionados, mínimos cuadrados ordinarios cumple con las siguientes propiedades:
+
+1.  **Insesgadez**: Los estimadores de mínimos cuadrados son insesgados, lo que significa que, en promedio, su valor esperado es igual al verdadero valor del parámetro que se está estimando.
+
+2.  **Varianza mínima**: Entre todos los estimadores insesgados y lineales, los estimadores de mínimos cuadrados tienen la menor varianza posible. Esto los convierte en los estimadores más precisos que se pueden obtener mediante una combinación lineal de las variables independientes.
+
+3.  **Linealidad**: Los estimadores de mínimos cuadrados son lineales en la variable de respuesta $Y$.
+
+4.  **Consistencia**: Con un tamaño de muestra lo suficientemente grande, los estimadores de mínimos cuadrados se acercan al verdadero valor del parámetro que se está estimando.
+
+5.  El estimador máximo verosímil, para el caso lineal con errores normales **coincide con el estimador de mínimos cuadrados**.
+
+## Estrategias de Modelamiento
+
+### Arte vs. Procedimiento
+
+El debate entre el arte y el procedimiento en el campo de la modelización y análisis de datos se ha intensificado en los últimos años con el auge de la inteligencia artificial y el aprendizaje automático. Los defensores del arte argumentan que la experiencia y la intuición del analista son esenciales para identificar patrones y relaciones complejas en los datos que no son evidentes a simple vista. Por otro lado, los defensores del procedimiento insisten en que la aplicación rigurosa de algoritmos y técnicas estadísticas es la única manera de garantizar la validez y precisión del modelo.
+
+Es importante tener en cuenta que el uso exclusivo de uno u otro enfoque puede llevar a resultados subóptimos. Por ejemplo, un modelo construido únicamente a través del arte puede ser difícil de replicar o explicar a otros, lo que limita su utilidad práctica. Por otro lado, un modelo construido únicamente a través del procedimiento puede pasar por alto aspectos importantes de los datos que son evidentes para un experto en el campo.
+
+En la práctica, los analistas suelen combinar ambos enfoques para construir modelos efectivos y útiles. Un aspecto clave en este proceso es la exploración exhaustiva de los datos y la definición de una lista de modelos candidatos, que pueden incluir diferentes técnicas de modelización y selección de variables. Luego, se pueden utilizar diversas métricas de ajuste y predicción para evaluar la calidad de cada modelo y seleccionar el que mejor se ajuste a los datos y sea capaz de hacer predicciones precisas.
+
+### Aprendizajes Preliminares
+
+En el ámbito del modelado estadístico, existen innumerables modelos de regresión, lo que hace imposible determinar cuál es el mejor en términos absolutos.
+
+Una forma de abordar este problema es equilibrar la complejidad del modelo con su capacidad explicativa. Esto significa que el modelo debe ser lo suficientemente simple como para ser fácilmente interpretable, pero lo suficientemente complejo como para capturar todas las relaciones relevantes entre las variables.
+
+Para seleccionar un modelo de regresión adecuado, es fundamental tener conocimientos previos del negocio y realizar una exploración exhaustiva de los datos antes de aplicar cualquier modelo. Esta exploración ex-ante puede ayudar a identificar las variables más relevantes y las posibles relaciones entre ellas. Es importante evaluar cómo se relacionan las variables, qué variables tienen mayor dispersión y qué variables se mantienen relativamente constantes.
+
+Después de la exploración ex-ante, es necesario aplicar el modelo y evaluar su rendimiento mediante la evaluación ex-post. Esto implica evaluar el modelo en datos nuevos y comprobar si se comporta de manera similar a cómo lo hizo en los datos de entrenamiento.
+
+**1. Elegir nivel de agregación**
+
+Uno de los aspectos clave del análisis de datos es determinar el nivel adecuado de agregación para realizar el análisis. Por ejemplo, se puede analizar las ventas de un producto en un supermercado por hora, día, semana, mes o año. También se puede considerar el análisis de ventas por SKU (código de identificación), marca, cadena o sala.
+
+Es importante tener en cuenta que el problema de gestión puede imponer restricciones al nivel de agregación mínimo. Por ejemplo, si un gerente de una cadena de supermercados necesita tomar decisiones en tiempo real sobre la reposición de un producto, es posible que necesite datos a nivel de hora o día. En este caso, analizar las ventas a nivel de semana o mes no sería útil.
+
+En el análisis de ventas, a menudo se enfrenta un trade-off entre la sensibilidad al precio y la programación de reposición. Si el análisis se realiza a nivel de SKU, se puede obtener una comprensión más detallada de cómo el precio afecta a las ventas. Sin embargo, si el análisis se realiza a nivel de cadena o sala, se puede obtener una mejor comprensión de los patrones de reposición.
+
+Agregar los datos a un nivel de agregación más alto puede ser más fácil, ya que se requiere menos detalle y se puede tener una visión más general. Sin embargo, puede llevar a una pérdida de precisión por underfitting. Por ejemplo, si se analiza las ventas a nivel de mes, se puede perder información valiosa sobre patrones diarios o semanales. Por otro lado, si la cantidad de datos es limitada, es posible que se necesite mantener un nivel de agregación más alto para obtener un modelo preciso. En este caso, reducir el nivel de agregación puede significar la pérdida de información importante y la reducción de la precisión del modelo por overfitting.
+
+**2. Descomposición en múltiples regresiones:**
+
+La descomposición en múltiples regresiones es una técnica que permite abordar problemas complejos y de alta dimensionalidad mediante la partición del problema en componentes más pequeños y manejables. Este enfoque puede adoptar diversas formas, incluyendo la descomposición por índices y la descomposición por componentes latentes.
+
+-   Descomposición por Índices: Aunque en general es preferible utilizar una única regresión para analizar las relaciones entre las variables, en ciertas situaciones, como en casos de complejidad computacional elevada o cuando se abordan problemas con múltiples niveles de jerarquía, la descomposición por índices puede ser una solución adecuada. Esta técnica implica dividir el conjunto de datos en subconjuntos según algún criterio y ajustar modelos de regresión separados para cada subconjunto.
+
+-   Regresión Lineal y Modelos Más Complejos: La regresión lineal es un enfoque simple y fácil de estimar que puede ser suficiente en muchos casos. Sin embargo, en situaciones donde las relaciones entre las variables no son lineales o donde se requiere una mayor flexibilidad en el modelado, se pueden justificar modelos más complejos, como regresiones polinómicas, regresiones no paramétricas o modelos de regresión con variables categóricas.
+
+-   Descomposición por Componentes Latentes: En ciertos casos, la variable dependiente puede descomponerse de manera natural en componentes latentes, lo que facilita la interpretación de los resultados y la identificación de relaciones subyacentes entre las variables. Un ejemplo típico es la descomposición de las ventas en el número de compras y el número de unidades por compra. Al analizar estos componentes por separado, se puede obtener una comprensión más detallada de los factores que influyen en las ventas.
+
+-   Caso del Cero Inflado (Zero Inflated): En algunas situaciones, se pueden observar una gran cantidad de ceros en los datos, lo que indica una distribución inflada en cero. En estos casos, se puede utilizar un modelo de regresión de ceros inflados que distingue entre dos procesos distintos: la incidencia de compra (probabilidad de que ocurra una compra) y el monto de compra (valor de la compra, condicional a que se haya realizado una compra). Este enfoque permite analizar de manera más efectiva los factores que afectan tanto la propensión a comprar como la cantidad gastada en las compras.
+
+**3.  Transformación de Variables**
+
+La transformación de variables es una técnica utilizada para mejorar la interpretación y el ajuste del modelo. Esta técnica consiste en aplicar funciones matemáticas a las variables con el objetivo de modificar su distribución y hacer que el modelo sea más interpretable y significativo.
+
+Un ejemplo común de transformación de variables es el modelo doble log, en el cual se aplican logaritmos a las variables dependientes e independientes para transformar la relación no lineal en una relación lineal. Esta técnica puede ser útil cuando se analizan datos que siguen una distribución log-normal o cuando se busca interpretar los coeficientes de manera logarítmica.
+
+Es importante tener en cuenta que, aunque la transformación de variables puede mejorar la bondad del ajuste y la precisión de las predicciones, no siempre es necesario aplicarla. En algunos casos, las variables ya están en una forma adecuada para el modelo y cualquier transformación adicional podría reducir la interpretabilidad del modelo. Por lo tanto, es importante tener una comprensión sólida de los datos y del problema a resolver antes de aplicar cualquier transformación de variables.
+
+**4.  Selección de Variables**
+
+En el campo de la regresión, existen diferentes enfoques para la selección de variables, incluyendo métodos automáticos y manuales. Uno de los métodos automáticos más utilizados es la regresión paso a paso (stepwise regression), que implica la iterativa agregación o eliminación de variables en función de algún criterio de bondad de ajuste.
+
+En el enfoque forward de la regresión paso a paso, las variables se van agregando al modelo una por una, comenzando con la variable que proporciona el mejor ajuste según el criterio establecido. En cada etapa, se evalúa si agregar una nueva variable mejora significativamente el ajuste del modelo.
+
+Por otro lado, en el enfoque backward de la regresión paso a paso, todas las variables se incluyen inicialmente en el modelo y se van eliminando una por una, comenzando con la variable que menos contribuye al ajuste según el criterio establecido. En cada etapa, se evalúa si eliminar una variable mejora significativamente el ajuste del modelo.
+
+Otro enfoque de selección de variables es la penalización de uso de parámetros no nulos al momento de minimizar la función de error. Dentro de este enfoque se encuentra la regresión Ridge y LASSO (Least Absolute Shrinkage and Selection Operator)
+
+$$\text{Ridge: }\min_{β} \sum_{i}(y_i - \beta_0 - \sum_{j}\beta_{j}x_{ij})^2 + λ\sum_{j}\beta_{j}^2$$ $$\text{LASSO: }\min_{β}\sum_{i}(y_i - \beta_0 - \sum_{j}\beta_{j}x_{ij})^2 + λ\sum_{j}|\beta_{j}|$$
+
+Aunque estos enfoques automáticos de selección de variables pueden ser convenientes y ahorrar tiempo, es importante tener en cuenta algunas limitaciones. En primer lugar, las implementaciones automáticas de selección de variables no exploran todas las posibles combinaciones de variables, lo que significa que podrían pasar por alto combinaciones óptimas que un enfoque manual más exhaustivo podría descubrir.
+
+Además, los resultados de la selección automática de variables pueden generar conjuntos de variables poco intuitivos y difíciles de interpretar. A veces, el algoritmo puede seleccionar variables que tienen una relación estadística con la variable de respuesta, pero carecen de una interpretación causal o intuitiva en el contexto del problema.
+
+Una alternativa es utilizar una mixtura entre métodos automáticos y manuales, eligiendo aquellas variables que mejoran el modelo en ajuste y que igualmente tienen un sentido interpretativo para la resolución de la pregunta a responder.
+
+**5.  Selección de Índices**
+
+La selección de índices en el análisis de regresión es un proceso discrecional que puede influir significativamente en la interpretación y el rendimiento de los modelos. Para abordar este problema de manera efectiva, se pueden seguir algunas pautas generales que ayuden a identificar y justificar la inclusión de índices en el análisis.
+
+Condiciones para Indexar un Parámetro Es recomendable considerar la inclusión de un índice en un modelo de regresión si se cumplen las siguientes tres condiciones:
+
+a)  Relevancia para el problema de gestión: El índice debe ser importante para abordar el problema de gestión en cuestión, proporcionando una distinción significativa entre diferentes aspectos del problema.
+
+b)  Diferencias en el comportamiento de la variable dependiente: La variable dependiente debe mostrar comportamientos distintos para cada índice, lo que sugiere que la desagregación aporta información adicional útil.
+
+c)  Suficiencia de datos: Deben estar disponibles suficientes datos para estimar de manera confiable los parámetros desagregados. La falta de datos puede conducir a estimaciones poco fiables y a un mayor riesgo de sobreajuste.
+
+d)  Índices y Variables Binarias: En el análisis de regresión, los índices pueden representarse mediante variables binarias, también conocidas como variables *dummy*. Estas variables toman el valor de 1 cuando se cumple una condición específica (por ejemplo, si un producto pertenece a una categoría determinada) y 0 en caso contrario. Aunque la representación de índices mediante variables binarias es matemáticamente equivalente, la notación de índices suele ser más compacta y se prefiere en la mayoría de los casos.
+
+**6.  Uso de Jerarquías**
+
+Una jerarquía aparece cuando un parámetro del modelo aparece como una función de otros parámetros, el uso de esta técnica es útil para detectar posibles efectos de interacción entre las variables predictoras, de esta forma se pueden escribir modelos más parsinomios (es decir, modelos más sencillos y con menor cantidad de parámetros). Sin embargo, es importante tener en cuenta que la inclusión de jerarquías entre variables debe estar basada en una teoría clara o una justificación empírica, y no simplemente probando diferentes combinaciones de variables.
+
+## Evaluación de modelos
+
+La evaluación de modelos estadísticos es un tema amplio que involucra la aplicación de los mismos principios y técnicas básicas a un gran grupo de modelos. En la práctica, la evaluación de modelos se utiliza para determinar la calidad y utilidad de los modelos estadísticos, es decir, para determinar si un modelo se ajusta adecuadamente a los datos y si es útil para hacer predicciones o inferencias sobre la población de interés.
+
+Es importante destacar que la evaluación de modelos estadísticos no es un proceso estático y que puede requerir ajustes y modificaciones a medida que se adquiere más información o se amplía el alcance del modelo. Por lo tanto, es fundamental seguir actualizando y refinando los modelos para asegurar su calidad y utilidad en la toma de decisiones basadas en datos.
+
+En la evaluación de modelos estadísticos, se utilizan diversas técnicas que se verán a continuación.
+
+### ¿Qué buscamos en un modelo?
+
+Lo deseable en un modelo es que cualitativamente puedan contar una buena historia, es decir, proporcionar información útil para poder tomar decisiones que vayan en línea de lo que se busca estimar. Por otra parte, se espera que cuantitativamente el modelo escogido ajuste bien a los datos utilizados como insumo para la calibración, de tal manera que reduzca el error de predicción y pueda generar un pronóstico creíble a partir de lo observado.
+
+Con esto en mente, queremos un criterio bien definido para comparar modelos y determinar si un modelo dado es suficientemente bueno.
+
+### Ajuste por métricas generales
+
+Las siguientes métricas de ajuste se basan en reducir los errores de predicción de los modelos, teniendo como fin cuantificar qué tanto error tiene un modelo al predecir un conjunto de datos dado:
+1. Coeficiente de determinación o $R^2$: Indica la cantidad de variación en la variable dependiente que puede ser explicada por las variable independientes en un modelo. Se define como:
+
+
+$$ R^2 = \frac{\sum_{i=1}^n (\hat{y}_i - \bar{y})^2}{\sum_{i=1}^n (y_i - \bar{y})^2} $$
+
+Donde $\hat{y_i}$ son los valores predichos por el modelo, $\bar{y}$ es la media de los valores observados $y_i$ y $n$ es el número de observaciones.
+
+2. MAE (Mean Average Error):Calcula la diferencia promedio entre las predicciones del modelo y los valores reales observados en los datos.
+
+$$MAE = \frac{1}{n}\sum_{i=1}^{n}|y_i - \hat{y_i}|$$
+
+La función valor absoluto ($|x|$) se utiliza para asegurar que el error siempre sea positivo.
+
+3. MAPE (Mean Absolute Percentage Error): Se expresa en porcentaje y se calcula como el promedio de los valores absolutos de los errores porcentuales de cada observación.
+
+$$MAPE = \frac{1}{n} \sum_{i=1}^{n} \left|\frac{y_i - \hat{y}_i}{y_i}\right|\cdot 100\%$$
+
+4. RMSE (Root Mean Squared Error): Es una medida de la diferencia entre los valores predichos y los valores reales en un conjunto de datos. La fórmula del RMSE es:
+
+$$ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^n(y_i - \hat{y}_i)^2} $$
+
+### Ajuste basado en la probabilidad
+
+También es posible darle una interpretación probabilística al ajuste, es decir, elegir aquellos parámetros que más se asemejen a la distribución de probabilidad que generan los datos del modelo, para ello nos basamos en la función de verosimilitud.
+
+La fórmula general de la función de verosimilitud para un conjunto de $n$ observaciones independientes y con distribución conjunta $f(x_1, x_2, ..., x_n; θ)$ es:
+
+$$L(\theta | x_1, x_2, ..., x_n) = f(x_1, x_2, ..., x_n; \theta) = \prod_{i=1}^{n} f(x_i;\theta)$$
+
+donde $θ$ es el vector de parámetros desconocidos que se quieren estimar y $f(x_i; θ)$ es la densidad de probabilidad (o función de masa de probabilidad) de la variable aleatoria $x_i$ para un valor de $θ$.
+
+Es común aplicar logaritmo a la función de verosimilitud, pues de esta forma se facilitan los cálculos manteniendo sus propiedades (dado que el logaritmo es una función monótona y creciente):
+
+$$\ell(\theta | x) = \sum_{i=1}^{n} \log(f(x_i|\theta))$$
+
+Las siguientes métricas se basan en la log-verosimilitud para evaluar el nivel de ajuste:
+
+1. Razón de verosimilitud (o pseudo $R^2$): Esta métrica es utilzada cuando la variable de resultado es nominal u ordinal, de modo que el coeficiente de determinación no se puede aplicar como una medida de bondad de ajuste. Se define como:
+
+$$\rho = 1 - \frac{\ell(\hat{\beta})}{\ell(0)} \text{(Asumiendo que $\beta=0$ es un modelo nulo razonable)}$$ 
+
+2. Criterio de Información de Akaike (AIC): Basado en la teoría de información, es una medida de la calidad del modelo que penaliza aquellos que son más complejos, lo que ayuda a prevenir el sobreajuste de los datos.
+
+$$AIC = -2\ell({\hat{\beta}}) + 2k$$
+
+Con $k$ el número de variables del modelo.
+
+3. Criterio de Información Bayesiano (BIC): Este criterio penaliza la complejidad del modelo de manera más fuerte que el AIC, en función del número de parámetros del modelo y del tamaño de la muestra de datos. El BIC es más efectivo que el AIC para prevenir el sobreajuste del modelo, lo que significa que es más probable que seleccione un modelo más simple y generalizable.
+
+$$BIC = -2\ell(\hat{\beta}) + klog(n)$$
+
+Con $n$ el número de observaciones en el set de datos.
+
+### Errores dentro y fuera de la muestra
+
+En general, se busca contruir modelos que sean generalizables a otros datos fuera de aquellos que se utilizan para su construcción, para ello se suele dividir el conjunto de datos en un set de **calibración** y otro de **validación** para evaluar su capacidad de predicción.
+
+En general, uno de los problemas que puede traer la excesiva complejización de un modelo es la poca adaptabilidad a nuevos conjuntos de datos, esto se conoce como sobreajuste (o overfitting), lo cual puede ser detectado al comparar los errores de predicción entre el set de calibración y validación:
+
+```{r my-fig1, fig.cap="Error de calibración vs predicción",out.width='50%', fig.align='center'}
+knitr::include_graphics(rep("images/fitting.png"))
+```
+
+### División de datos
+
+La división de los datos en conjuntos de calibración y validación depende de la estructura de los mismos. Por lo general se utiliza el 80% de los datos en calibración y el 20% en validación. Si la estructura de datos lo permite, podemos realizar crossvalidación ejecutamos múltiples validaciones sobre diferentes muestras de prueba.
+
+### Validación cruzada
+
+Algunos modelos, en especial en el mundo del *Machine learning*, requieren la calibración de sus hiperparámetros para una mejor predicción. Para ello existen múltiples técnicas, donde una de las más populares es la validación cruzada (*cross validation*).
+
+El método de validación cruzada comienza con la división del conjunto en $k$ subconjuntos (*folds*), dónde $k-1$ servirán para calibrar el modelo, mientras que el conjunto restante se utilizará como validación. Este proceso se repite cambiando el conjunto de validación por cada uno de los *folds*, buscando los hiperparámetros que optimizan el rendimiento para cada una de las combinaciones. Finalmente, el valor de los hiperparámetros será la media de sus valores para cada *fold*.
+
+```{r my-fig2, fig.cap="Ejemplo de validación cruzada",out.width='70%', fig.align='center'}
+knitr::include_graphics(rep("images/cv.png"))
+```
+
+### Test de hipótesis
+
+Además de la evaluación del ajuste del modelo a partir de métricas, es posible hacer inferencias estadísticas sobre el modelo completo:
+
+1. Pruebas de bondad de ajuste: Este tipo de tests intentan responder la pregunta de si el modelo es lo suficientemente *bueno* para confiar en su rendimiento. Una de las pruebas más utilizadas es el test de $\chi ^2$ de Pearson. Se busca testear la siguiente hipótesis nula:
+  
+  $H_0: \text{El modelo describe correctamente los datos observados}$
+
+  Para ello se separan los datos en $k$ posible categorías y se construye el estadístico $\chi^2$
+
+  $$\chi^2 = \sum_{i = 1}^{K} \frac{(y_i - \hat{y_i})^2}{\hat{y_i}}$$
+
+  Se rechaza la hipótesis nula si $\chi^2 > \chi^{2}_{K-1, α}$.
+  
+  Donde $\mathbb{P}(\chi^2 > \chi^{2}_{K-1, α}) = α$
+
+2. Comparación de modelos anidados: Supongamos que tenemos dos modelos A y B, diremos que el modelo B está anidado en el modelo A si el modelo B puede derivarse imponiendo algunas restricciones sobre los parámetros de A.
+
+  En el contexto de regresión, por ejemplo un modelo $y=a+bx$ está anidado en otro modelo $y=a+bx+cz$, solo basta con imponer que $c=0$.
+
+  Para evaluar si vale la pena agregar más complejidad al modelo se utiliza la prueba de *Likelihood Ratio*. De esta forma se puede determinar si la mejora del rendimiento de un modelo en comparación al modelo anidado se justifica en relación a la cantidad de nuevos parámetros.
+
+  La prueba de verosimilitud se basa en computar el estadístico del ratio:
+  
+  $$LR = 2(LL_A - LL_B)$$
+
+  Supongamos que existen $k$ nuevos parámetros que se agregan en el modelo A.
+
+  Si $LR > \chi^2(0.05, k)$, entonces el modelo A es mejor que el modelo B (es decir, la adición de parámetros marca una diferencia estadísticamente significativa al rendimiento del modelo.)
+
+## Usos y limitaciones del análisis de regresión
+
+Una vez que se construye y se estima un modelo, el siguiente paso es interpretar sus resultados. Es posible enfocarse en el **aprendizaje** sobre los parámetros retornados del modelo y cómo estos explican el fenómeno a estudiar, como también es posible realizar un **pronóstico** a futuro del desempeño de las variables a predecir.
+
+### Aprendizaje de los parámetros
+
+En general, la principal fuente de aprendizaje que provee un modelo de regresión son los coeficientes calculados, los cuales entregan información sobre el efecto de las variables independientes sobre lo que se desea estudiar.
+
+Dentro de las preguntas más importantes a responder se encuentran:
+
+- ¿Poseen las variables del modelo el signo esperado?
+- ¿Son estadísticamente significativos?
+- ¿Es relevante la magnitud de su efecto?
+
+Para responder a estas preguntas se hace necesario el uso de heramientas estadsticas tales como **t-test** para evaluaciones individuales o **F-test** para la evaluación de un conjunto de regresores.
+
+### Interpretación de los coeficientes
+
+Supongamos un modelo lineal simple definido por $y = 12 + 1.5x$, es de toda lógica pensar que el efecto de $x$ sobre $y$ al incrementar en una unidad es, en promedio, de $1.5$. Sin embargo, esta afirmación sería correcta **sólo** en el caso de que se tengan buenas razones para creer que $x$ tiene un **efecto causal** en $y$.
+
+Es importante recordar que los modelos de regresión solo indican la correlación entre las variables dependientes con las independientes, pero no necesariamente una relación causal entre ambas. Dentro de los fenómenos que pueden explicar la correlación sin causalidad entre variables, se encuentran los siguientes:
+
+- Causalidad inversa: $y$ causa $x$
+- Simultaneidad: $y$ causa $x$ y $x$ causa $y$
+- Tercera variable: $z$ causa $x$ e $y$
+
+Para averiguar qué es lo que hace que una variable independiente tenga un efecto sobre la variable dependiente, se suele recurrir a un método llamado **análisis de mediación**, el cual consiste en la investigación para examinar la relación entre una variable independiente y una variable dependiente a través de una variable intermedia, conocida como mediador. La mediación se produce cuando la relación entre la variable independiente y la variable dependiente se explica por completo o parcialmente por la influencia del mediador.
+
+
+```{r my-fig3, fig.cap="Modelo de mediación",out.width='70%', fig.align='center'}
+knitr::include_graphics(rep("images/Simple_Mediation_Model.png"))
+```
+
+Es importante no confundir el análisis de mediación con un efecto de tercera variable. Por ejemplo, si $z$ causa $x$ y a la vez $z$ causa $y$, entonces estamos bajo un escenario de tercera variable. Sin embargo, si $x$ causa $z$ y $z$ causa $y$, es posible afirmar que $z$ es una variable mediadora entre $x$ e $y$.
+
+### Pronósticos
+
+La principal razón de realizar buenas predicciones con los modelos construidos es la toma de decisiones mediante la evaluación de resultados en diversos escenarios posibles. Bajo el enfoque de regresión lineal, el pronóstico está dado por la esperanza del valor de la variable dependiente, es decir $\mathbb{E}[Y]$.
+
+En el caso mas sencillo, el pronóstico está dado por $\mathbb{E}[Y] = \beta X$, si dentro del desarrollo del modelo se decidiera utilizar una transformación funcional en el modelo, la expresión del pronóstico cambiará. Por ejemplo, para el caso de una regresión log-lineal, el término de error no desaparece del pronóstico, debido a que se está calculando la esperanza de una función de una variable aleatoria, luego el resultado que se obtiene es $\mathbb{E}[Y] = exp(\beta X + \frac{1}{2}S_ϵ^2)$, con $S_{ϵ}^2$ la varianza muestral de $ϵ$.
+
+### Errores de pronóstico
+
+El error de pronóstico contiene dos componentes: errores residuales (debido a la dispersión de los datos) y errores de muestra. Se puede escribir de la siguiente manera:
+
+$$\text{sef}(x_0) = s\sqrt{x_0^T(X^TX)^{-1}x_0 + 1}$$
+
+La variabilidad en los prónosticos dependerá de las variables explicativas del modelo y de la muestra utilizada para estimar la forma funcional de la variable dependiente. Esta variabilidad debe ser considerada en la evaluación de escenarios al momento de tomar una decisión.
+
+### Principios generales de pronóstico
+
+1. Incluir todas las variables que se esperan que contribuyan al pronóstico: A diferencia del enfoque anterior, no se está buscando el entendimiento de los parámetros sino predecir.
+2. Evaluar si algunas variables pueden ser agregadas para crear índices: Puede suceder que varias variables capturan un mísmo fenómeno, y por ende causar ruido en la predicción. Para evitar esto, se puede construir una variable que las agrupe a todas en una sola componente.
+3. Para variables importantes agregar interacciones: Puede que exista un efecto conjunto no observado.
+4. Evaluar la inclusión de variables explicativas basadas en su signo esperado y significancia estadística:
+  1. Significativa y signo esperado: Mantener en el modelo.
+  2. No significativa y signo esperado: Mantener en el modelo.
+  3. Significativa y signo contrario: Puede causar ruido en el pronóstico, por lo que se debe quitar del modelo.
+  4. No significativa y signo contrario: Es posible que algo esté pasando con esa variable, es importante considerar trabajar con mas datos y/o variables.
+
+
+### Limitaciones de los modelos de regresión
+
+Debido a su simpleza, los modelos de regresión poseen ciertas limitaciones provocadas por la muestra de datos utilizadas, las variables escogidas para el modelo o por la naturaleza del método de estimación de mínimos cuadrados. Algunos de los problemas más frecuentes que se encuentran al trabajar con modelos de regresión son los siguientes:
+
+1. **Colinealidad**: Es la condición cuando uno o más regresores están correlacionados entre sí, dependiendo del grado de la misma se debe proceder de manera distinta. Si la correlación entre regresores es baja, no existe problema. Si la correlación es alta, se debe considerar eliminar una o más variables redundantes, reducir el número de variables en el modelo o transformar las variables para reducir su correlación. Finalmente, si existe **colinealidad perfecta** la matriz de regresores $X$ no es invertible y el modelo no puede ser calculado.
+2. Es posible requerir de **causalidad** para afirmar que existe un efecto entre variables. Para determinar un efecto causal se pueden realizar experimentos, proponer modelos estructurales o utilizar variables instrumentales.
+3. **Heteroscedasticidad**: Es la correlación entre los términos de error y las variables del modelo. En otras palabras, la heteroscedasticidad significa que la dispersión de los errores en los datos es diferente para diferentes valores de las variables independientes. El estimador sigue siendo insesgado, pero se torna estadísticamente ineficiente. Para coregir heteroscedasticidad se utiliza mínimos cuadrados generalizados, ponderando según la magnitud del error de cada observación.
+4. **Autocorrelación**: Los errores estan correlacionados entre sí. Al igual que en el caso anterior el estimador sigue siendo insesgado, pero se torna estadísticamente ineficiente. Para enfrentar este fenómeno se recurre al uso de series de tiempo.
+
+### Modelos lineales generalizados
+
+Muchas veces los modelos lineales son muy restrictivos, para ello se utilizan modelos lineales generalizados, es decir, mantiene la linealidad en los parámetros, pero la respuesta del modelo puede tener una forma funcional distinta.
+
+Dentro de la familia de modelos generalizados se encuentran:
+
+- Regresión de Poisson (La variable dependiente es positiva y discreta)
+- Regresión logística (Se busca predecir número de sucesos de un total de intentos)
+- Mínimos cuadrados generalizados
+
+## Alternativas de Machine Learning para la regresión
+
+### ¿Qué es Machine Learning?
+
+El concepto de *Machine Learning* se ha vuelto muy popular últimamente, obteniendo mucha atención y usos en una gran cantidad de tareas, pero ¿A qué nos referimos cuando hablamos de modelos de *machine learning*?
+
+En terminos sencillos, el aprendizaje automático, o *machine learning* en inglés, es una rama de la inteligencia artificial que se centra en el desarrollo de algoritmos y modelos que permiten a las computadoras aprender patrones y realizar tareas específicas sin ser programadas explícitamente. En lugar de seguir instrucciones detalladas, los sistemas de aprendizaje automático utilizan datos para mejorar su rendimiento en una tarea particular a lo largo del tiempo. Este enfoque permite a las máquinas adaptarse y mejorar su desempeño a medida que se exponen a más información.
+
+### ¿La regresión cuenta como un modelo de ML?
+
+Si bien la regresión utiliza datos para *aprender* a partir de ellos, no se suele considerar completamente un modelo de aprendizaje automático. El hecho de tener que  seleccionar las variables adecuadas, aplicar transformaciones funcionales y tener que verificar el cumplimiento de supuestos estadísticos hace que la regresión sea menos automático que lo que normalmente se entiende como ML.
+
+Un acercamiento más próximo a un modelo de ML se da al utilizar técnicas de selección automática de variables como Ridge o LASSO. De todas formas, los límites son difusos, en este curso se entenderá como ML a cualquier modelo que pueda aprender automáticamente sobre el conjunto de variables predictivas y sus formas funcionales.
+
+### Multivariate Adaptive Regression Splines (MARS)
+
+MARS extiende OLS generando para cada variable independiente $x$ una función bisagra (*hinge*) $h(x, a) = \{ \max\{0, x-a\},  \max\{0, a-x\} \}$. De esta forma, un modelo MARS genera una aproximación lineal por tramos.
+
+Por ejemplo:
+
+$$\text{OLS: }y = \beta_0 + \beta_1 x$$
+$$\text{MARS: }y = \gamma_0 + \gamma_1 \max\{0, x-a\} + \gamma_2 \max\{0, a-x\}$$
+
+Además, MARS puede incluir multiplicaciones entre dos o más funciones bisagras para diferentes predictores, de tal manera que captura la interacción entre estos.
+
+Inicialmente, MARS busca el único punto en el rango de $x$ donde dos relaciones lineales diferentes entre $y$ y $x$ logran un error más pequeño, este punto se convierte en el primer corte (*knot*) $a$ del modelo. Este procedimiento continúa hasta que se encuentren los demás puntos de corte. Para evitar el sobreajuste, MARS elimina términos que provoquen una pequeña contribución a la mejora del ajuste.
+
+```{r mars, fig.cap="Regresión MARS para distinto número de bisagras",out.width='70%', fig.align='center'}
+knitr::include_graphics(rep("images/mars.png"))
+```
+
+
+### K Nearest Neighbors Regression (KNN)
+
+En la regresión con KNN, el objetivo es predecir un valor numérico para una variable dependiente basándose en los valores de las variables independientes. A diferencia de la regresión lineal, que ajusta una línea o superficie a los datos, KNN no realiza una aproximación paramétrica. En cambio, hace predicciones basándose en la similitud entre los puntos de datos.
+
+Hay una serie de parámetros que deben ajustarse en KNN. Para decidir qué funciona mejor, la práctica común es decidir basándose en el error de predicción:
+
+1. Vecinos más cercanos (*Neighbors*): $k$ representa el número de vecinos más cercanos que se tomarán en cuenta para hacer una predicción. Se calcula la distancia entre el punto a predecir y los demás puntos del conjunto de entrenamiento.
+
+2. Pesos (*Weights*): Para predecir el valor de la variable dependiente para un nuevo punto, se promedian los valores de la variable dependiente de los $k$ vecinos más cercanos. Uno de los parámetros del modelo es el peso que se le da a los vecinos más cercanos.
+
+3. Distancia: La medida de distancia más comúnmente utilizada en KNN es la distancia euclidiana, pero otras medidas también pueden ser empleadas según el tipo de datos y el problema específico (Manhattan, Coseno, Mahalanobis, etc.)
+
+```{r knn, fig.cap="Regresión KNN para distinto número de vecinos cercanos",out.width='100%', fig.align='center'}
+knitr::include_graphics(rep("images/knn.png"))
+```
+
+### Regression trees
+
+Los arboles de regresión solo tienen sentido cuando el problema tiene múltiples regresores, el objetivo es dividir el espacio de regresores en subconjuntos y luego utilizar un modelo simple (constante) dentro de cada región. Las particiones son secuenciales mediante divisiones binarias generando una estructura de árbol.
+
+El modelo busca cada valor distinto de cada variable de entrada para encontrar el predictor y dividir el valor que divide los datos en dos.
+regiones $R_1$ y $R_2$, con valores medios $c_1$ y $c_2$ para minimizar la suma de los errores al cuadrado
+
+$$\min SSE = \min \left\{ \sum_{i \in R_1}(y_i - c_1)^2 + \sum_{i \in R_2} (y_i - c_2)^2 \right\}$$
+
+Es común agregar hiperparámetros de penalización para evitar el sobreajuste.
+
+**Ejemplo:** Sea $y = f(x_1, x_2)$. Los valores de $x_1$ y $x_2$ se pueden representar en el plano mientras que los valores de $y$ se representan con colores (cuanto más grandes, más oscuros)
+
+```{r ej1, fig.cap="Región de ejemplo",out.width='40%', fig.align='center'}
+knitr::include_graphics(rep("images/tree1.png"))
+```
+
+Luego, un arbol que representa la separación en regiones según $x_1$ y $x_2$ es:
+
+```{r ej2, fig.cap="Árbol de ejemplo",out.width='20%', fig.align='center'}
+knitr::include_graphics(rep("images/tree2.png"))
+```
+
+### Bagging y Random forests
+
+Un problema de los árboles de regresión es que son sensibles a pequeñas variaciones en los datos. En general para solucionar este problema se crean varios árboles y se promedian los resultados obtenidos, a esto se le llama bosque aleatorio (*random forest*).
+
+Para la construcción de este conjunto de arboles de regresión se hace uso de una técnica llamada *Bagging* (**B**ootstrap **Agg**regation), la cual sigue los siguientes pasos:
+
+1. **Bootstrap Sampling:** Se generan múltiples conjuntos de datos de entrenamiento mediante un muestreo con reemplazo, al que se conoce como *bootstrap*. Al hacerlo, algunos datos se pueden repetir en un conjunto de datos, mientras que otros pueden no aparecer en absoluto.
+
+2. **Construcción de árboles de regresión:** Se construyen múltiples árboles de decisión, generalmente utilizando el conjunto de datos de entrenamiento generado en cada iteración del *bootstrap*. Cada árbol se entrena de manera independiente y puede llegar a sobreajustarse a ciertos patrones del conjunto de datos de entrenamiento.
+
+3. **Promediar resultados:** Para hacer predicciones en un nuevo dato, se utiliza cada árbol de decisión para realizar una predicción, promediando los valores de cada árbol.
+
+La combinación de múltiples árboles entrenados de esta manera ayuda a reducir la varianza y mejora la capacidad de generalización del modelo. Además, el Random Forest introduce aleatoriedad adicional al seleccionar un subconjunto aleatorio de características para dividir en cada nodo de los árboles, lo que agrega más diversidad al conjunto de árboles.
+

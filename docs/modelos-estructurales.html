@@ -4,26 +4,26 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 2 Modelos Estructurales | Apunte Marketing II</title>
-  <meta name="description" content="Capítulo 2 Modelos Estructurales | Apunte Marketing II" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <title>Capítulo 3 Modelos Estructurales | Marketing Engineering</title>
+  <meta name="description" content="Capítulo 3 Modelos Estructurales | Marketing Engineering" />
+  <meta name="generator" content="bookdown 0.37 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 2 Modelos Estructurales | Apunte Marketing II" />
+  <meta property="og:title" content="Capítulo 3 Modelos Estructurales | Marketing Engineering" />
   <meta property="og:type" content="book" />
   
-  <meta property="og:description" content="Capítulo 2 Modelos Estructurales | Apunte Marketing II" />
+  <meta property="og:description" content="Capítulo 3 Modelos Estructurales | Marketing Engineering" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 2 Modelos Estructurales | Apunte Marketing II" />
+  <meta name="twitter:title" content="Capítulo 3 Modelos Estructurales | Marketing Engineering" />
   
-  <meta name="twitter:description" content="Capítulo 2 Modelos Estructurales | Apunte Marketing II" />
+  <meta name="twitter:description" content="Capítulo 3 Modelos Estructurales | Marketing Engineering" />
   
 
 <meta name="author" content="Marcel Goic" />
 
 
-<meta name="date" content="2022-12-27" />
+<meta name="date" content="2023-12-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -119,6 +119,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -133,61 +137,107 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <nav role="navigation">
 
 <ul class="summary">
-<li><a href="./">Apunte Marketing II</a></li>
+<li><a href="./">Marketing Engineering</a></li>
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Prólogo</a></li>
-<li class="chapter" data-level="1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html"><i class="fa fa-check"></i><b>1</b> Modelos Probabilisticos</a>
+<li class="chapter" data-level="1" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html"><i class="fa fa-check"></i><b>1</b> Modelos de Regresión</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#introducción"><i class="fa fa-check"></i><b>1.1</b> Introducción</a></li>
-<li class="chapter" data-level="1.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración"><i class="fa fa-check"></i><b>1.2</b> Modelos de Duración</a>
+<li class="chapter" data-level="1.1" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#conceptos-básicos-de-regresión"><i class="fa fa-check"></i><b>1.1</b> Conceptos básicos de regresión</a>
 <ul>
-<li class="chapter" data-level="1.2.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración-de-tiempo-discreto"><i class="fa fa-check"></i><b>1.2.1</b> Modelos de duración de tiempo discreto</a></li>
-<li class="chapter" data-level="1.2.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración"><i class="fa fa-check"></i><b>1.2.2</b> Modelos de duración en tiempo continuo sin dependencia en la duración</a></li>
-<li class="chapter" data-level="1.2.3" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración"><i class="fa fa-check"></i><b>1.2.3</b> Modelos de duración en tiempo continuo con dependencia en la duración</a></li>
+<li class="chapter" data-level="1.1.1" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#notación"><i class="fa fa-check"></i><b>1.1.1</b> Notación</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-conteo"><i class="fa fa-check"></i><b>1.3</b> Modelos de Conteo</a></li>
-<li class="chapter" data-level="1.4" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-elección"><i class="fa fa-check"></i><b>1.4</b> Modelos de Elección</a></li>
-<li class="chapter" data-level="1.5" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#esperanzas-condicionales"><i class="fa fa-check"></i><b>1.5</b> Esperanzas Condicionales</a></li>
-<li class="chapter" data-level="1.6" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#variables-explicativas"><i class="fa fa-check"></i><b>1.6</b> Variables explicativas</a>
+<li class="chapter" data-level="1.2" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#mínimos-cuadrados-ordinarios-ols-y-supuestos"><i class="fa fa-check"></i><b>1.2</b> Mínimos Cuadrados Ordinarios (OLS) y supuestos</a>
 <ul>
-<li class="chapter" data-level="1.6.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-sin-dependencia-de-la-duración"><i class="fa fa-check"></i><b>1.6.1</b> Variables explicativas en modelos de duración en tiempo continuo sin dependencia de la duración</a></li>
-<li class="chapter" data-level="1.6.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-con-dependencia-de-la-duración"><i class="fa fa-check"></i><b>1.6.2</b> Variables explicativas en modelos de duración en tiempo continuo con dependencia de la duración</a></li>
-<li class="chapter" data-level="1.6.3" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#caso-modelo-de-conteo-khakichinos.com"><i class="fa fa-check"></i><b>1.6.3</b> Caso Modelo de Conteo: KhakiChinos.com</a></li>
+<li class="chapter" data-level="1.2.1" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#estimación"><i class="fa fa-check"></i><b>1.2.1</b> Estimación</a></li>
+<li class="chapter" data-level="1.2.2" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#propiedades"><i class="fa fa-check"></i><b>1.2.2</b> Propiedades</a></li>
 </ul></li>
-<li class="chapter" data-level="1.7" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-integrados"><i class="fa fa-check"></i><b>1.7</b> Modelos Integrados</a></li>
-<li class="chapter" data-level="1.8" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#customer-lifetime-value-caso-contractual"><i class="fa fa-check"></i><b>1.8</b> Customer Lifetime Value: Caso Contractual</a>
+<li class="chapter" data-level="1.3" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#estrategias-de-modelamiento"><i class="fa fa-check"></i><b>1.3</b> Estrategias de Modelamiento</a>
 <ul>
-<li class="chapter" data-level="1.8.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelo-contractual-a-tiempo-discreto"><i class="fa fa-check"></i><b>1.8.1</b> Modelo contractual a tiempo discreto</a></li>
-<li class="chapter" data-level="1.8.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelo-contractual-a-tiempo-continuo"><i class="fa fa-check"></i><b>1.8.2</b> Modelo contractual a tiempo continuo</a></li>
+<li class="chapter" data-level="1.3.1" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#arte-vs.-procedimiento"><i class="fa fa-check"></i><b>1.3.1</b> Arte vs. Procedimiento</a></li>
+<li class="chapter" data-level="1.3.2" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#aprendizajes-preliminares"><i class="fa fa-check"></i><b>1.3.2</b> Aprendizajes Preliminares</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#evaluación-de-modelos"><i class="fa fa-check"></i><b>1.4</b> Evaluación de modelos</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#qué-buscamos-en-un-modelo"><i class="fa fa-check"></i><b>1.4.1</b> ¿Qué buscamos en un modelo?</a></li>
+<li class="chapter" data-level="1.4.2" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#ajuste-por-métricas-generales"><i class="fa fa-check"></i><b>1.4.2</b> Ajuste por métricas generales</a></li>
+<li class="chapter" data-level="1.4.3" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#ajuste-basado-en-la-probabilidad"><i class="fa fa-check"></i><b>1.4.3</b> Ajuste basado en la probabilidad</a></li>
+<li class="chapter" data-level="1.4.4" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#errores-dentro-y-fuera-de-la-muestra"><i class="fa fa-check"></i><b>1.4.4</b> Errores dentro y fuera de la muestra</a></li>
+<li class="chapter" data-level="1.4.5" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#división-de-datos"><i class="fa fa-check"></i><b>1.4.5</b> División de datos</a></li>
+<li class="chapter" data-level="1.4.6" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#validación-cruzada"><i class="fa fa-check"></i><b>1.4.6</b> Validación cruzada</a></li>
+<li class="chapter" data-level="1.4.7" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#test-de-hipótesis"><i class="fa fa-check"></i><b>1.4.7</b> Test de hipótesis</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#usos-y-limitaciones-del-análisis-de-regresión"><i class="fa fa-check"></i><b>1.5</b> Usos y limitaciones del análisis de regresión</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#aprendizaje-de-los-parámetros"><i class="fa fa-check"></i><b>1.5.1</b> Aprendizaje de los parámetros</a></li>
+<li class="chapter" data-level="1.5.2" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#interpretación-de-los-coeficientes"><i class="fa fa-check"></i><b>1.5.2</b> Interpretación de los coeficientes</a></li>
+<li class="chapter" data-level="1.5.3" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#pronósticos"><i class="fa fa-check"></i><b>1.5.3</b> Pronósticos</a></li>
+<li class="chapter" data-level="1.5.4" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#errores-de-pronóstico"><i class="fa fa-check"></i><b>1.5.4</b> Errores de pronóstico</a></li>
+<li class="chapter" data-level="1.5.5" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#principios-generales-de-pronóstico"><i class="fa fa-check"></i><b>1.5.5</b> Principios generales de pronóstico</a></li>
+<li class="chapter" data-level="1.5.6" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#limitaciones-de-los-modelos-de-regresión"><i class="fa fa-check"></i><b>1.5.6</b> Limitaciones de los modelos de regresión</a></li>
+<li class="chapter" data-level="1.5.7" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#modelos-lineales-generalizados"><i class="fa fa-check"></i><b>1.5.7</b> Modelos lineales generalizados</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#alternativas-de-machine-learning-para-la-regresión"><i class="fa fa-check"></i><b>1.6</b> Alternativas de Machine Learning para la regresión</a>
+<ul>
+<li class="chapter" data-level="1.6.1" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#qué-es-machine-learning"><i class="fa fa-check"></i><b>1.6.1</b> ¿Qué es Machine Learning?</a></li>
+<li class="chapter" data-level="1.6.2" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#la-regresión-cuenta-como-un-modelo-de-ml"><i class="fa fa-check"></i><b>1.6.2</b> ¿La regresión cuenta como un modelo de ML?</a></li>
+<li class="chapter" data-level="1.6.3" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#multivariate-adaptive-regression-splines-mars"><i class="fa fa-check"></i><b>1.6.3</b> Multivariate Adaptive Regression Splines (MARS)</a></li>
+<li class="chapter" data-level="1.6.4" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#k-nearest-neighbors-regression-knn"><i class="fa fa-check"></i><b>1.6.4</b> K Nearest Neighbors Regression (KNN)</a></li>
+<li class="chapter" data-level="1.6.5" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#regression-trees"><i class="fa fa-check"></i><b>1.6.5</b> Regression trees</a></li>
+<li class="chapter" data-level="1.6.6" data-path="modelos-de-regresión.html"><a href="modelos-de-regresión.html#bagging-y-random-forests"><i class="fa fa-check"></i><b>1.6.6</b> Bagging y Random forests</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html"><i class="fa fa-check"></i><b>2</b> Modelos Estructurales</a>
+<li class="chapter" data-level="2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html"><i class="fa fa-check"></i><b>2</b> Modelos Probabilisticos</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#introducción-a-modelos-estructurales"><i class="fa fa-check"></i><b>2.1</b> Introducción a Modelos Estructurales</a>
+<li class="chapter" data-level="2.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#introducción"><i class="fa fa-check"></i><b>2.1</b> Introducción</a></li>
+<li class="chapter" data-level="2.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración"><i class="fa fa-check"></i><b>2.2</b> Modelos de Duración</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#introducción-1"><i class="fa fa-check"></i><b>2.1.1</b> Introducción</a></li>
-<li class="chapter" data-level="2.1.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#modelos-estructurales-en-marketing"><i class="fa fa-check"></i><b>2.1.2</b> Modelos Estructurales en Marketing</a></li>
-<li class="chapter" data-level="2.1.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#taxonomía-de-modelos-estrucuturales"><i class="fa fa-check"></i><b>2.1.3</b> Taxonomía de Modelos Estrucuturales</a></li>
+<li class="chapter" data-level="2.2.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración-de-tiempo-discreto"><i class="fa fa-check"></i><b>2.2.1</b> Modelos de duración de tiempo discreto</a></li>
+<li class="chapter" data-level="2.2.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración"><i class="fa fa-check"></i><b>2.2.2</b> Modelos de duración en tiempo continuo sin dependencia en la duración</a></li>
+<li class="chapter" data-level="2.2.3" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración"><i class="fa fa-check"></i><b>2.2.3</b> Modelos de duración en tiempo continuo con dependencia en la duración</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#logit"><i class="fa fa-check"></i><b>2.2</b> Logit</a>
+<li class="chapter" data-level="2.3" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-conteo"><i class="fa fa-check"></i><b>2.3</b> Modelos de Conteo</a></li>
+<li class="chapter" data-level="2.4" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-de-elección"><i class="fa fa-check"></i><b>2.4</b> Modelos de Elección</a></li>
+<li class="chapter" data-level="2.5" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#esperanzas-condicionales"><i class="fa fa-check"></i><b>2.5</b> Esperanzas Condicionales</a></li>
+<li class="chapter" data-level="2.6" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#variables-explicativas"><i class="fa fa-check"></i><b>2.6</b> Variables explicativas</a>
 <ul>
-<li class="chapter" data-level="2.2.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#modelos-de-elección-discreta"><i class="fa fa-check"></i><b>2.2.1</b> Modelos de Elección Discreta</a></li>
-<li class="chapter" data-level="2.2.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#modelo-logit"><i class="fa fa-check"></i><b>2.2.2</b> Modelo Logit</a></li>
-<li class="chapter" data-level="2.2.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#estimación"><i class="fa fa-check"></i><b>2.2.3</b> Estimación</a></li>
+<li class="chapter" data-level="2.6.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-sin-dependencia-de-la-duración"><i class="fa fa-check"></i><b>2.6.1</b> Variables explicativas en modelos de duración en tiempo continuo sin dependencia de la duración</a></li>
+<li class="chapter" data-level="2.6.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#variables-explicativas-en-modelos-de-duración-en-tiempo-continuo-con-dependencia-de-la-duración"><i class="fa fa-check"></i><b>2.6.2</b> Variables explicativas en modelos de duración en tiempo continuo con dependencia de la duración</a></li>
+<li class="chapter" data-level="2.6.3" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#caso-modelo-de-conteo-khakichinos.com"><i class="fa fa-check"></i><b>2.6.3</b> Caso Modelo de Conteo: KhakiChinos.com</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelos-integrados"><i class="fa fa-check"></i><b>2.7</b> Modelos Integrados</a></li>
+<li class="chapter" data-level="2.8" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#customer-lifetime-value-caso-contractual"><i class="fa fa-check"></i><b>2.8</b> Customer Lifetime Value: Caso Contractual</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelo-contractual-a-tiempo-discreto"><i class="fa fa-check"></i><b>2.8.1</b> Modelo contractual a tiempo discreto</a></li>
+<li class="chapter" data-level="2.8.2" data-path="modelos-probabilisticos.html"><a href="modelos-probabilisticos.html#modelo-contractual-a-tiempo-continuo"><i class="fa fa-check"></i><b>2.8.2</b> Modelo contractual a tiempo continuo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html"><i class="fa fa-check"></i><b>3</b> Modelos Estructurales</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#introducción-a-modelos-estructurales"><i class="fa fa-check"></i><b>3.1</b> Introducción a Modelos Estructurales</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#introducción-1"><i class="fa fa-check"></i><b>3.1.1</b> Introducción</a></li>
+<li class="chapter" data-level="3.1.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#modelos-estructurales-en-marketing"><i class="fa fa-check"></i><b>3.1.2</b> Modelos Estructurales en Marketing</a></li>
+<li class="chapter" data-level="3.1.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#taxonomía-de-modelos-estrucuturales"><i class="fa fa-check"></i><b>3.1.3</b> Taxonomía de Modelos Estrucuturales</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#logit"><i class="fa fa-check"></i><b>3.2</b> Logit</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#modelos-de-elección-discreta"><i class="fa fa-check"></i><b>3.2.1</b> Modelos de Elección Discreta</a></li>
+<li class="chapter" data-level="3.2.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#modelo-logit"><i class="fa fa-check"></i><b>3.2.2</b> Modelo Logit</a></li>
+<li class="chapter" data-level="3.2.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#estimación-1"><i class="fa fa-check"></i><b>3.2.3</b> Estimación</a></li>
 <li class="chapter" data-level="" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#apéndice"><i class="fa fa-check"></i>Apéndice</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#probit"><i class="fa fa-check"></i><b>2.3</b> Probit</a>
+<li class="chapter" data-level="3.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#probit"><i class="fa fa-check"></i><b>3.3</b> Probit</a>
 <ul>
-<li class="chapter" data-level="2.3.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#definición"><i class="fa fa-check"></i><b>2.3.1</b> Definición</a></li>
-<li class="chapter" data-level="2.3.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#patrones-de-substitución"><i class="fa fa-check"></i><b>2.3.2</b> Patrones de substitución</a></li>
-<li class="chapter" data-level="2.3.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#identificación"><i class="fa fa-check"></i><b>2.3.3</b> Identificación</a></li>
+<li class="chapter" data-level="3.3.1" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#definición"><i class="fa fa-check"></i><b>3.3.1</b> Definición</a></li>
+<li class="chapter" data-level="3.3.2" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#patrones-de-substitución"><i class="fa fa-check"></i><b>3.3.2</b> Patrones de substitución</a></li>
+<li class="chapter" data-level="3.3.3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#identificación"><i class="fa fa-check"></i><b>3.3.3</b> Identificación</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#mixed-logit"><i class="fa fa-check"></i><b>2.4</b> <em>Mixed Logit</em></a></li>
+<li class="chapter" data-level="3.4" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html#mixed-logit"><i class="fa fa-check"></i><b>3.4</b> <em>Mixed Logit</em></a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html"><i class="fa fa-check"></i><b>3</b> Apéndices Técnicos</a>
+<li class="chapter" data-level="4" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html"><i class="fa fa-check"></i><b>4</b> Apéndices Técnicos</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html#métodos-de-estimación-y-evaluación-de-modelos"><i class="fa fa-check"></i><b>3.1</b> Métodos de Estimación y Evaluación de modelos</a></li>
+<li class="chapter" data-level="4.1" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html#métodos-de-estimación-y-evaluación-de-modelos"><i class="fa fa-check"></i><b>4.1</b> Métodos de Estimación y Evaluación de modelos</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -201,7 +251,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div class="body-inner">
         <div class="book-header" role="navigation">
           <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Apunte Marketing II</a>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Marketing Engineering</a>
           </h1>
         </div>
 
@@ -209,12 +259,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="modelos-estructurales" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Capítulo 2</span> Modelos Estructurales<a href="modelos-estructurales.html#modelos-estructurales" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="introducción-a-modelos-estructurales" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Introducción a Modelos Estructurales<a href="modelos-estructurales.html#introducción-a-modelos-estructurales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="introducción-1" class="section level3 hasAnchor" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> Introducción<a href="modelos-estructurales.html#introducción-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-estructurales" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Modelos Estructurales<a href="modelos-estructurales.html#modelos-estructurales" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introducción-a-modelos-estructurales" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Introducción a Modelos Estructurales<a href="modelos-estructurales.html#introducción-a-modelos-estructurales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="introducción-1" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Introducción<a href="modelos-estructurales.html#introducción-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>En esencia, un modelo econométrico estructural es aquel que deriva relaciones estimables estadísticamente a partir de supuestos bien definidos de comportamiento de los agentes que deciden respecto a las cantidades observables. En contraposición a los modelos estructurales están los modelos de forma reducida donde los modelos simplemente describen la variabilidad de alguna medida de interés en base a un conjunto de variables observables exógenas.</p>
 <p>La disciplina económica suele llamar modelo estructurales a los resultantes de asumir que los consumidores maximizan una utilidad subyacente y que las firmas maximizan su rentabilidad
 esperada. Desde el marketing, consideramos también en la definición en aquellos que postulan hipótesis alternativas de comportamiento incluyendo así una variedad de teorías de comportamiento que nutren la disciplina tales como teoría de prospectos, contabilidad mental, elección sobre conjuntos de consideración, etc. Como discutiremos más adelante, no existe un modelo estructural puro y la línea que los separa de los modelos de forma reducida es ciertamente difusa.</p>
@@ -262,8 +312,8 @@ altamente intensivas computacionalmente.</p>
 <p><strong>Observación:</strong> En nuestra discusión, hemos hecho la distinción entre modelos probabilísticos y modelos estructurales. Aunque los modelos probabilísticos proveen una historia de comportamiento de los agentes, los supuestos básicos usados para derivarlos no se sustentan en ninguna
 teoría de comportamiento. Por ejemplo, en modelos de duración en tiempo discreto solemos suponer que los clientes dejan de estar activos con cierta probabilidad. Más que una teoría de comportamiento esto es simplemente una descripción probabilística de un fenómeno. En determinadas situaciones, especialmente en casos en que no disponemos una descripción rica del ambiente en que se los agentes toman sus decisiones, nos conformamos con esta descripción agregada del comportamiento. El enfoque estructural sobre el que ahondaremos en esta parte resulta particularmente útil cuando tenemos suficiente información para investigar las motivaciones profundas de las elecciones. Al definir un modelo estructural, tanto las teorías de comportamiento como la descripción probabilística del sistema son fuentes válidas de estructura. Sin embargo, consideraremos como modelo econométrico estructural a aquellos que se nutren de ambas fuentes.</p>
 </div>
-<div id="modelos-estructurales-en-marketing" class="section level3 hasAnchor" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Modelos Estructurales en Marketing<a href="modelos-estructurales.html#modelos-estructurales-en-marketing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-estructurales-en-marketing" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Modelos Estructurales en Marketing<a href="modelos-estructurales.html#modelos-estructurales-en-marketing" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>El desarrollo de modelos estructurales se ha gestado en varias areas del conocimiento tales como Economía, Transportes, Logística, Finanzas y Marketing. Entre estas áreas, la del marketing se ha constituido en un terreno particularmente fértil para el desarrollo y adopción del enfoque estructural. Identificamos al menos cuatro motivos por los cuales la adición de estructura en los modelos econométricos son particularmente útiles para el análisis de problemas comerciales:</p>
 <ol style="list-style-type: decimal">
 <li><p><em>Disponibilidad de Data</em>. Gran parte de la data que registran las compañías dan cuenta de las interacciones entre clientes y firma como son ocasiones de compra, visitas a sitios web corporativos o llamadas a los call center. De esta forma, un conjunto importante de la data disponible dentro de las organizaciones son informativos respecto a procesos claves de la función comercial. Así, los requerimientos de datos impuestos por los modelos estructurales están inmediatamente satisfechos por procesos operacionales.</p></li>
@@ -273,8 +323,8 @@ estimaciones desagregadas suele derivarse directamente.</p></li>
 <li><p><em>Pragmatismo en la aceptación de teorías</em>. Como hemos argumentado, una de las ventajas de los modelos estructurales es que nos permite testear si una determinada teoría de comportamiento aplica a una situación. A diferencia de otras disciplinas, en marketing hay una tradición de una revisión continua de las fuerzas que moldean el comportamiento de las personas y por tanto el enfoque de modelos estructurales entrega una herramienta alternativa a la verificación experimental de nuevas teorias.</p></li>
 </ol>
 </div>
-<div id="taxonomía-de-modelos-estrucuturales" class="section level3 hasAnchor" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> Taxonomía de Modelos Estrucuturales<a href="modelos-estructurales.html#taxonomía-de-modelos-estrucuturales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="taxonomía-de-modelos-estrucuturales" class="section level3 hasAnchor" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> Taxonomía de Modelos Estrucuturales<a href="modelos-estructurales.html#taxonomía-de-modelos-estrucuturales" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Metodológicamente, es útil generar un clasificación de los tipos de modelos estructurales existentes en la literatura. Como hemos consignado, uno de los costos de la inclusión de teoría en modelos econométricos es la mayor complejidad en las rutinas de estimación. Es esta complejidad la que dificulta la generación un mecanismo único que permita estimar modelos generales y por tanto nos vemos forzados a usar metodologías específicas dependiendo de la naturaleza del problema. En nuestra discusión basaremos nuestra clasificación en la evaluación de cuatro factores.</p>
 <ol style="list-style-type: decimal">
 <li><p><em>Nivel de agregación de la Data</em>. Hemos propuesto que un modelo estructural debe basarse en una descripción detallada de los supuestos de los tomadores de decisión a nivel individual. Por lo tanto la disponibilidad de data a nivel individual como la decisión de compra de cada uno de los individuos de un panel de consumidores, nos habilita para, imponiendo las restricciones de identificación necesaria, estimar los parámetros de comportamiento de manera mas o menos directa. Sin embargo, en ciertas situaciones solo se dispone de información agregada, como participaciones de mercado o datos agregados de venta. En estos casos, la identificación de parámetros de comportamiento requiere además de una descripción del mecanismo mediante el cual se agregan las decisiones individuales. Este mecanismo típicamente considera la especificación de un modelo de heterogeneidad describiendo como se distribuyen los parámetros entre los clientes la que se integra sobre la población para generar las métricas agregadas. Esto es precisamente lo propuesto por el método BLP (a partir de
@@ -288,10 +338,10 @@ modelo de decisión continuo. Si las variables sobre las que deciden los agentes
 <p>Metodológicamente es útil también distinguir los métodos de estimación de los modelos. La literatura reconoce dos grandes enfoques para estimar modelos estructurales como los aquí presentados: Método de los Momentos Generalizados (GMM) y Método de la Máxima Verosimilitud. Dada su eficiencia estadística (en el sentido que usa toda la información disponibles), en esta primera versión usaremos solo el método de la máxima verosimilitud. En lo que sigue nos enfocaremos la discusión al estudio del comportamiento de clientes, en problemas estáticos (o con dinámica limitada a la incorporación del pasado) y con data desagregada. Partiremos describiendo brevemente modelos de decisión continuos para luego iniciar una discusión más extensa en modelos de decisión discreta que tienen una tradición más larga en marketing.</p>
 </div>
 </div>
-<div id="logit" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Logit<a href="modelos-estructurales.html#logit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="modelos-de-elección-discreta" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Modelos de Elección Discreta<a href="modelos-estructurales.html#modelos-de-elección-discreta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="logit" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Logit<a href="modelos-estructurales.html#logit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="modelos-de-elección-discreta" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Modelos de Elección Discreta<a href="modelos-estructurales.html#modelos-de-elección-discreta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Un modelo de elección discreta consiste básicamente en situaciones en que la naturaleza de las variables de decisión a las que se enfrenta el tomador de decisión son discretas. Para ilustrar la intuición de la diferencia con respecto a modelos de decisión continua es útil pensar que mientras
 estos últimos buscan describir decisiones de el cuanto, los modelos de elección discreta se concentran en el cuál. La distinción además relevante desde un punto de vista metodológico. A diferencia de los modelos de elección continua en que la optimidad de la elección queda bien descrita por
 condiciones de primer orden, al enfrentar decisiones discretas caracterizaremos la optimidad por enumeración. Ejemplos típicos en que la decisión a evaluar es de naturaleza discreta incluye la elección de una marca por sobre otra en la góndola de un supermercado, la decisión de visitar o no a una tienda, la elección del color de una prenda de vestir, de un canal de venta y la elección de las firmas respecto a entrar o no entrar a un mercado.</p>
@@ -335,15 +385,15 @@ P_{nit} &amp;= Pr(u_{nit}&gt;u_{njt},\forall j \neq i)\\
 <p>donde <span class="math inline">\(\textbf{1}(\cdot)\)</span> toma el valor 1 si se cumple el argumento y el valor 0 en caso contrario. En esta expresión, <span class="math inline">\(\varepsilon_{nt} = (\varepsilon_{n1t},\varepsilon_{n2t}, ...,\varepsilon_{nIt})\)</span> es el vector de las componentes aleatorias de la elección del agente <span class="math inline">\(n\)</span> en la oportunidad <span class="math inline">\(t\)</span> y <span class="math inline">\(f(·)\)</span> la función de densidad que describe su comportamiento
 probabilístico. La elección de la distribución de la componente aleatoria es importante en cuanto impone restricciones a los patrones de comportamientos que pueden ser capturados por el modelo. Concentraremos nuestra atención en los casos en que <span class="math inline">\(\varepsilon_{nit}\)</span> se distribuye valor extremo que da origen al modelo <em>logit</em> y normal que da origen al modelo <em>probit</em>.</p>
 </div>
-<div id="modelo-logit" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Modelo Logit<a href="modelos-estructurales.html#modelo-logit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelo-logit" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Modelo Logit<a href="modelos-estructurales.html#modelo-logit" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>El modelo logit resulta de asumir que cada <span class="math inline">\(\varepsilon_{nit}\)</span> es independientemente distribuido de acuerdo a una distribución gumbel o de valor extremo tipo I.</p>
 <p><span class="math display" id="eq:logituno">\[\begin{equation}
   \begin{array}{cc}
   F(\varepsilon_{nit}) = e^{-e^{-\varepsilon_{nit}}}
    &amp;f(\varepsilon_{nit}) = e^{-\varepsilon_{nit}}e^{-e^{-\varepsilon_{nit}}}
    \end{array}
-  \tag{2.1}
+  \tag{3.1}
 \end{equation}\]</span></p>
 <p>Aplicando esta definición, podemos demostrar que la probabilidad de elección en un modelo logit corresponde a una fórmula cerrada sencilla (para el detalle de la derivación ver <a href="modelos-estructurales.html#apéndice">apéndice</a>):</p>
 <span class="math display">\[\begin{aligned}
@@ -356,11 +406,11 @@ en efecto dicha expresión puede derivarse a partir de supuestos de maximizació
 <p>Para ganar algo de intuición respecto a la expresión de la probabilidad de elección, es útil graficarla con respecto a la utilidad derivada por cada alternativa. Por ejemplo, supongamos que tenemos una decisión binaria que por ejemplo corresponde a decisión de comprar o no comprar un producto. En este caso, la probabilidad de comprar el producto crece <em>sigmoidalmente</em> con la utilidad derivada de la compra. Esto es, al graficar la probabilidad de compra con respecto a la
 utilidad derivada obtenemos una curva S como muestra la Figura 1. En la figura, hemos agregado también la curva de la probabilidad de elección en el caso en que en vez de asumir que el error se distribuye valor extremo como demanda el modelo logit, asumimos que el error está normalmente
 distribuido como tradicionalmente hacemos en otros modelos econométricos.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="modelos-estructurales.html#cb1-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">rep</span>(<span class="st">&quot;images/probabilidad_eleccion.png&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="modelos-estructurales.html#cb1-1" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">rep</span>(<span class="st">&quot;images/probabilidad_eleccion.png&quot;</span>))</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:probelec"></span>
 <img src="images/probabilidad_eleccion.png" alt="Probabilidad de elección" width="50%" />
 <p class="caption">
-Figure 2.1: Probabilidad de elección
+Figure 3.1: Probabilidad de elección
 </p>
 </div>
 <p>La disposición de una fórmula cerrada para la probabilidad de elección facilita el cálculo de múltiples métricas asociadas que permiten complementar el análisis. Supongamos que la utilidad de una alternativa viene dada por <span class="math inline">\(v_{nit} = v(x_{nit}, θ)\)</span>, entonces podemos calcular:</p>
@@ -382,8 +432,8 @@ Figure 2.1: Probabilidad de elección
 <p><span class="math display">\[e_{ix_{njt}} = \frac{\partial P_{nit}}{\partial x_{njt}}  \cdot \frac{x_{njt}}{P_{nit}}= \frac{\partial v_{njt}}{\partial x_{njt}} x_{njt} P_{njt}\]</span></p>
 <p>Recuerden que unas de las motivaciones para el uso de modelos estructurales es la posibilidad de analizar contrafactuales, esto es ver que pasaría con el mercado si hay cambio en alguna
 variable de control interesante. Por ejemplo que pasa con las participaciones de mercado si sube el precio de una alternativa, si se aumenta la frecuencia publicitaria, etc. Las métricas recién presentadas permiten precisamente hacer dichas evaluaciones de manera directa.</p>
-<div id="propiedades-del-modelo-logit" class="section level4 hasAnchor" number="2.2.2.1">
-<h4><span class="header-section-number">2.2.2.1</span> Propiedades del modelo Logit<a href="modelos-estructurales.html#propiedades-del-modelo-logit" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="propiedades-del-modelo-logit" class="section level4 hasAnchor" number="3.2.2.1">
+<h4><span class="header-section-number">3.2.2.1</span> Propiedades del modelo Logit<a href="modelos-estructurales.html#propiedades-del-modelo-logit" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>El modelo logit es bastante flexible para acomodar una amplia variedad de situaciones. En efecto, distintas especificaciones de las funciones de utilidades de las alternativas permiten describir múltiples fenómenos asociados a la elección. Sin embargo, es importante reconocer que los supuestos subyacentes al logit imponen importantes restricciones a como describimos la lógica en que los agentes evalúan las alternativas y escogen entre ellas.</p>
 <p>Para fijar ideas, resulta útil pensar qué restricciones impone asumir que las componentes no observables de la utilidad son todas independientes entre ellas. El supuesto de independencia
 nos obliga a imponer que cualquier relación entre las utilidades de dos alternativas debe necesariamente capturarse a través de variables observables. Del mismo modo, las utilidades que derivamos por dos alternativas en ocasiones de elección diferentes solo pueden describirse a través de elementos que podamos observar a lo largo del tiempo. Para entender mejor como estas limitaciones se materializan en la formulación del modelo, discutiremos formalmente tres características del modelo logit: la existencia de patrones de substitución proporcional, la incapacidad de capturar tanto heterogeneidad aleatoria en las preferencias como componentes dinámicas no observables.</p>
@@ -423,8 +473,8 @@ variación aleatoria µn no puede ser incluida ya que su inclusión necesariamen
 </div>
 </div>
 </div>
-<div id="estimación" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Estimación<a href="modelos-estructurales.html#estimación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="estimación-1" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Estimación<a href="modelos-estructurales.html#estimación-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Para estimar el modelo, necesitamos escribir la verosimilitud del problema. La componente fundamental para la construcción de la verosimilitud es la descripción de la probabilidad de
 elección <span class="math inline">\(P_{nit}\)</span>. Para el caso del modelo logit, como la expresión de la probabilidad de elección corresponde a una fórmula analítica cerrada, la construcción de la verosimilitud es directa. Si la componente determinística de la utilidad viene dada por <span class="math inline">\(v_{nit}(x_{nit}, θ)\)</span> y si <span class="math inline">\(y_{nit}\)</span> es una variable que toma valor 1 si el tomador de decisión <span class="math inline">\(n\)</span> escoge alternativa <span class="math inline">\(i\)</span> en oportunidad <span class="math inline">\(t\)</span>, entonces la verosimilitud viene dada por:</p>
 <p><span class="math display">\[L(\theta) = \prod_n\prod_i\prod_t (P_{nit})^{y_{nit}} =  \prod_n\prod_i\prod_t \left(\frac{e^{v_{nit}(x_{nit},\theta)}}{\sum_j e^{v_{njt}(x_{njt},\theta)}}\right)^{y_{nit}} \]</span>
@@ -484,10 +534,10 @@ P_{nit} &amp;= \int_{\infty}^{0} -e^{t\sum_{j}  e^{-(v_{ni} - v_{nj})}} dt\\
 \end{aligned}\]</span>
 </div>
 </div>
-<div id="probit" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Probit<a href="modelos-estructurales.html#probit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="definición" class="section level3 hasAnchor" number="2.3.1">
-<h3><span class="header-section-number">2.3.1</span> Definición<a href="modelos-estructurales.html#definición" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="probit" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Probit<a href="modelos-estructurales.html#probit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="definición" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Definición<a href="modelos-estructurales.html#definición" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Al introducir modelos de elección discreta, postulamos que los tomadores de decisiones disponían de una función de utilidad subyacente que descomponíamos en una componente determinística y otra aleatoria. Más aún, discutimos que el modelo que describe la probabilidad de elegir cada una de las alternativas quedaba directamente determinada por la distribución que asumiéramos para la componente aleatoria de la utilidad. Aunque una especificación de errores normales
 centrados en cero tiene una larga tradición en modelos econométricos, por simplicidad optamos iniciar la discusión con modelos <em>logit</em> derivados de asumir que la componente aleatoria de la utilidad se distribuía valor extremo tipo I. En este capitulo volveremos al caso de componentes
 aleatorias normales que dan origen al modelo probit. Formalmente, un modelo <em>probit</em> resulta de los siguientes supuestos de comportamiento:</p>
@@ -495,12 +545,12 @@ aleatorias normales que dan origen al modelo probit. Formalmente, un modelo <em>
   \begin{array}{cc}
   u_{ni} = v_{ni} + \varepsilon_{ni} &amp;\varepsilon_n \sim N(0,Σ)
   \end{array}  
-  \tag{2.2}
+  \tag{3.2}
 \end{equation}\]</span></p>
 <p>La normalidad de los errores provee bastante flexibilidad para acomodar una amplia variedad de estructuras de las preferencias. Como veremos en la discusión que sigue, un modelo con errores normales permite acomodar factores sistemáticos no observables en la utilidad. Una de las pocas limitaciones de un modelo probit viene de la normalidad dichos factores. Por ejemplo, si queremos incorporar el efecto que tiene el precio en la utilidad como una componente aleatoria, entonces las colas de la distribución normal implicara una probabilidad positiva de que algunos clientes aumenten la utilidad de una alternativa si aumenta el precio de esta. Formalmente, el supuesto de la normalidad de la componente aleatoria de la utilidad implica que su función de densidad viene dada por:</p>
 <p><span class="math display" id="eq:density">\[\begin{equation}
   \phi(\varepsilon_n) = \frac{1}{(2\pi)^{I/2}|Σ|^{1/2}}e^{-\frac{1}{2} \varepsilon&#39;_n Σ^{-1}\varepsilon_n}
-  \tag{2.3}
+  \tag{3.3}
 \end{equation}\]</span></p>
 <p>Esta expresión no es más que la versión multivariada de la bien conocida densidad de la distribución <span class="math inline">\(N(0, \sigma^2)\)</span>. La matriz Σ corresponde a la matriz varianza-covarianza de los errores. Por tratarse de una distribución normal, la matriz Σ es simétrica y de dimensión I × I, donde I es el número de alternativas disponibles para el tomador de decisión. Por ejemplo, si hay tres alternativas disponibles, la matriz Σ tomaría la siguiente forma:</p>
 <p><span class="math display" id="eq:matrix">\[\begin{equation}
@@ -508,7 +558,7 @@ aleatorias normales que dan origen al modelo probit. Formalmente, un modelo <em>
 \cdot &amp; \sigma_{22} &amp; \sigma_{23}\\
 \cdot &amp; \cdot &amp; \sigma_{33}
 \end{bmatrix}
-  \tag{2.4}
+  \tag{3.4}
 \end{equation}\]</span></p>
 <p>Los coeficientes en la diagonal dan cuenta de la variabilidad de la componente aleatoria de la utilidad. Así por ejemplo, si <span class="math inline">\(σ_{ii}\)</span> tiene un valor alto indica que hay una fracción importante de la utilidad de la alternativa <span class="math inline">\(i\)</span> que no es capturada por el modelo de la componente sistemática. Los
 coeficientes fuera de la diagonal dan cuenta de la correlación de las componentes no observables de cada una de las alternativas. De este modo, si <span class="math inline">\(σ_{ij}\)</span> tiene un valor positivo alto indica que existe un elemento no observable importante que afecta simultáneamente las alternativas <span class="math inline">\(i\)</span> y <span class="math inline">\(j\)</span>.</p>
@@ -518,22 +568,22 @@ coeficientes fuera de la diagonal dan cuenta de la correlación de las component
     P_{ni} &amp;= Pr (v_{ni} + \varepsilon_{ni} &gt; v_{nj} + \varepsilon_{nj}), \forall j \neq i \\
     &amp;= \int \textbf{1} (v_{ni} + \varepsilon_{ni} &gt; v_{nj} + \varepsilon_{nj})\phi(\varepsilon_n)d\varepsilon_n , \forall j \neq i
   \end{aligned}  
-  \tag{2.5}
+  \tag{3.5}
 \end{equation}\]</span></p>
 <p>Intuitivamente, simplemente calculamos el volumen bajo la densidad <span class="math inline">\(\phi(\varepsilon_n)\)</span> en la región en que los errores son tales que la alternativa <span class="math inline">\(i\)</span> es aquella que reporta mayor utilidad al individuo <span class="math inline">\(n\)</span>. A diferencia del modelo logit, la integral sobre la densidad <span class="math inline">\(\phi(\cdot)\)</span> no tiene primitiva analítica y por tanto no disponemos de una formula cerrada para <span class="math inline">\(P_{ni}\)</span>.</p>
 </div>
-<div id="patrones-de-substitución" class="section level3 hasAnchor" number="2.3.2">
-<h3><span class="header-section-number">2.3.2</span> Patrones de substitución<a href="modelos-estructurales.html#patrones-de-substitución" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="patrones-de-substitución" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Patrones de substitución<a href="modelos-estructurales.html#patrones-de-substitución" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Una de las grandes ventajas de un modelo <em>probit</em> es su flexibilidad para capturar una amplia variedad de patrones de comportamiento. En efecto, un modelo <em>probit</em> no impone restricciones en los patrones de substitución más allá de la simetría propia de la distribución normal lo que posibilita al analista explorar el esquema que mejor se ajusta a la data. En este sentido, es útil compararlo con el modelo <em>logit</em> que, aunque provee una fórmula analítica cerrada para la probabilidad de cada elección, impone la propiedad de substitución proporcional (o de independencia de alternativas irrelevantes). El modelo probit no tiene esta propiedad y por tanto el aumento de la probabilidad de elección de una alternativa puede tener impactos diferentes en las probabilidades de elección de las alternativas remanentes. Esto permitiría por ejemplo identificar pares de alternativas que son mejores substitutos (complementos) más allá de las comonalidades que podrían existir en las componentes determinísticas de su utilidad.</p>
 <p>A continuación discutiremos como el modelo probit puede ser usado para representar algunas situaciones de elección discreta.</p>
-<div id="variación-aleatorias-en-preferencias" class="section level4 hasAnchor" number="2.3.2.1">
-<h4><span class="header-section-number">2.3.2.1</span> Variación aleatorias en preferencias<a href="modelos-estructurales.html#variación-aleatorias-en-preferencias" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="variación-aleatorias-en-preferencias" class="section level4 hasAnchor" number="3.3.2.1">
+<h4><span class="header-section-number">3.3.2.1</span> Variación aleatorias en preferencias<a href="modelos-estructurales.html#variación-aleatorias-en-preferencias" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Una de las componentes más importantes en el diseño de un plan comercial exitoso es la identificación de como las preferencias de los potenciales clientes se distribuyen en la población. Identificando estas variaciones, podemos encontrar las propuestas de valor que resulten más atractivas para cada grupo de clientes. En un modelo probit, podemos asumir que los parámetros que definen la componente determinística son heterogéneos en la población sin perder los supuestos básicos que definen el modelo. Por simplicidad, supongamos que la componente determinística de la utilidad es lineal:</p>
 <p><span class="math display" id="eq:cdeterminista">\[\begin{equation}
   \begin{array}{cc}
     u_{ni} = \beta&#39;_{n} x_{ni} + \varepsilon_{ni} &amp; \varepsilon_n \sim N(0,Σ)
   \end{array}  
-  \tag{2.6}
+  \tag{3.6}
 \end{equation}\]</span></p>
 <p>Notar que a diferencia de los modelos anteriores, ahora hemos asumido que cada tomador de decisión <span class="math inline">\(n\)</span> tiene su propio set de parámetros <span class="math inline">\(β_n\)</span> que describen sus preferencias por las alternativas disponibles. Para completar el modelo necesitamos especificar una distribución de <span class="math inline">\(β_n\)</span> en la población. Para mantener la estructura del modelo asumiremos normalidad: <span class="math inline">\(β_n ∼ N(b, σ^2_β)\)</span>. Dado que la suma de dos variables aleatorias normales se distribuye normal, es fácil ver que el modelo es
 equivalente a</p>
@@ -541,7 +591,7 @@ equivalente a</p>
   \begin{array}{cc}
     u_{ni} = b&#39;_{n} x_{ni} + \eta_{ni} &amp; \eta_n \sim N(0,\hat{Σ})
   \end{array}  
-  \tag{2.7}
+  \tag{3.7}
 \end{equation}\]</span></p>
 <p>Las componentes de la matriz de varianza-covarianza resultante <span class="math inline">\(\hat{Σ}\)</span> pueden trazarse directamente a las componentes de la matriz Σ original como lo indica el siguiente ejemplo:</p>
 <p><strong>Ejemplo:</strong> Consideremos un modelo de elección con dos alternativas y un modelo lineal con una única variable para describir la componente sistemática de la utilidad. En este caso, las utilidades por cada alternativa vienen dadas por:</p>
@@ -567,8 +617,8 @@ x_{n1}x_{n2} &amp; x^2_{n2} \end{bmatrix} + \sigma_{\varepsilon} \begin{bmatrix}
 x_{n1}x_{n2} &amp; x^2_{n2} \end{bmatrix} + \begin{bmatrix}1 &amp; 0\\
 0 &amp; 1\end{bmatrix}\]</span></p>
 </div>
-<div id="dependiencia-del-tiempo" class="section level4 hasAnchor" number="2.3.2.2">
-<h4><span class="header-section-number">2.3.2.2</span> Dependiencia del tiempo<a href="modelos-estructurales.html#dependiencia-del-tiempo" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="dependiencia-del-tiempo" class="section level4 hasAnchor" number="3.3.2.2">
+<h4><span class="header-section-number">3.3.2.2</span> Dependiencia del tiempo<a href="modelos-estructurales.html#dependiencia-del-tiempo" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Hemos discutido que bajo un modelo <em>probit</em> podemos estudiar relaciones no observables entre las alternativas de elección. En las bases disponibles para la función comercial, las observaciones suelen estar indexadas temporalmente generando estructuras de panel que permiten estudiar aspectos interesantes de los agentes. Discutiremos a continuación cómo usar un modelo <em>probit</em> para explorar no solo relación entre las utilidades de alternativas sino que también del comportamiento de las utilidades de las alternativas en el tiempo. Al igual que en la sección anterior, buscamos
 encontrar patrones temporales en las componentes no observables de la utilidad, ya que las variaciones en la componente observable puede ser fácilmente estudiada incluyendo variables observables que describan la evolución temporal del sistema. Por ejemplo, si creemos que la utilidad
 de una de las alternativas es creciente en el tiempo, basta incluir el tiempo <span class="math inline">\(t\)</span> entre las variables independientes en la descripción de la utilidad de la alternativa. En general, debiéramos esperar que las utilidades estén correlacionadas tanto en el tiempo como entre las alternativas ya que los
@@ -578,7 +628,7 @@ factores que no son observados por el analista suelen ser persistentes en el tie
   \begin{array}{cc}
     u_{ni} = v_{nit} + \varepsilon_{nit}  &amp; [\varepsilon_{n11},...,\varepsilon_{nI1},\varepsilon_{n12}, ..., \varepsilon_{nI2},...,\varepsilon_{n1T},...,\varepsilon_{nIT}] \sim N(0,Σ)
   \end{array}  
-  \tag{2.7}
+  \tag{3.7}
 \end{equation}\]</span></p>
 <p>La matriz de covarianza Σ tiene dimensión <span class="math inline">\(IT ×IT\)</span> (como veremos, no todas las componentes son identificables y tendremos que imponer ciertas restricciones). Para paneles típicos, <span class="math inline">\(T\)</span> es grande y generan matrices de varianza covarianza muy grandes. Por ejemplo, si tenemos datos semanales de compras de 5 marcas por un periodo de 2 años, nos
 enfrentaremos con una matriz de varianza (sin normalizar) con 5 × 104 = 520 filas y 520 columnas, lo que nos generaría no solo un modelo difícil de estimar numéricamente si no que también difícil de interpretar. Así, para usar un modelo <em>probit</em> con dependencia en el tiempo, típicamente
@@ -586,16 +636,16 @@ agregaremos estructura al modelo. Por ejemplo podemos restringir nuestro anális
 <p><strong>Ejemplo:</strong> Supongamos un caso de elección binaria, el error está compuesto por una componente sistemática específica del tomador de decisión, y otra que es variable en el tiempo.</p>
 <p><span class="math display" id="eq:errorbinario">\[\begin{equation}
   \varepsilon_{nt} = \eta_n + \mu_{nt}
-  \tag{2.8}
+  \tag{3.8}
 \end{equation}\]</span></p>
 <p>Si asumimos que <span class="math inline">\(η_n\)</span> está distribuida <span class="math inline">\(N(0, σ)\)</span> y <span class="math inline">\(\mu_{nt}\)</span> en <span class="math inline">\(N(0, 1)\)</span>, entonces la varianza y covarianza son</p>
 <p><span class="math display" id="eq:varbinaria">\[\begin{equation}
   \mathbb{V}ar(\varepsilon_{nt}) =  \mathbb{V}ar(\eta_{n}+ mu_{nt}= \sigma + 1)
-    \tag{2.9}
+    \tag{3.9}
   \end{equation}\]</span></p>
 <p><span class="math display" id="eq:covbinaria">\[\begin{equation}
   \mathbb{C}ov(\varepsilon_{nt},\varepsilon_{ns})) =  \mathbb{E}((\eta_{n}+ mu_{nt}) (\eta_{n}+ mu_{ns})) = \sigma
-    \tag{2.10}
+    \tag{3.10}
   \end{equation}\]</span></p>
 <p>La matriz Σ, por lo tanto, es</p>
 <p><span class="math display" id="eq:matrizsum">\[\begin{equation}
@@ -604,16 +654,16 @@ agregaremos estructura al modelo. Por ejemplo podemos restringir nuestro anális
 \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
 \sigma &amp; \sigma &amp; \dots &amp; \sigma +1
 \end{bmatrix}
-    \tag{2.11}
+    \tag{3.11}
   \end{equation}\]</span></p>
 </div>
 </div>
-<div id="identificación" class="section level3 hasAnchor" number="2.3.3">
-<h3><span class="header-section-number">2.3.3</span> Identificación<a href="modelos-estructurales.html#identificación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="identificación" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Identificación<a href="modelos-estructurales.html#identificación" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Para estimar un modelo <em>probit</em>, junto con los parámetros de la componente sistemática de la utilidad necesitamos estimar los coeficientes la matriz Σ. Por tratarse de una distribución normal,la matriz Σ es simétrica y por tanto en principio se deben estimar <span class="math inline">\(\frac{I(I+1)}{2}\)</span> de sus componentes. Sin
 embargo dicho problema no es identificable y necesitamos imponer restricciones adicionales. La intuición detrás de esta falta de identificación resulta de asumir que las utilidades subyacentes que maximizan los individuos son monótonas y homotéticas. En otras palabras, podemos agregar un valor constante a las utilidades de cada una de las alternativas o escalarlas en cualquier proporción y la identidad de la alternativa de mayor utilidad no cambia. En general, si tenemos I alternativas, solo podemos identificar <span class="math inline">\(\frac{I(I+1)}{2} -1\)</span> parámetros. A continuación discutiremos dos enfoques para generar restricciones que hagan el problema identificable.</p>
-<div id="normalización-de-las-funciones-de-utilidad" class="section level4 hasAnchor" number="2.3.3.1">
-<h4><span class="header-section-number">2.3.3.1</span> Normalización de las funciones de utilidad<a href="modelos-estructurales.html#normalización-de-las-funciones-de-utilidad" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="normalización-de-las-funciones-de-utilidad" class="section level4 hasAnchor" number="3.3.3.1">
+<h4><span class="header-section-number">3.3.3.1</span> Normalización de las funciones de utilidad<a href="modelos-estructurales.html#normalización-de-las-funciones-de-utilidad" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Motivados en las propiedades de la función de utilidad, este enfoque consiste en imponer directamente restricciones de escala y locación. Este enfoque es completamente general y permite además garantizar identificación con un procedimiento estándar que puede incluso automatizarse. Formalmente el proceso consiste en imponer dos restricciones:</p>
 <ol style="list-style-type: decimal">
 <li><p>FIJAR LOCACIÓN: Como el valor absoluto de las utilidades es irrelevante, podemos fijar arbitrariamente el punto de referencia sobre el cual interpretaremos las utilidades. De esta forma, tomaremos la utilidad de una de las alternativas como referencia y re-definiremos las utilidades como las diferencias con respecto a la alternativa de referencia.</p></li>
@@ -626,7 +676,7 @@ embargo dicho problema no es identificable y necesitamos imponer restricciones a
 \cdot &amp; \cdot &amp; \sigma_{33} &amp; \sigma_{34}\\
 \cdot &amp; \cdot &amp; \cdot &amp; \sigma_{44}
 \end{bmatrix}
-  \tag{2.12}
+  \tag{3.12}
 \end{equation}\]</span></p>
 <p>El primer paso en la normalización es considerar diferencias de utilidades con respecto a una alternativa de referencia, la que por simplicidad escogeremos como la primera de la lista. Al fijar esta utilidad y tomar las diferencias, hemos reducido la dimensión del vector errores, resultando en una matriz de varianza-covarianza <span class="math inline">\(\hat{Σ} = \{\hat{σ}_{ij}\}^3_{i,j=1}\)</span> cuyas componentes vienen dadas por:</p>
 <span class="math display">\[\begin{aligned}
@@ -647,8 +697,8 @@ embargo dicho problema no es identificable y necesitamos imponer restricciones a
 \end{aligned}\]</span>
 <p>La matriz resultante $ es identificable. En ella es importante trazar sus componentes originales de la matriz sigma porque nos ayudan a darle interpretación a los resultados obtenidos en la estimación.</p>
 </div>
-<div id="incorporación-de-restricciones-estructurales" class="section level4 hasAnchor" number="2.3.3.2">
-<h4><span class="header-section-number">2.3.3.2</span> Incorporación de restricciones estructurales<a href="modelos-estructurales.html#incorporación-de-restricciones-estructurales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="incorporación-de-restricciones-estructurales" class="section level4 hasAnchor" number="3.3.3.2">
+<h4><span class="header-section-number">3.3.3.2</span> Incorporación de restricciones estructurales<a href="modelos-estructurales.html#incorporación-de-restricciones-estructurales" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>Aunque completamente general, la normalización descrita en la sección anterior, muchas veces puede ser algo inconveniente en cuanto los parámetros estimados no tienen interpretación
 directa. Un enfoque que permite interpretar directamente los parámetros se obtiene al imponer estructura sobre la matriz de varianza-covarianza a partir de supuestos de comportamiento. Por ejemplo, podemos imponer que las componentes aleatorias de algunos pares de alternativas no están correlacionadas o que algún grupo de alternativas tiene la misma variabilidad de la componente no observable. El cuadro 4.1 ejemplifica algunas de las estructuras de varianza-covarianza comúnmente usadas en la literatura.</p>
 <p>Otros modelos usados en la literatura y que están implementadas en aplicaciones comerciales incluyen estructuras de bandas, Huynh-Feldt, autoregresivo heterogéneo y simetría compuesta. Como en otros aspectos de la modelación, la elección de la estructura a elegir para la matriz de
@@ -656,8 +706,8 @@ varianza-covarianza dependerá de las hipótesis de comportamiento que tengamos 
 </div>
 </div>
 </div>
-<div id="mixed-logit" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> <em>Mixed Logit</em><a href="modelos-estructurales.html#mixed-logit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="mixed-logit" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> <em>Mixed Logit</em><a href="modelos-estructurales.html#mixed-logit" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -704,7 +754,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-estructurales.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/03-estructurales.Rmd",
 "text": "Edit"
 },
 "history": {

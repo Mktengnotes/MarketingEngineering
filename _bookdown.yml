@@ -4,3 +4,9 @@ language:
   ui:
     chapter_name: "Capítulo "
 delete_merged_file: true
+rmd_files:
+  - "index.Rmd"
+  - "01-regresión.Rmd"
+  - "02-probabilisticos.Rmd"
+  - "03-estructurales.Rmd"
+  - "04-apéndice.Rmd"
