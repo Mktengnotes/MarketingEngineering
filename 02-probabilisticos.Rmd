@@ -922,4 +922,120 @@ donde
 
 $\Psi$ es la *función hiper geométrica confluyente del segundo tipo*.
 
-Actualizado hasta la página 100
+## Ejercicios teóricos
+
+### E1: Tasa de respuesta
+Una compañía de venta de ropa por cat́alogo busca decidir a que segmento enviar los cat́alogo de la próxima colección. Para ello analiza la tasa de respuesta de una muestra de clientes de cada segmento (esto es el ratio entre número de clientes que compra y número de catálogos enviados). Al mirar el primer segmento observa que de los 18 clientes a quienes se les envió el catálogo, ninguno compró y por tanto decide no enviar catálogos a ningún cliente de ese segmento. Esta compañía:
+
+(a) **Muy probablemente esté subestimando la tasa de respuesta de ese segmento.**
+(b) Debiera redefinir los criterios de segmentación para hacer grupos más grandes y accionables.
+(c) Ha definido una política que da cuenta de su aversión al riesgo.
+(d) Debiera usar un modelo de duración en tiempo continuo con dependencia en la duración.
+(e) Debiera incorporar variables explicativas en su modelo predictivo.
+
+### E2: Distribución Weibull
+En relación a la distribución Weibull:
+
+a. Es un caso particular de la Poisson.
+b. Es una generalización de la Poisson.
+c. Sólo tiene un parámetro $c$.
+d. Es muy flexible y permite incluso generar distribuciones bimodales.
+e. **Ninguna de las anteriores.**
+
+### E3: Distribución Gamma y Heterogeneidad
+¿Cuál de los siguientes factores motivan la utilización de una distribución Gamma para modelar la heterogeneidad de las tasas de adopción en un modelo de duración en tiempo continuo? (Puede elegir más de un factor).
+
+i. Consistencia con el dominio de la probabilidad de abandono en cada período.
+ii. Para generar una fórmula recursiva de fácil implementación.
+iii. **Flexibilidad para acomodar distintas formas de la distribución.**
+iv. **Para generar una fórmula cerrada que pueda ser calculada de manera computacionalmente eficiente.**
+
+### E4: Modelos de Duración
+¿Cuáles de los siguientes modelos NO describe la duración de la relación de los clientes con una firma?
+
+a. Beta-geométrica desplazada.
+b. Beta-geométrica NBD.
+c. Gamma-Weibull.
+d. **Binomial Negativa.**
+e. Ninguna de las anteriores.
+
+### E5: Modelo NBD
+Un modelo NBD describe la demanda de botellas de *oporto* en los últimos 6 meses. Si con este modelo se estima la demanda del próximo mes:
+
+a. Hay que hacer un modelo de regresión que considere la dinámica del problema.
+b. El cálculo no se puede hacer directamente, sin embargo podemos recalibrar el modelo considerando un horizonte de un mes.
+c. **El histograma del número de botellas consumidas por cliente se moverá a la izquierda.**
+d. La probabilidad de comprar $x$ botellas resulta ser simplemente 1/6 veces las probabilidades calculadas para el primer semestre.
+e. Ninguna de las anteriores.
+
+### E6: Modelos de Conteo
+Un analista propone el uso de modelos de conteo para describir la intensidad de la participación de los usuarios de la red social *Twitter*. Los parámetros que describen el comportamiento de los usuarios han sido estimados usando datos de 4 días de actividad. El modelo ajusta extremadamente bien. Sin embargo, al usar las estimaciones para pronosticar la actividad del quinto día el modelo no ajusta bien. Al respecto se debiera concluir que:
+
+a. Se debe agregar la data para considerar la actividad agregada en todo el horizonte.
+b. **Probablemente el comportamiento de los usuarios en el quinto día esté afectado por factores que no están presentes en los primeros cuatro días.**
+c. Hay que calcular esperanzas condicionales.
+d. Los supuestos de comportamiento son errados y hay que desechar el modelo.
+e. Todas las anteriores.
+
+### E7: Tiempo discreto en Modelos de Duración
+En la práctica, siempre podemos discretizar el tiempo y por lo tanto no hay motivos para usar modelo de duración en tiempo continuo. Discuta respecto de la veracidad de esta afirmación.
+
+- **Para eventos con gran variabilidad de tiempos de ocurrencia, un modelo de tiempo discreto podría requerir un número muy grande de periodos para describir el apropiadamente comportamiento bajo estudio.**
+- **Si el comportamiento tiene dependencia en la duración, dichas dependencias son fáciles de incluir en un modelo de tiempo continuo.**
+
+## Ejercicios aplicados
+
+### E1: Elección en Promociones Personalizadas
+Inmersos en la era digital, los consumidores están cada vez conectados en distintos dispositivos los cuales pueden ser usados como canales durante el proceso de compra. En este contexto, algunas empresas han decidido lanzar aplicaciones móviles que funcionan en base a información georreferenciada de los dispositivos de sus clientes, y que permiten enviarles promociones personalizadas cuando identifica que este se encuentra cercano a un punto de venta.
+
+La aplicación que más éxito ha tenido en el mercado, quiere evaluar la efectividad de las campañas que envían a sus usuarios, y así poder ofrecer un mejor servicio a las empresas que lo contratan. Para esto, cuenta con información de los $m_{i}$ mensajes promocionales que envía al cliente $i$, y el número $x_{i}$ de esos que son efectivamente utilizados por el cliente.
+
+1. Plantee un modelo de elección para determinar la probabilidad de respuesta de cada cliente, en cada ocasión de compra. En particular,
+
+    a. Escriba la log-verosimilitud del problema.
+    b. Sea $N$ el número de clientes. Si se observa el comportamiento por $T$ períodos y en promedio se envían $M$ promociones por cliente, ¿cuántos parámetros deben estimarse?
+
+> a. Sea $X_{i}$ el número de veces que la persona $i$ hace efectivo un cupón. La probabilidad de respuesta es:
+$$\mathbb{P}(X_{i}=x_{i}|p_{i})=\binom{m_{i}}{x_{i}}p_{i}^{x_{i}}(1-p_{i})^{m_{i}-x_{i}}$$
+donde log-verosimilitud viene dada por:
+$$LL(p)=\sum_{i}ln(\binom{m_{i}}{x_{i}}p_{i}^{x_{i}}(1-p_{i})^{m_{i}-x_{i}})$$
+b. Se deben estimar $N$ parámmetros. Uno por cada cliente (esto por supuesto sugiere que es necesario un mecanismo alternativo para describir las probabilidades de respuesta en la población, como en la siguiente pregunta).
+
+2. Considere que se cuenta con información demográfica de los usuarios de la aplicación móvil, como edad, Ingreso y frecuencia de uso de la app. Reformule el modelo anterior incorporando variables explicativas considerando además que existe un segmento de clientes que realiza pocos canjes y otro que realiza muchos (es decir, un segmento canjeador _C_ y otro no-canjeador _N_). 
+
+    **Hint**: Recuerde que si $x\in\mathbb{R}$, entonces $\frac{exp(x)}{1+exp(x)}\in(0,1)$.
+
+> Se necesita un modelo de elección con dos segmentos. Sea $p_{iC}$ la probabilidad de canje del individuo $i$ si pertenece al segmento canjeador y $p_{iN}$ si pertenece al segmento no-canjeador. Entonces, si $\pi$ es la fracción de clientes canjeadores, el modelo con dos segmentos puede escribirse como:
+$$\mathbb{P}(X_{i}=x_{i}|\beta,\pi)=\pi[\binom{m_{i}}{x_{i}}p_{iC}^{x_{i}}(1-p_{iC})^{m_{i}-x_{i}}]+(1-\pi)[\binom{m_{i}}{x_{i}}p_{iN}^{x_{i}}(1-p_{iN})^{m_{i}-x_{i}}]$$
+donde
+$$\begin{align}
+  p_{iC}&=\frac{exp(\beta'_{C}z_{i})}{1+exp(\beta'_{C}z_{i})}\\
+  p_{iN}&=\frac{exp(\beta'_{N}z_{i})}{1+exp(\beta'_{N}z_{i})}
+\end{align}$$
+por lo que finalmente se tiene
+$$LL=\sum_{i}ln(\pi[\binom{m_{i}}{x_{i}}p_{iC}^{x_{i}}(1-p_{iC})^{m_{i}-x_{i}}]+(1-\pi)[\binom{m_{i}}{x_{i}}p_{iN}^{x_{i}}(1-p_{iN})^{m_{i}-x_{i}}])$$
+
+3. Suponga que se ha estimado el modelo anterior y se encuentra que los segmento canjeadores y no-canjeadores tienen el mismo tamaño y que los parámetros asociados a las variables explicativas son tales que para un usuario $i$ con un vector de variables explicativas $z_{i}$, $\beta'_{C}x_{i}=ln(2)$ y $\beta'_{N}x_{i}=ln(1/2)$. Si al usuario le han enviado dos promociones y ha canjeado las dos, ¿cuál es la probabilidad que este usuario pertenezca al segmento de canjeadores?
+
+> Para ello, aplicamos probabilidades condicionales
+$$\mathbb{P}(C|X_{i}=2)=\frac{\mathbb{P}(X_{i}=2|C)\mathbb{P}(C)}{\mathbb{P}(X_{i}=2|C)\mathbb{P}(C)+\mathbb{P}(X_{i}=2|N)\mathbb{P}(N)}$$
+donde
+$$\begin{align}
+  \mathbb{P}(X_{i}=2|C)&=\binom{2}{2}[\frac{exp(\beta'_{C}z_{i})}{1+exp(\beta'_{C}z_{i})}]^{2}[\frac{1}{1+exp(\beta'_{C}z_{i})}]^{2-2}=\frac{4}{9}\\
+  \mathbb{P}(X_{i}=2|N)&=\binom{2}{2}[\frac{exp(\beta'_{N}z_{i})}{1+exp(\beta'_{N}z_{i})}]^{2}[\frac{1}{1+exp(\beta'_{N}z_{i})}]^{2-2}=\frac{1}{9}
+\end{align}$$
+Finalmente, considerando que $\mathbb{P}(C)=\mathbb{P}(N)=1/2$, tenemos que:
+$$\mathbb{P}(C|X_{i}=2)=\frac{4/9\cdot1/2}{4/9\cdot1/2+1/9\cdot1/2}=\frac{4}{5}$$
+
+4. Suponga ahora que del total de $m_{i}$ mensajes que recibe un usuario este lee $n_{i}$ de ellos. De los $n_{i}$ mensajes que efectivamente lee, decide canjear $x_{i}$ de ellos. Modele el comportamiento anteriormente descrito como un modelo integrado elección-elección. Plantee explícitamente la probabilidad de canje y la log-verosimilitud del problema.
+
+> La probabilidad de leer un mensaje queda descrita por un modelo binomial:
+$$\mathbb{P}(N_{it}=n_{it}|p_{leer})=\binom{m_{i}}{n_{i}}p_{leer}^{n_{i}}(1-p_{leer})^{m_{i}-n_{i}}$$
+Para la probabilidad de canje, usando probabilidades totales:
+$$\begin{align}
+  \mathbb{P}(X_{i}=x_{i}|p_{canjear})&=\sum_{n_{i}=x_{i}}^{m_{i}}\mathbb{P}(X_{i}=x_{i}|p_{canjear},n_{i})\mathbb{P}(N_{i}=n_{i}|p_{leer})\\
+  &=\binom{n_{i}}{x_{i}}p_{canjear}^{x_{i}}(1-p_{canjear})^{n_{i}-x_{i}}\binom{m_{i}}{n_{i}}p_{leer}^{n_{i}}(1-p_{leer})^{m_{i}-n_{i}}
+\end{align}$$
+Finalmente, la log-verosimilitud del problema está dada por:
+$$LL=\sum_{i}\sum_{t}ln(\mathbb{P}(X_{i}=x_{i}|p_{canjear}))$$
+
