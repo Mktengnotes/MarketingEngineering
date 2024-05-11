@@ -2,15 +2,22 @@
 
 ## Conceptos básicos de regresión
 
-Como bien ya se ha estudiado en otros cursos de la carrera de ingeniería industrial, una **regresión** es una técnica para calcular el valor esperado de una variable condicional en la realización de otras.
+Como bien ya se ha estudiado en otros cursos de la carrera de ingeniería industrial, una **regresión** es una técnica para calcular el valor esperado de una variable condicional en la realización de otras. Por ejemplo: 
 
-Por ejemplo: - ¿Cuál debería ser el precio de venta de una casa en la comuna de la Providencia, con 4 dormitorios, 170m2 de superficie construida? -¿Cuáles deberían ser las ventas de Leche semidescremada Nestlé en la última semana del mes de Abril si el precio es \$723? - ¿Cuál debería ser el número de clientes que ve un aviso publicitario si se despliega en 4 programas durante 3 semanas y el rating promedio de los programas es 8.7 puntos?
+- ¿Cuál debería ser el precio de venta de una casa en la comuna de la Providencia, con 4 dormitorios, 170m2 de superficie construida?
+- ¿Cuáles deberían ser las ventas de Leche semidescremada Nestlé en la última semana del mes de Abril si el precio es \$723?
+- ¿Cuál debería ser el número de clientes que ve un aviso publicitario si se despliega en 4 programas durante 3 semanas y el rating promedio de los programas es 8.7 puntos?
 
 ### Notación
 
 En general se denota con $y$ al vector que representa todas las variables dependientes en un único vector columna, mientras que $X$ representa la matriz que incluye todas las variables independientes (esto incluye una columna de 1s si se desea incluir un intercepto).
 
-Es importante notar que: - Cada columna corresponde a una variable - Cada fila corresponde a un caso - Las dimensiones de las filas del vector $y$ y la matriz $X$ deben ser consistentes. - Todos los elementos de una misma fila deben tener los mismos índices.
+Es importante notar que:
+
+- Cada columna corresponde a una variable.
+- Cada fila corresponde a un caso.
+- Las dimensiones de las filas del vector $y$ y la matriz $X$ deben ser consistentes.
+- Todos los elementos de una misma fila deben tener los mismos índices.
 
 Para estimar los parámetros de la recta de regresión, se utilizan diferentes métodos, siendo uno de los más populares el método de Mínimos Cuadrados Ordinarios (OLS).
 
