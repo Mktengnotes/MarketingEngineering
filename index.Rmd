@@ -13,6 +13,7 @@ description: "Marketing Engineering"
 
 # Prólogo {-}
 
+- Estimado/a estudiante, tienes en tus manos el primer apunte oficial del curso de Ingeniería de Marketing, hecho con mucho esfuerzo por varios integrantes de los distintos equipos docente del curso a lo largo de los años. Cabe recordar que este documento está en constante actualización y mejora, por lo que cualquier sugerencia, corrección o comentario favor de comunicarse al correo mktengnotes@gmail.com. ¡Éxito en el estudio!
 -----
 
 ```{r include=FALSE}
