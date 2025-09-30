@@ -214,12 +214,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.6.3" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelo-de-conteo-combinado-con-gamma"><i class="fa fa-check"></i><b>2.6.3</b> Modelo de Conteo (Combinado con Gamma)</a></li>
 <li class="chapter" data-level="2.6.4" data-path="02-probabilisticos.html"><a href="#modelo-de-elecci%C3%B3n-binaria-binomial-combinado-con-beta"><i class="fa fa-check"></i><b>2.6.4</b> Modelo de Elección Binaria binomial (Combinado con Beta)</a></li>
 </ul></li>
-<li class="chapter" data-level="2.7" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelos-integrados"><i class="fa fa-check"></i><b>2.7</b> Modelos Integrados</a></li>
-<li class="chapter" data-level="2.8" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#customer-lifetime-value-caso-contractual"><i class="fa fa-check"></i><b>2.8</b> Customer Lifetime Value: Caso Contractual</a>
-<ul>
-<li class="chapter" data-level="2.8.1" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelo-contractual-a-tiempo-discreto"><i class="fa fa-check"></i><b>2.8.1</b> Modelo contractual a tiempo discreto</a></li>
-<li class="chapter" data-level="2.8.2" data-path="modelos-probabilísticos.html"><a href="modelos-probabilísticos.html#modelo-contractual-a-tiempo-continuo"><i class="fa fa-check"></i><b>2.8.2</b> Modelo contractual a tiempo continuo</a></li>
-</ul></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="modelos-estructurales.html"><a href="modelos-estructurales.html"><i class="fa fa-check"></i><b>3</b> Modelos Estructurales</a>
 <ul>
@@ -514,10 +508,10 @@ contribuciones a la verosimilitud son las siguientes (asumiendo como
 modelo de comportamiento la distribución geométrica desplazada)</p>
 <table>
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="37%" />
+<col width="23%" />
+<col width="23%" />
+<col width="23%" />
+<col width="29%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1037,7 +1031,11 @@ obtenidas. Recordando que la suma de experimentos de <span class="math inline">\
 corresponde a una variable aleatoria Binomial, es posible interpretar
 <span class="math inline">\(X_s\)</span> como la cantidad de respuestas obtenidas de un total de <span class="math inline">\(m_s\)</span>
 enviadas. Luego:</p>
-<p><span class="math display" id="eq:bin">\[P(X_s = x_s|m_s,p_s) = \binom{m_s}{x_s} p_s^{x_s}(1-p_s)^{m_s\tag{2.6}ad (#eq:bin)\]</span></p>
+<p><span class="math display" id="eq:bin">\[
+\begin{aligned}
+P(X_s = x_s|m_s,p_s) &amp;= \binom{m_s}{x_s} p_s^{x_s}(1-p_s)^{m_s-x_s}
+\end{aligned}
+\quad \tag{2.6}\]</span></p>
 <p>donde <span class="math inline">\(m_s\)</span> es la población del segmento <span class="math inline">\(s\)</span> y <span class="math inline">\(p_s\)</span> es la probabilidad
 de respuesta del segmento <span class="math inline">\(s\)</span>.</p>
 <p>Se tiene que la verosimilitud es expresada como:</p>
@@ -1064,7 +1062,7 @@ de acuerdo a dos segmentos identificables, la probabilidad adopta el
 valor de <span class="math inline">\(\theta_1\)</span> y <span class="math inline">\(\theta_2\)</span>, donde <span class="math inline">\(\pi\)</span> corresponde a la
 probabilidad de pertencer al primer segmento. El modelo de probabilidad
 queda representado por:</p>
-<p><span class="math display">\[P(X_s = x_s | m_s, \theta_1, \theta_2, \pi) = \binom{m_s}{x_s} \left[ \theta_1^{x_s}(1-\theta_1)^{m_s-x_s}\pi + \theta_2^{x_s}(1-\theta_2)^{m_s-x_s}(1-\pi) \right] \quad (\#eq:mezcla:binomial)\]</span></p>
+<p><span class="math display">\[P(X_s = x_s | m_s, \theta_1, \theta_2, \pi) = \binom{m_s}{x_s} \left[ \theta_1^{x_s}(1-\theta_1)^{m_s-x_s}\pi + \theta_2^{x_s}(1-\theta_2)^{m_s-x_s}(1-\pi) \right] \quad (\#eq:mezcla:b)\]</span></p>
 <p>En el caso de mezcla infinita, la heterogeneidad no observable se extrae
 aprovechando la distribución <span class="math inline">\(B(\alpha,\beta)\)</span>:</p>
 <p><span class="math display" id="eq:beta-binomial">\[
@@ -1390,7 +1388,11 @@ población y el comportamiento observado de ese cliente.</p>
 <p>Recordando que la distribución del parámetro <span class="math inline">\(\theta\)</span> (la probabilidad
 de abandono), condicionada a los datos observados de un cliente, se
 obtiene por el Teorema de Bayes:</p>
-<p><span class="math display" id="eq:thetabayes">\[ g(\theta|\text{datos}) = \frac{\mathbb{P}(\text{datos}|\theta)g(\theta)}{\int \mathbb{P}(\text{datos}|\theta)g(\th\tag{2.8}ad (#eq:thetabayes) \]</span></p>
+<p><span class="math display" id="eq:thetabayes">\[
+\begin{aligned}
+g(\theta|\text{datos}) &amp;= \frac{\mathbb{P}(\text{datos}|\theta)g(\theta)}{\int \mathbb{P}(\text{datos}|\theta)g(\theta)d\theta}
+\end{aligned}
+\quad \tag{2.8} \]</span></p>
 <p>donde <span class="math inline">\(g(\theta)\)</span> es la distribución a priori del parámetro (Beta) y
 <span class="math inline">\(\mathbb{P}(\text{datos}|\theta)\)</span> es la verosimilitud del comportamiento
 observado (Geométrica). Para el modelo Beta-Geométrico, la distribución
@@ -1473,7 +1475,12 @@ promedio de la población y el comportamiento observado de ese cliente.</p>
 <p>Recordando que la distribución del parámetro <span class="math inline">\(\lambda\)</span> (la tasa de
 eventos), condicionada a los datos observados de un cliente, se obtiene
 por el Teorema de Bayes:</p>
-<p><span class="math display" id="eq:thetabayes">\[ g(\lambda|\text{datos}) = \frac{\mathbb{P}(\text{datos}|\lambda)g(\lambda)}{\int \mathbb{P}(\text{datos}|\lambda)g(\lamb\tag{2.8}ad (#eq:thetabayes) \]</span></p>
+<p><span class="math display" id="eq:thetabayes">\[
+\begin{aligned}
+g(\lambda|\text{datos}) &amp;= \frac{\mathbb{P}(\text{datos}|\lambda)g(\lambda)}{\int \mathbb{P}(\text{datos}|\lambda)g(\lambda)d\lambda}
+\end{aligned}
+\quad \tag{2.8}
+\]</span></p>
 <p>La esperanza condicional <span class="math inline">\(E[\lambda|t]\)</span> representa la tasa de ocurrencia
 esperada para un cliente, la cual se actualiza y ajusta en función del
 tiempo transcurrido <span class="math inline">\(t\)</span>.</p>
@@ -1514,7 +1521,11 @@ eventos en un período de tiempo <span class="math inline">\(t\)</span>.</p>
 <p>Recordando que la distribución del parámetro <span class="math inline">\(\lambda\)</span> (la tasa de
 eventos), condicionada a los datos observados de un cliente, se obtiene
 por el Teorema de Bayes:</p>
-<p><span class="math display" id="eq:thetabayes">\[ g(\lambda|\text{datos}) = \frac{\mathbb{P}(\text{datos}|\lambda)g(\lambda)}{\int \mathbb{P}(\text{datos}|\lambda)g(\lamb\tag{2.8}ad (#eq:thetabayes) \]</span></p>
+<p><span class="math display" id="eq:thetabayes">\[
+\begin{aligned}
+g(\lambda|\text{datos}) = \frac{\mathbb{P}(\text{datos}|\lambda)g(\lambda)}{\int \mathbb{P}(\text{datos}|\lambda)g(\lambda)d\lambda}
+\end{aligned}
+\quad \tag{2.8} \]</span></p>
 <p>El proceso para derivar la esperanza condicional se descompone de la
 siguiente manera:</p>
 <ul>
@@ -1549,7 +1560,11 @@ es simplemente la media de dicha distribución:
 <p>Recordando que la distribución del parámetro <span class="math inline">\(\theta\)</span> (la probabilidad
 de éxito), condicionada a los datos observados, se obtiene por el
 Teorema de Bayes:</p>
-<p><span class="math display" id="eq:thetabayes">\[ g(\theta|\text{datos}) = \frac{\mathbb{P}(\text{datos}|\theta)g(\theta)}{\int \mathbb{P}(\text{datos}|\theta)g(\th\tag{2.8}ad (#eq:thetabayes) \]</span></p>
+<p><span class="math display" id="eq:thetabayes">\[
+\begin{aligned}
+g(\theta|\text{datos}) &amp;= \frac{\mathbb{P}(\text{datos}|\theta)g(\theta)}{\int \mathbb{P}(\text{datos}|\theta)g(\theta)d\theta}
+\end{aligned}
+\quad \tag{2.8} \]</span></p>
 <p>El proceso para derivar la esperanza condicional se descompone de la
 siguiente manera:</p>
 <ul>
@@ -1583,324 +1598,322 @@ es simplemente la media de dicha distribución:
 de respuesta de un segmento <span class="math inline">\(s\)</span> determinado. Intuitivamente debería
 estar entre la tasa de respuesta esperada de la población y la
 observada, es decir,</p>
-<p><span class="math display" id="eq:tasa">\[ \mathbb{E}(\theta_s|m_s,x_s)=\gamma \frac{\alpha}{\alpha+\beta} + (1-\gamma) \frac{x_s\tag{2.9}ad (#eq:tasa) \]</span></p>
+<p><span class="math display" id="eq:tasa">\[
+\begin{aligned}
+\mathbb{E}(\theta_s|m_s,x_s)=\gamma \frac{\alpha}{\alpha+\beta} + (1-\gamma) \frac{x_s}{m_s}
+\end{aligned}
+\quad \tag{2.9}
+\]</span></p>
 <p>Esta última igualdad se encuentra al hacer el reemplazo
 <span class="math inline">\(\gamma = \frac{\alpha + \beta}{\alpha + \beta + m_s}\)</span>, la cual coincide
 con <a href="modelos-probabilísticos.html#eq:thetabayes">(2.8)</a>. Se podría replantear la regla de decisión y
 enviar catálogos a los segmentos <span class="math inline">\(s\)</span> tales que</p>
 <p><span class="math display">\[\mathbb{E} (\theta_s|x_s) =\frac{\alpha + x_s}{\alpha + \beta + m_s} &gt; \frac{\text{costo de envío}}{\text{margen unitario}}\]</span></p>
-<p><span class="math display" id="eq:esp">\[ \mathbb{E}(\theta_s \mid x_s) = \frac{\alpha + x_s}{\alpha + \tag{2.10}_s}(#eq:esp) \]</span></p>
-<p><a href="modelos-probabilísticos.html#eq:esp">(2.10)</a></p>
-</div>
-</div>
-<div id="modelos-integrados" class="section level2 hasAnchor" number="2.7">
-<h2><span class="header-section-number">2.7</span> Modelos Integrados<a href="modelos-probabilísticos.html#modelos-integrados" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Los Modelos Integrados permiten modelar fenómenos complejos que
-incorporan más de uno de los modelos básicos planteados anteriormente.</p>
-<p>En un caso hipótetico de los items no reportados, se tiene que estos
-siguen una distribución de <em>Poisson</em>. Por otro lado, la elección para
-escoger cuántos items declarar sigue una distribución <em>Binomial</em>. La
-heterogeneidad se incluye con una distribución <em>Gamma</em> para la tasa del
-modelo de conteo y con una distribución Beta para la probabilidad de
-declaración. Entonces:</p>
-<p><span class="math display" id="eq:integrado">\[
+<p><span class="math display" id="eq:esp">\[
 \begin{aligned}
-P(X=k) &amp;= \sum_{n=k}^{\infty} P(X=k|N=n)\cdot P(N=n)\\
-&amp;= \sum_{n=k}^{\infty} \left[ \int_{0}^{1} \binom{n}{k} \theta^k(1 - \theta)^{n-k} \cdot \frac{\theta^{\alpha-1}(1-\theta)^{\beta-1}}{B(\alpha,\beta)} d\theta \right] \\
-&amp;\qquad \cdot \left[ \int_{0}^{\infty} \frac{\lambda^n e^{-\lambda}}{n!}\cdot \frac{r^\alpha \lambda^{\alpha-1}e^{-r\lambda}}{\Gamma(\alpha)}d\lambda \right] \\
-&amp;= \frac{\Gamma(\alpha+k)}{\Gamma(\alpha)k!} \left(\frac{r}{r+1}\right)^\alpha \left(\frac{1}{r+1}\right)^k \frac{\Gamma(\alpha&#39;+k)}{\Gamma(\alpha&#39;)} \frac{\Gamma(\alpha&#39;+\beta&#39;)}{\Gamma(\alpha&#39;+\beta&#39;+k)} \\
-&amp;\qquad \cdot {_2F_1}\left(r+k, \beta&#39;; \alpha&#39;+\beta&#39;+k; \frac{1}{r+1}\right)
+\mathbb{E}(\theta_s \mid x_s) &amp;= \frac{\alpha + x_s}{\alpha + \beta + m_s}
 \end{aligned}
-\quad \tag{2.11}
-\]</span></p>
-<p>El último termino es la función <em>Hypergeométrica Gaussiana</em>. Esta
-función queda definida como:</p>
-<p><span class="math display" id="eq:hypergauss">\[
+\quad \tag{2.10} \]</span></p>
+<!-- BEGIN: sección comentada
+## Modelos Integrados
+
+Los Modelos Integrados permiten modelar fenómenos complejos que
+incorporan más de uno de los modelos básicos planteados anteriormente.
+
+En un caso hipótetico de los items no reportados, se tiene que estos
+siguen una distribución de *Poisson*. Por otro lado, la elección para
+escoger cuántos items declarar sigue una distribución *Binomial*. La
+heterogeneidad se incluye con una distribución *Gamma* para la tasa del
+modelo de conteo y con una distribución Beta para la probabilidad de
+declaración. Entonces:
+
+$$
+\begin{aligned}
+P(X=k) &= \sum_{n=k}^{\infty} P(X=k|N=n)\cdot P(N=n)\\
+&= \sum_{n=k}^{\infty} \left[ \int_{0}^{1} \binom{n}{k} \theta^k(1 - \theta)^{n-k} \cdot \frac{\theta^{\alpha-1}(1-\theta)^{\beta-1}}{B(\alpha,\beta)} d\theta \right] \\
+&\qquad \cdot \left[ \int_{0}^{\infty} \frac{\lambda^n e^{-\lambda}}{n!}\cdot \frac{r^\alpha \lambda^{\alpha-1}e^{-r\lambda}}{\Gamma(\alpha)}d\lambda \right] \\
+&= \frac{\Gamma(\alpha+k)}{\Gamma(\alpha)k!} \left(\frac{r}{r+1}\right)^\alpha \left(\frac{1}{r+1}\right)^k \frac{\Gamma(\alpha'+k)}{\Gamma(\alpha')} \frac{\Gamma(\alpha'+\beta')}{\Gamma(\alpha'+\beta'+k)} \\
+&\qquad \cdot {_2F_1}\left(r+k, \beta'; \alpha'+\beta'+k; \frac{1}{r+1}\right)
+\end{aligned}
+\quad (\#eq:integrado)
+$$
+
+El último termino es la función *Hypergeométrica Gaussiana*. Esta
+función queda definida como:
+
+$$
 \begin{aligned}
 _2 F_1 (a,b;c;z) = \frac{\Gamma(c)}{\Gamma(a)\Gamma(b)} \sum_{j=0}^{\infty} \frac{\Gamma(a+j)\Gamma(b+j)}{\Gamma(c+j)} \frac{z^j}{j!}
 \end{aligned}
-\quad \tag{2.12}
-\]</span></p>
-<p>Como su cálculo puede ser complicado, puede usarse la siguiente
-recursión:</p>
-<p><span class="math display" id="eq:recursion">\[
+\quad (\#eq:hypergauss)
+$$
+
+Como su cálculo puede ser complicado, puede usarse la siguiente
+recursión:
+
+$$
 \begin{aligned}
 _2 F_1 (a,b;v;z) = \sum_{j=0}^{\infty} u_j \approx \sum_{j=0}^{M} u_j
 \end{aligned}
-\quad \tag{2.13}
-\]</span></p>
-<p>donde</p>
-<ul>
-<li><span class="math display">\[u_0=1\]</span></li>
-<li></li>
-</ul>
-<p><span class="math display">\[\frac{u_j}{u_{j-1}}=\frac{(a+j-1)(b+j-1)}{(c+j-1)j} \text{           ,} \forall j \geq 1\]</span></p>
-</div>
-<div id="customer-lifetime-value-caso-contractual" class="section level2 hasAnchor" number="2.8">
-<h2><span class="header-section-number">2.8</span> Customer Lifetime Value: Caso Contractual<a href="modelos-probabilísticos.html#customer-lifetime-value-caso-contractual" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><em>Database Marketing</em> posee dos elementos esenciales, tiempo de
+\quad (\#eq:recursion)
+$$
+
+donde
+
+-   $$u_0=1$$
+-   
+
+$$\frac{u_j}{u_{j-1}}=\frac{(a+j-1)(b+j-1)}{(c+j-1)j} \text{           ,} \forall j \geq 1$$
+
+## Customer Lifetime Value: Caso Contractual
+
+*Database Marketing* posee dos elementos esenciales, tiempo de
 permanencia con la firma e intensidad de compra mientras el cliente está
 en la firma. Para el caso determinista se define Life Time Value (CLV)
-como</p>
-<p><span class="math display" id="eq:clv">\[
+como
+
+$$
 \begin{aligned}
 CLV = \sum_{t=0}^T m \cdot \frac{r^t}{(1+d)^t}
 \end{aligned}
-\quad \tag{2.14}
-\]</span></p>
-<p>donde <span class="math inline">\(m\)</span> es el flujo neto por período (si el cliente está activo); <span class="math inline">\(r\)</span>
-es la tasa de retención; <span class="math inline">\(d\)</span> es la tasa de descuento; y T es el
-horizonte de evaluación.</p>
-<p>Para el caso estocástico, sean <span class="math inline">\(\mathbb{E}(v(t))\)</span> valor esperado de los
-flujos del cliente en el instante <span class="math inline">\(t\)</span> (asumiendo que está activo);
-<span class="math inline">\(S(t)\)</span> la probabilidad que el cliente siga activo en el instante <span class="math inline">\(t\)</span>; y
-<span class="math inline">\(d(t)\)</span> el factor de descuento que refleja el valor presente del dinero
-recibido en el instante <span class="math inline">\(t\)</span>. El cálculo de CLV es:</p>
-<p><span class="math display" id="eq:eclv">\[
+\quad (\#eq:clv)
+$$
+
+donde $m$ es el flujo neto por período (si el cliente está activo); $r$
+es la tasa de retención; $d$ es la tasa de descuento; y T es el
+horizonte de evaluación.
+
+Para el caso estocástico, sean $\mathbb{E}(v(t))$ valor esperado de los
+flujos del cliente en el instante $t$ (asumiendo que está activo);
+$S(t)$ la probabilidad que el cliente siga activo en el instante $t$; y
+$d(t)$ el factor de descuento que refleja el valor presente del dinero
+recibido en el instante $t$. El cálculo de CLV es:
+
+$$
 \begin{aligned}
 \mathbb{E}(CLV) = \int_{0}^{\infty} \mathbb{E}(v(t))S(t)d(t)dt
 \end{aligned}
-\quad \tag{2.15}
-\]</span></p>
-<p>Esta definición es inútil a menos que se operacionalice
-<span class="math inline">\(\mathbb{E}(v(t))\)</span>, <span class="math inline">\(S(t)\)</span> y <span class="math inline">\(d(t)\)</span> para la situación particular.</p>
-<p>Es importante distinguir entre situaciones contractuales y no
-contractuales:</p>
-<ul>
-<li><p><strong>Contractual:</strong> Observamos cuando un cliente deja de estar activo.
-Ejemplo: suscripción a una revista, plan VTR, etc.</p></li>
-<li><p><strong>No Contractual:</strong> No observamos cuando un cliente deja de estarlo.</p></li>
-</ul>
-<p>El desafío de lo mercados contractuales: ¿Cómo diferenciamos aquellos
+\quad (\#eq:eclv)
+$$
+
+Esta definición es inútil a menos que se operacionalice
+$\mathbb{E}(v(t))$, $S(t)$ y $d(t)$ para la situación particular.
+
+Es importante distinguir entre situaciones contractuales y no
+contractuales:
+
+-   **Contractual:** Observamos cuando un cliente deja de estar activo.
+    Ejemplo: suscripción a una revista, plan VTR, etc.
+
+-   **No Contractual:** No observamos cuando un cliente deja de estarlo.
+
+El desafío de lo mercados contractuales: ¿Cómo diferenciamos aquellos
 clientes que han terminado su relación con la firma, de aquellos que
-simplemente están en un largo período de inactividad?</p>
-<p>También se debe distinguir según la oportunidad de hacer la transacción:</p>
-<ul>
-<li><p><strong>Discreta:</strong> La acción puede realizarse en un número discreto de
-ocasiones.</p></li>
-<li><p><strong>Continua:</strong> La acción puede realizarse en cualquier momento.
-Ejemplo, transacción con una tarjeta de crédito.</p></li>
-</ul>
-<div id="modelo-contractual-a-tiempo-discreto" class="section level3 hasAnchor" number="2.8.1">
-<h3><span class="header-section-number">2.8.1</span> Modelo contractual a tiempo discreto<a href="modelos-probabilísticos.html#modelo-contractual-a-tiempo-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><em>En el mercado de las revistas, típicamente el 30 % renueva al final de
+simplemente están en un largo período de inactividad?
+
+También se debe distinguir según la oportunidad de hacer la transacción:
+
+-   **Discreta:** La acción puede realizarse en un número discreto de
+    ocasiones.
+
+-   **Continua:** La acción puede realizarse en cualquier momento.
+    Ejemplo, transacción con una tarjeta de crédito.
+
+### Modelo contractual a tiempo discreto
+
+*En el mercado de las revistas, típicamente el 30 % renueva al final de
 su primera suscripción, pero ese número salta al 50 % para la segunda
 renovación y hasta el 75 % para subscriptores de mayor antigüedad
-(Fielding, Michael (2005), “Get Circulation Going: DM Redesign Increases
-Renewal Rates for Magazines”, Marketing News, September 1, 9-10).</em></p>
-<p>Al evaluar las tasas de retención de una base de clientes, es necesario
+(Fielding, Michael (2005), "Get Circulation Going: DM Redesign Increases
+Renewal Rates for Magazines", Marketing News, September 1, 9-10).*
+
+Al evaluar las tasas de retención de una base de clientes, es necesario
 considerar las diferencias entre las cohortes y proyectar los
-comportamientos más allá de los que observamos.</p>
-<p>Explicaciones alternativas (y complementarias) para el incremento de las
+comportamientos más allá de los que observamos.
+
+Explicaciones alternativas (y complementarias) para el incremento de las
 tasas de retención: Dinámicas a nivel individual (incremento de lealtad)
-y un cambio en la mezcla de la composición de la población.</p>
-<p><strong>Ejemplo:</strong> En un caso donde se analiza una cohorte de 10.000 clientes
-que, en promedio, gastan $100 por período y que corresponden a dos
-tipos de clientes:</p>
-<ul>
-<li><p><strong>Segmento 1:</strong> Un tercio de los clientes tiene una tasa de
-retención (constante en el tiempo) de 0.9.</p></li>
-<li><p><strong>Segmento 2:</strong> Dos tercios de los clientes tienen una tasa de
-retención anual de 0.5.</p></li>
-</ul>
-<table>
-<thead>
-<tr class="header">
-<th></th>
-<th>#Clientes activos</th>
-<th></th>
-<th></th>
-<th>Tasa de retención</th>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Año</td>
-<td>Seg-1</td>
-<td>Seg-2</td>
-<td>Total</td>
-<td>Seg-1</td>
-<td>Seg-2</td>
-<td>Total</td>
-</tr>
-<tr class="even">
-<td>1</td>
-<td>3.333</td>
-<td>6.667</td>
-<td>10</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>2</td>
-<td>3</td>
-<td>3.334</td>
-<td>6.334</td>
-<td>0.9</td>
-<td>0.5</td>
-<td><span style="color: red;">0.633</span></td>
-</tr>
-<tr class="even">
-<td>3</td>
-<td>2.7</td>
-<td>1.667</td>
-<td>4.367</td>
-<td>0.9</td>
-<td>0.5</td>
-<td><span style="color: red;">0.689</span></td>
-</tr>
-<tr class="odd">
-<td>4</td>
-<td>2.43</td>
-<td>0.834</td>
-<td>3.264</td>
-<td>0.9</td>
-<td>0.5</td>
-<td><span style="color: red;">0.747</span></td>
-</tr>
-<tr class="even">
-<td>5</td>
-<td>2.187</td>
-<td>0.417</td>
-<td>2.604</td>
-<td>0.9</td>
-<td>0.5</td>
-<td><span style="color: red;">0.798</span></td>
-</tr>
-</tbody>
-</table>
-<p><span class="math display">\[\text{Cuadro 1.1: Rol de la heterogeneidad}\]</span></p>
-<p>En el Cuadro 1.1 la tasa de retención agregada (en rojo en la tabla) es
+y un cambio en la mezcla de la composición de la población.
+
+**Ejemplo:** En un caso donde se analiza una cohorte de 10.000 clientes
+que, en promedio, gastan \$100 por período y que corresponden a dos
+tipos de clientes:
+
+-   **Segmento 1:** Un tercio de los clientes tiene una tasa de
+    retención (constante en el tiempo) de 0.9.
+
+-   **Segmento 2:** Dos tercios de los clientes tienen una tasa de
+    retención anual de 0.5.
+
+|   | #Clientes activos |   |   | Tasa de retención |   |   |
+|----|----|----|----|----|----|----|
+| Año | Seg-1 | Seg-2 | Total | Seg-1 | Seg-2 | Total |
+| 1 | 3.333 | 6.667 | 10 |  |  |  |
+| 2 | 3 | 3.334 | 6.334 | 0.9 | 0.5 | [0.633]{style="color: red;"} |
+| 3 | 2.7 | 1.667 | 4.367 | 0.9 | 0.5 | [0.689]{style="color: red;"} |
+| 4 | 2.43 | 0.834 | 3.264 | 0.9 | 0.5 | [0.747]{style="color: red;"} |
+| 5 | 2.187 | 0.417 | 2.604 | 0.9 | 0.5 | [0.798]{style="color: red;"} |
+
+$$\text{Cuadro 1.1: Rol de la heterogeneidad}$$
+
+En el Cuadro 1.1 la tasa de retención agregada (en rojo en la tabla) es
 decreciente aún cuando a nivel individual las retenciones son constantes
-en el tiempo.</p>
-<p>El valor residual de un cliente activo del cohorte, si pertenece al
-segmento 1 es:</p>
-<p><span class="math display" id="eq:erlv1">\[
+en el tiempo.
+
+El valor residual de un cliente activo del cohorte, si pertenece al
+segmento 1 es:
+
+$$
 \begin{aligned}
 \mathbb{E}(RLV) = \sum_{t=1}^{\infty} \$100 \cdot \frac{0.9^t}{(1+0.1)^{t-1}} = \$495
 \end{aligned}
-\quad \tag{2.16}
-\]</span></p>
-<p>Si el cliente pertenece al segmento 2:</p>
-<p><span class="math display" id="eq:erlv2">\[
+\quad (\#eq:erlv1)
+$$
+
+Si el cliente pertenece al segmento 2:
+
+$$
 \begin{aligned}
 \mathbb{E}(RLV) = \sum_{t=1}^{\infty} \$100 \cdot \frac{0.5^t}{(1+0.1)^{t-1}} = \$92
 \end{aligned}
-\quad \tag{2.17}
-\]</span></p>
-<p>Sin embargo, la regla de Bayes permite mostrar que, condicional en estar
-activo, un cliente es más probable que tenga una alta tasa de retención:</p>
-<p><span class="math display">\[
+\quad (\#eq:erlv2)
+$$
+
+Sin embargo, la regla de Bayes permite mostrar que, condicional en estar
+activo, un cliente es más probable que tenga una alta tasa de retención:
+
+$$
 \begin{aligned}
-P(\text{seg-1|renovar 4 veces}) &amp;= \frac{P(\text{renovar 4 veces|seg-1}) P(\text{seg-1})}{P(\text{renovar 4 veces})}\\
-&amp;= \frac{0.9^4 \cdot 0.3333}{0.9^4 \cdot 0.333 + 0.5^4 \cdot 0.6667}\\
-&amp;= 0.84
+P(\text{seg-1|renovar 4 veces}) &= \frac{P(\text{renovar 4 veces|seg-1}) P(\text{seg-1})}{P(\text{renovar 4 veces})}\\
+&= \frac{0.9^4 \cdot 0.3333}{0.9^4 \cdot 0.333 + 0.5^4 \cdot 0.6667}\\
+&= 0.84
 \end{aligned}
-\]</span></p>
-<p>Luego, el <em>Lifetime Value Residual</em> viene dado por:</p>
-<p><span class="math display">\[\mathbb{E}(RLV) = 0.84 \cdot  \$495 + (0.84) \cdot \$ 92 = \$493.08 \]</span>En
+$$
+
+Luego, el *Lifetime Value Residual* viene dado por:
+
+$$\mathbb{E}(RLV) = 0.84 \cdot  \$495 + (0.84) \cdot \$ 92 = \$493.08 $$En
 mercados contractuales, ¿cuánto se pierde si no no se considera la
 heterogeneidad?. En este ejemplo, si se toma en cuenta la tasa de
-retención agregada, el valor de la base de clientes es $4.945.049. En
+retención agregada, el valor de la base de clientes es \$4.945.049. En
 cambio, si se distingue por segmentos, este valor asciende a
-$7.940.992.</p>
-<p>En estudios con bases de datos reales muestran que el error en el CLV se
+\$7.940.992.
+
+En estudios con bases de datos reales muestran que el error en el CLV se
 eleva hasta el 50%. El impacto sobre el CLV de aumentar las tasas de
 retención es hasta un 50%. Para calcular CLV hay que hacerlo condicional
-en la duración.</p>
-<p>Se postulan los siguientes supuestos para el caso discreto:</p>
-<ol style="list-style-type: decimal">
-<li><p>La tasa de retención a nivel individual es <span class="math inline">\(1- \theta\)</span>:</p>
-<p><span class="math display" id="eq:treti">\[
+en la duración.
+
+Se postulan los siguientes supuestos para el caso discreto:
+
+1.  La tasa de retención a nivel individual es $1- \theta$:
+
+    $$
+    \begin{array}{cc}
+    S(t|\theta) = (1-\theta)^t, &t=1,2,3,...
+    \end{array}
+    \quad (\#eq:treti)
+    $$
+
+2.  La heterogeneidad en $\theta$ es capturada por una distribución
+    $\text{Beta}$*:*
+
+    $$
+    f(\theta|\alpha,\beta) = \frac{\theta^{\alpha -1}(1-\theta)^{\beta -1}}{B(\alpha,\beta)} \quad (\#eq:hetebeta)
+    $$
+
+La probabilidad de que el cliente siga activo en $t$:
+
+$$
 \begin{array}{cc}
-S(t|\theta) = (1-\theta)^t, &amp;t=1,2,3,...
+S(t|\alpha,\beta) = \int_{0}^{1} S(t|\theta) f(\theta|\alpha,\beta) d\theta = \frac{B(\alpha,\beta+t)}{B(\alpha,\beta)}, &t = 1,2,3,...
 \end{array}
-\quad \tag{2.18}
-\]</span></p></li>
-<li><p>La heterogeneidad en <span class="math inline">\(\theta\)</span> es capturada por una distribución
-<span class="math inline">\(\text{Beta}\)</span><em>:</em></p>
-<p><span class="math display" id="eq:hetebeta">\[
-f(\theta|\alpha,\beta) = \frac{\theta^{\alpha -1}(1-\theta)^{\beta -1}}{B(\alpha,\beta)} \quad \tag{2.19}
-\]</span></p></li>
-</ol>
-<p>La probabilidad de que el cliente siga activo en <span class="math inline">\(t\)</span>:</p>
-<p><span class="math display">\[
-\begin{array}{cc}
-S(t|\alpha,\beta) = \int_{0}^{1} S(t|\theta) f(\theta|\alpha,\beta) d\theta = \frac{B(\alpha,\beta+t)}{B(\alpha,\beta)}, &amp;t = 1,2,3,...
-\end{array}
-\]</span></p>
-<p>Considerando a un cliente que ha estado activo por n períodos:</p>
-<p><span class="math display" id="eq:erlvactivo">\[
+$$
+
+Considerando a un cliente que ha estado activo por n períodos:
+
+$$
 \begin{aligned}
-\mathbb{E}(\text{RLV}(d| \text{activo en } n \text{ períodos})) &amp;= \sum_{t=n+1}^{\infty} \mathbb{E}(v(t)) \cdot \frac{S(t|t&gt;n)}{(1+d)^{t-n}}\\
-&amp;= \bar{v} \sum_{t=n+1}^{\infty} \frac{S(t|t&gt;n)}{(1+d)^{t-n}}, \quad \text{Asumiendo flujos constantes}
+\mathbb{E}(\text{RLV}(d| \text{activo en } n \text{ períodos})) &= \sum_{t=n+1}^{\infty} \mathbb{E}(v(t)) \cdot \frac{S(t|t>n)}{(1+d)^{t-n}}\\
+&= \bar{v} \sum_{t=n+1}^{\infty} \frac{S(t|t>n)}{(1+d)^{t-n}}, \quad \text{Asumiendo flujos constantes}
 \end{aligned}
-\quad \tag{2.20}
-\]</span></p>
-<p>DERL es el valor esperado residual del cliente (condicional en la
-antigüedad). Para el caso de la distribución geométrica desplazada:</p>
-<p><span class="math display" id="eq:derl">\[
+\quad (\#eq:erlvactivo)
+$$
+
+DERL es el valor esperado residual del cliente (condicional en la
+antigüedad). Para el caso de la distribución geométrica desplazada:
+
+$$
 \begin{aligned}
-\text{DERL}(d| \text{activo en } n \text{ períodos}) &amp;= \sum_{t=n}^{\infty} \frac{S(t)}{S(n-1)} \cdot \left(\frac{a}{a+d}\right)^{t-n}\\
-&amp;= \frac{(1-\theta)(1+d)}{d+\theta}
+\text{DERL}(d| \text{activo en } n \text{ períodos}) &= \sum_{t=n}^{\infty} \frac{S(t)}{S(n-1)} \cdot \left(\frac{a}{a+d}\right)^{t-n}\\
+&= \frac{(1-\theta)(1+d)}{d+\theta}
 \end{aligned}
-\quad \tag{2.21}
-\]</span></p>
-<p>Cuando la tasa de abandono <span class="math inline">\(\theta\)</span> no es observable, hay que encontrar
+\quad (\#eq:derl)
+$$
+
+Cuando la tasa de abandono $\theta$ no es observable, hay que encontrar
 la distribución de esta variable en la población. Para ello se usa la
 regla de Bayes para calcular la distribución posterior condicional en la
-antigüedad.</p>
-<p><span class="math display" id="eq:derlno">\[
+antigüedad.
+
+$$
 \begin{aligned}
-\text{DERL}(d|\alpha,\beta, \text{activo en } n \text{ períodos}) &amp;= \int_0^1 \frac{(1-\theta)(1+d)}{d+\theta} \cdot \frac{S(n-1|\theta)f(\theta|\alpha,\beta)}{S(n-1|\alpha, \beta)} d\theta \\
-&amp;= \left(\frac{\beta + n - 1}{\alpha + \beta + n - 1}\right) \\
-&amp;\quad \cdot_2 F_1 \left( 1,\beta + n; \alpha + \beta + n; \frac{1}{1+d}\right)
+\text{DERL}(d|\alpha,\beta, \text{activo en } n \text{ períodos}) &= \int_0^1 \frac{(1-\theta)(1+d)}{d+\theta} \cdot \frac{S(n-1|\theta)f(\theta|\alpha,\beta)}{S(n-1|\alpha, \beta)} d\theta \\
+&= \left(\frac{\beta + n - 1}{\alpha + \beta + n - 1}\right) \\
+&\quad \cdot_2 F_1 \left( 1,\beta + n; \alpha + \beta + n; \frac{1}{1+d}\right)
 \end{aligned}
-\quad \tag{2.22}
-\]</span></p>
-</div>
-<div id="modelo-contractual-a-tiempo-continuo" class="section level3 hasAnchor" number="2.8.2">
-<h3><span class="header-section-number">2.8.2</span> Modelo contractual a tiempo continuo<a href="modelos-probabilísticos.html#modelo-contractual-a-tiempo-continuo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Algunos supuestos son:</p>
-<ol style="list-style-type: decimal">
-<li><p>La duración de la relación de un cliente con la firma está
-caracterizada por una distribución exponencial, con densidad y
-función de sobrevivencia dadas por:</p>
-<p><span class="math display" id="eq:fsur">\[
-f(t|\lambda) = \lambda e^{-\lambda t} \quad \tag{2.23}
-\]</span> <span class="math display" id="eq:ssur">\[
-S(t|\lambda) = e^{-\lambda t} \quad \tag{2.24}
-\]</span></p></li>
-<li><p>La heterogeneidad en <span class="math inline">\(\lambda\)</span> es capturada por una distribución
-<span class="math inline">\(\text{Gamma}\)</span>:</p>
-<p><span class="math display" id="eq:hgamma">\[
-g(\lambda|r,\alpha) = \frac{\alpha^r\lambda^{r-1}e^{-\alpha\lambda}}{\Gamma(r)} \quad \tag{2.25}
-\]</span></p></li>
-</ol>
-<p>Entonces, la probabilidad de seguir activo en <span class="math inline">\(t\)</span> es:</p>
-<p><span class="math display" id="eq:sactiv">\[
+\quad (\#eq:derlno)
+$$
+
+### Modelo contractual a tiempo continuo
+
+Algunos supuestos son:
+
+1.  La duración de la relación de un cliente con la firma está
+    caracterizada por una distribución exponencial, con densidad y
+    función de sobrevivencia dadas por:
+
+    $$
+    f(t|\lambda) = \lambda e^{-\lambda t} \quad (\#eq:fsur)
+    $$ $$
+    S(t|\lambda) = e^{-\lambda t} \quad (\#eq:ssur)
+    $$
+
+2.  La heterogeneidad en $\lambda$ es capturada por una distribución
+    $\text{Gamma}$:
+
+    $$
+    g(\lambda|r,\alpha) = \frac{\alpha^r\lambda^{r-1}e^{-\alpha\lambda}}{\Gamma(r)} \quad (\#eq:hgamma)
+    $$
+
+Entonces, la probabilidad de seguir activo en $t$ es:
+
+$$
 \begin{aligned}
-S(t|r,\alpha) &amp;= \int_0^{\infty} S(t|\lambda)g(\lambda|r,\alpha)d\lambda\\
-&amp;= \left(\frac{\alpha}{\alpha+t}\right)^r
+S(t|r,\alpha) &= \int_0^{\infty} S(t|\lambda)g(\lambda|r,\alpha)d\lambda\\
+&= \left(\frac{\alpha}{\alpha+t}\right)^r
 \end{aligned}
-\quad \tag{2.26}
-\]</span></p>
-<p>El valor esperado de <span class="math inline">\(\text{Residual Lifetime Value}\)</span> es:</p>
-<p><span class="math display" id="eq:sactiv">\[
+\quad (\#eq:sactiv)
+$$
+
+El valor esperado de $\text{Residual Lifetime Value}$ es:
+
+$$
 \begin{aligned}
-\mathbb{E}(\text{RLV}(\delta|\text{activo en }s)) &amp;= \int_{s}^{\infty} \mathbb{E}(v(t))S(t|t&gt;s)\delta(t)dt\\
-&amp;= \bar{v} \cdot \text{DERL}(\delta|r,\alpha,\text{activo en }s)
+\mathbb{E}(\text{RLV}(\delta|\text{activo en }s)) &= \int_{s}^{\infty} \mathbb{E}(v(t))S(t|t>s)\delta(t)dt\\
+&= \bar{v} \cdot \text{DERL}(\delta|r,\alpha,\text{activo en }s)
 \end{aligned}
-\quad \tag{2.26}
-\]</span></p>
-<p>donde</p>
-<p><span class="math display" id="eq:drldos">\[
-\text{DERL}(\delta|r,\alpha,\text{activo en }s) = (\alpha+s)^r\delta \Psi (r;r;(\alpha +s) \delta) \quad \tag{2.27}
-\]</span></p>
-<p><span class="math inline">\(\Psi\)</span> es la <em>función hiper geométrica confluyente del segundo tipo</em>.</p>
+\quad (\#eq:sactiv)
+$$
+
+donde
+
+$$
+\text{DERL}(\delta|r,\alpha,\text{activo en }s) = (\alpha+s)^r\delta \Psi (r;r;(\alpha +s) \delta) \quad (\#eq:drldos)
+$$
+
+$\Psi$ es la *función hiper geométrica confluyente del segundo tipo*.
+END: sección comentada -->
 
 </div>
 </div>
