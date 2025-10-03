@@ -23,7 +23,7 @@
 <meta name="author" content="Marcel Goic" />
 
 
-<meta name="date" content="2025-09-29" />
+<meta name="date" content="2025-10-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -403,15 +403,13 @@ la variable aleatoria T sigue una distribución Geométrica Desplazada
 individuos puede ser descrito formalmente de acuerdo a la siguiente
 relación:</p>
 <ol style="list-style-type: decimal">
-<li>Probabilidad de que un individuo cualquiera abandone la relación
-comercial exactamente en el periodo t:</li>
+<li><p>Probabilidad de que un individuo cualquiera abandone la relación
+comercial exactamente en el periodo t:</p>
+<p><span class="math display">\[P(T=t| \theta) = \theta (1 - \theta)^{t-1}\]</span></p></li>
+<li><p>Probabilidad de que un individuo cualquiera abandone la relación
+comercial en un periodo posterior al periodo t:</p>
+<p><span class="math display">\[P(T&gt;\tau| \theta) = \theta (1 - \theta)^{\tau}\]</span></p></li>
 </ol>
-<p><span class="math display">\[P(T=t| \theta) = \theta (1 - \theta)^{t-1}\]</span></p>
-<ol start="2" style="list-style-type: decimal">
-<li>Probabilidad de que un individuo cualquiera abandone la relación
-comercial en un periodo posterior al periodo t:</li>
-</ol>
-<p><span class="math display">\[P(T&gt;t| \theta) = \theta (1 - \theta)^{t-1}\]</span></p>
 <p>No es muy difícil aplicar un modelamiento a partir de lo anterior para
 intentar dilucidar de qué forma se debería comportar un determinado
 grupo de individuos a partir de la data transaccional que se tiene.</p>
@@ -499,19 +497,20 @@ muestras:</p>
 </ul>
 <p><span class="math display">\[
 \begin{aligned}
-L(\theta)  &amp;= \left\{\prod_{t=1}^{\tau=7} P(T=t \mid \theta)^{\,n_t}\right\}\; P(T&gt;\tau \mid \theta)^{\,\bar n_{\tau}} \\  &amp;= \left\{\prod_{t=1}^{\tau=7} \big[\theta(1-\theta)^{t-1}\big]^{\,n_t}\right\}\; \big[(1-\theta)^{\tau}\big]^{\,\bar n_{\tau}}
+L(\theta)  &amp;= \left\{\prod_{t=1}^{\tau=7} P(T=t \mid \theta)^{\,n_t}\right\}\; P(T&gt;\tau \mid \theta)^{\,n_{\tau}} \\  &amp;= \left\{\prod_{t=1}^{\tau=7} \big[\theta(1-\theta)^{t-1}\big]^{\,n_t}\right\}\; \big[(1-\theta)^{\tau}\big]^{\,n_{\tau}}
 \end{aligned}
-\]</span> Notar que <span class="math inline">\(\bar{n}_t\)</span> es el número de clientes activos en <span class="math inline">\(t\)</span>, <span class="math inline">\(n_t\)</span>
-es el número de abandonos (si hay 369 abandonos, se multiplica 369
-veces), y <span class="math inline">\(x_i\)</span> el año. A partir de esto y de la data disponible, las
-contribuciones a la verosimilitud son las siguientes (asumiendo como
-modelo de comportamiento la distribución geométrica desplazada)</p>
+\]</span> Notar que <span class="math inline">\(n_\tau\)</span> es el número de clientes activos después del
+máximo tiempo observable <span class="math inline">\(\tau\)</span>, <span class="math inline">\(n_t\)</span> es el número de abandonos (si hay
+369 abandonos, se multiplica 369 veces), y <span class="math inline">\(x_i\)</span> el año. A partir de
+esto y de la data disponible, las contribuciones a la verosimilitud son
+las siguientes (asumiendo como modelo de comportamiento la distribución
+geométrica desplazada)</p>
 <table>
 <colgroup>
-<col width="23%" />
-<col width="23%" />
-<col width="23%" />
-<col width="29%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
+<col width="25%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -585,7 +584,7 @@ anterior, de modo de construir la función de log verosimilitud:</p>
 </ul>
 <p><span class="math display">\[
 \begin{aligned}
-\hat{\ell}(\theta)  &amp;= \sum_{t=1}^{\tau} n_t \,\ln P(T=t \mid \theta)\;+\;\bar n_{\tau}\,\ln P(T&gt;\tau \mid \theta) \\  &amp;= \sum_{t=1}^{\tau} n_t \big[\ln \theta + (t-1)\ln(1-\theta)\big]\;+\;\bar n_{\tau}\,\tau\ln(1-\theta) \end{aligned}
+\hat{\ell}(\theta)  &amp;= \sum_{t=1}^{\tau} n_t \,\ln P(T=t \mid \theta)\;+\; n_{\tau}\,\ln P(T&gt;\tau \mid \theta) \\  &amp;= \sum_{t=1}^{\tau} n_t \big[\ln \theta + (t-1)\ln(1-\theta)\big]\;+\;n_{\tau}\,\tau\ln(1-\theta) \end{aligned}
 \]</span> Con lo anterior, es sencillo maximizar la función de log
 verosimilitud para un <span class="math inline">\(\theta\)</span> desconocido utilizando un paquete
 estadístico como R, con lo que se tiene:</p>

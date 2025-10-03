@@ -306,7 +306,7 @@ es importante tener una comprensión sólida de los datos y del problema a
 resolver antes de aplicar cualquier transformación de variables.
 
 | *Modelo* | *Variable dependiente* | *Variable independiente* | *Interpretación* |
-|------------------|------------------|------------------|-------------------|
+|----|----|----|----|
 | Nivel-nivel | $Y$ | $X$ | $\Delta Y = \beta_1 \Delta X$ |
 | Nivel-log | $Y$ | $\log(X)$ | $\Delta Y = \dfrac{\beta_1}{100}\% \Delta X$ |
 | Log-nivel | $\log(Y)$ | $X$ | $\%\Delta Y = (100\beta_1)\Delta X$ |

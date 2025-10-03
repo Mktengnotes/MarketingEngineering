@@ -171,12 +171,12 @@ relación:
 1.  Probabilidad de que un individuo cualquiera abandone la relación
     comercial exactamente en el periodo t:
 
-$$P(T=t| \theta) = \theta (1 - \theta)^{t-1}$$
+    $$P(T=t| \theta) = \theta (1 - \theta)^{t-1}$$
 
 2.  Probabilidad de que un individuo cualquiera abandone la relación
     comercial en un periodo posterior al periodo t:
 
-$$P(T>t| \theta) = \theta (1 - \theta)^{t-1}$$
+    $$P(T>\tau| \theta) = \theta (1 - \theta)^{\tau}$$
 
 No es muy difícil aplicar un modelamiento a partir de lo anterior para
 intentar dilucidar de qué forma se debería comportar un determinado
@@ -219,16 +219,17 @@ $$f(x_1,x_2,...,x_n|\theta) = f(x_1|\theta) \cdot f(x_2|\theta) \cdot ... \cdot 
 
 $$
 \begin{aligned}
-L(\theta)  &= \left\{\prod_{t=1}^{\tau=7} P(T=t \mid \theta)^{\,n_t}\right\}\; P(T>\tau \mid \theta)^{\,\bar n_{\tau}} \\  &= \left\{\prod_{t=1}^{\tau=7} \big[\theta(1-\theta)^{t-1}\big]^{\,n_t}\right\}\; \big[(1-\theta)^{\tau}\big]^{\,\bar n_{\tau}}
+L(\theta)  &= \left\{\prod_{t=1}^{\tau=7} P(T=t \mid \theta)^{\,n_t}\right\}\; P(T>\tau \mid \theta)^{\,n_{\tau}} \\  &= \left\{\prod_{t=1}^{\tau=7} \big[\theta(1-\theta)^{t-1}\big]^{\,n_t}\right\}\; \big[(1-\theta)^{\tau}\big]^{\,n_{\tau}}
 \end{aligned}
-$$ Notar que $\bar{n}_t$ es el número de clientes activos en $t$, $n_t$
-es el número de abandonos (si hay 369 abandonos, se multiplica 369
-veces), y $x_i$ el año. A partir de esto y de la data disponible, las
-contribuciones a la verosimilitud son las siguientes (asumiendo como
-modelo de comportamiento la distribución geométrica desplazada)
+$$ Notar que $n_\tau$ es el número de clientes activos después del
+máximo tiempo observable $\tau$, $n_t$ es el número de abandonos (si hay
+369 abandonos, se multiplica 369 veces), y $x_i$ el año. A partir de
+esto y de la data disponible, las contribuciones a la verosimilitud son
+las siguientes (asumiendo como modelo de comportamiento la distribución
+geométrica desplazada)
 
 | Año | \# de Clientes | \# de Abandonos | Pr |
-|-----------------|-----------------|-----------------|---------------------|
+|------------------|------------------|------------------|------------------|
 | 0 | 1000 | \- | \- |
 | 1 | 631 | 369 | $P(T=1\|\theta) = \theta^{369}$ |
 | 2 | 468 | 163 | $P(T=2\|\theta) = ((1 - \theta)^{(2-1)} \cdot \theta)^{163}$ |
@@ -246,7 +247,7 @@ anterior, de modo de construir la función de log verosimilitud:
 
 $$
 \begin{aligned}
-\hat{\ell}(\theta)  &= \sum_{t=1}^{\tau} n_t \,\ln P(T=t \mid \theta)\;+\;\bar n_{\tau}\,\ln P(T>\tau \mid \theta) \\  &= \sum_{t=1}^{\tau} n_t \big[\ln \theta + (t-1)\ln(1-\theta)\big]\;+\;\bar n_{\tau}\,\tau\ln(1-\theta) \end{aligned}
+\hat{\ell}(\theta)  &= \sum_{t=1}^{\tau} n_t \,\ln P(T=t \mid \theta)\;+\; n_{\tau}\,\ln P(T>\tau \mid \theta) \\  &= \sum_{t=1}^{\tau} n_t \big[\ln \theta + (t-1)\ln(1-\theta)\big]\;+\;n_{\tau}\,\tau\ln(1-\theta) \end{aligned}
 $$ Con lo anterior, es sencillo maximizar la función de log
 verosimilitud para un $\theta$ desconocido utilizando un paquete
 estadístico como R, con lo que se tiene:
