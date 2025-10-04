@@ -176,7 +176,7 @@ relación:
 2.  Probabilidad de que un individuo cualquiera abandone la relación
     comercial en un periodo posterior al periodo t:
 
-    $$P(T>\tau| \theta) = \theta (1 - \theta)^{\tau}$$
+    $$P(T>t \;|\; \theta) = (1 - \theta)^{t}$$
 
 No es muy difícil aplicar un modelamiento a partir de lo anterior para
 intentar dilucidar de qué forma se debería comportar un determinado
