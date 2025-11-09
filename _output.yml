@@ -1,5 +1,5 @@
 bookdown::gitbook:
-  css: style.css
+  css: custom-style.css
   config:
     toc:
       before: |
@@ -8,4 +8,6 @@ bookdown::gitbook:
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
     edit: https://github.com/rstudio/bookdown-demo/edit/master/%s
     download: ["pdf", "epub"]
+  pandoc_args: ["--mathjax"]
+  mathjax: "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
 
