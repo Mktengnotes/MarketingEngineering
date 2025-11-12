@@ -661,9 +661,9 @@ Supóngase que se observa un panel de $N$ clientes que deciden respecto de $I$ a
   (\#eq:cdeterministaequi)
 \end{equation} 
 
-La matriz de covarianza \Sigma tiene dimensión $IT \times IT$ (como se verá, no todas las componentes son identificables y se deberá imponer ciertas restricciones). Para paneles típicos, $T$ es grande y genera matrices de varianza-covarianza muy grandes. Por ejemplo, si se tienen datos semanales de compras de 5 marcas por un período de 2 años, se enfrentará una matriz de varianza (sin normalizar) con 5 × 104 = 520 filas y 520 columnas, lo que generaría no solo un modelo difícil de estimar numéricamente sino también difícil de interpretar. Así, para usar un modelo *probit* con dependencia en el tiempo, típicamente se agregará estructura al modelo. Por ejemplo, se puede restringir el análisis a grupos de períodos que podría ser el caso de las decisiones antes y después de una intervención en el sistema (e.g., antes y después del lanzamiento de una campaña publicitaria).
+La matriz de covarianza \Sigma tiene dimensión $IT \times IT$ (como se verá, no todas las componentes son identificables y se deberá imponer ciertas restricciones). Para paneles típicos, $T$ es grande y genera matrices de varianza-covarianza muy grandes. Por ejemplo, si se tienen datos semanales de compras de 5 marcas por un período de 2 años, se enfrentará una matriz de varianza (sin normalizar) con 5 × 104 = 520 filas y 520 columnas, lo que generaría no solo un modelo difícil de estimar numéricamente sino que, también, difícil de interpretar. Así, para usar un modelo *probit* con dependencia en el tiempo, típicamente se agregará estructura al modelo. Por ejemplo, se puede restringir el análisis a grupos de períodos que podría ser el caso de las decisiones antes y después de una intervención en el sistema (e.g., antes y después del lanzamiento de una campaña publicitaria).
 
-**Ejemplo:** Supóngase un caso de elección binaria, el error está compuesto por una componente sistemática específica del tomador de decisión y otra que es variable en el tiempo.
+**Ejemplo:** Supóngase un caso de elección binaria. El error está compuesto por una componente sistemática específica del tomador de decisión y otra que es variable en el tiempo.
 
 
 \begin{equation} 
@@ -696,7 +696,7 @@ La matriz $\Sigma$, por lo tanto, es
 
 ### Identificación
 
-Para estimar un modelo *probit*, junto con los parámetros de la componente sistemática de la utilidad se necesita estimar los coeficientes de la matriz $\Sigma$. Por tratarse de una distribución normal, la matriz $\Sigma$ es simétrica y, por tanto, en principio se deben estimar $\frac{I(I+1)}{2}$ de sus componentes. Sin embargo, dicho problema no es identificable y se necesita imponer restricciones adicionales. La intuición detrás de esta falta de identificación resulta de asumir que las utilidades subyacentes que maximizan los individuos son monótonas y homotéticas. En otras palabras, se puede agregar un valor constante a las utilidades de cada una de las alternativas o escalarlas en cualquier proporción y la identidad de la alternativa de mayor utilidad no cambia. En general, si se tienen $I$ alternativas, solo se pueden identificar $\frac{I(I+1)}{2} -1$ parámetros. A continuación se discutirán dos enfoques para generar restricciones que hagan el problema identificable.
+Para estimar un modelo *probit*, junto con los parámetros de la componente sistemática de la utilidad, se necesita estimar los coeficientes de la matriz $\Sigma$. Por tratarse de una distribución normal, la matriz $\Sigma$ es simétrica, ya que sus varianzas generadas son conmutativas. Por tanto, se deben estimar $\frac{I(I+1)}{2}$ de sus componentes. Sin embargo, dicho problema no es identificable y se necesita imponer restricciones adicionales eliminando uan componente. La intuición detrás de esta falta de identificación resulta de asumir que las utilidades subyacentes que maximizan los individuos son monótonas y homotéticas. En otras palabras, se puede agregar un valor constante a las utilidades de cada una de las alternativas o escalarlas en cualquier proporción y la identidad de la alternativa de mayor utilidad no cambia. En general, si se tienen $I$ alternativas, solo se pueden identificar $\frac{I(I+1)}{2} - 1$ parámetros. A continuación se discutirán dos enfoques para generar restricciones que hagan el problema identificable.
 
 #### Normalización de las funciones de utilidad
 
@@ -709,7 +709,7 @@ Motivados en las propiedades de la función de utilidad, este enfoque consiste e
 **Ejemplo:** Considérese la normalización de una matriz $\Sigma$ resultante de un problema de elección discreto de 4 alternativas. 
 
 \begin{equation} 
-  Σ = \begin{bmatrix} \sigma_{11} & \sigma_{12} & \sigma_{13} & \sigma_{13}\\
+  \Sigma = \begin{bmatrix} \sigma_{11} & \sigma_{12} & \sigma_{13} & \sigma_{13}\\
  \cdot & \sigma_{22} & \sigma_{23} & \sigma_{24}\\
  \cdot & \cdot & \sigma_{33} & \sigma_{34}\\
  \cdot & \cdot & \cdot & \sigma_{44}
@@ -780,7 +780,7 @@ u_{ni} = v_{ni} + \varepsilon_{ni}
 (\#eq:nestedutil)
 \end{equation}
 
-donde $v_{ni}$ es la componente sistemática (observable) de la utilidad y $\varepsilon_{ni}$ es la componente aleatoria. 
+donde $v_{ni}$ es la componente sistemática (observable) de la utilidad y $\varepsilon_{ni}$ es la componente aleatoria. Si bien es común en la literatura descomponer el error $\varepsilon_{ni}$ en dos componentes —una idiosincrática a la alternativa y otra común a todas las alternativas del nido— esta descomposición no es necesaria para derivar el modelo. Como muestra Train (2009), la estructura de correlación del nested logit puede motivarse directamente asumiendo que el vector completo de errores sigue una distribución de valor extremo generalizada (GEV), sin necesidad de imponer una estructura aditiva específica en los términos de error. Esta formulación más general permite capturar la correlación intra-nido a través de los parámetros de la distribución GEV.
 
 La característica distintiva del nested logit es la estructura de correlación de los errores. A diferencia del logit estándar donde todos los $\varepsilon_{ni}$ son independientes, en el nested logit se permite que los errores de alternativas dentro del mismo nido estén correlacionados, mientras que los errores entre alternativas de diferentes nidos permanecen independientes.
 
@@ -831,7 +831,7 @@ P_{ni|B_k} = \frac{\exp(v_{ni}/\lambda_k)}{\sum_{j \in B_k} \exp(v_{nj}/\lambda_
 (\#eq:condprob)
 \end{equation}
 
-Esta expresión tiene la forma de un modelo logit estándar pero con las utilidades escaladas por $\lambda_k$.
+Esta expresión tiene la forma de un modelo logit estándar, escalando las utilidades con $\lambda_k$.
 
 #### Valor Inclusivo (Inclusive Value)
 
@@ -855,7 +855,7 @@ P_{nB_k} = \frac{\exp(\lambda_k \cdot IV_k)}{\sum_{m=1}^K \exp(\lambda_m \cdot I
 (\#eq:nestprob)
 \end{equation}
 
-Esta probabilidad tiene también forma logit, donde la "utilidad" del nido es el valor inclusivo escalado por $\lambda_k$.
+El valor $m$ corresponde al índice que suma las utilidades de todos las opciones del nido $k$. Esta probabilidad tiene también forma logit, donde la "utilidad" del nido es el valor inclusivo escalado por $\lambda_k$.
 
 #### Probabilidad No Condicional (Probabilidad Total)
 
@@ -1082,11 +1082,7 @@ El **estimador de máxima verosimilitud simulada (MSLE)** maximiza esta función
 
 $$\hat{\theta}_{MSL} = \arg\max_\theta SLL(\theta)$$
 
-**Propiedades asintóticas:**
-- Si $R$ crece más rápido que $\sqrt{N}$, el MSLE es consistente, asintóticamente normal y asintóticamente eficiente
-- En la práctica, valores de $R$ entre 100 y 500 suelen ser suficientes
-
-La elección de la distribución $f(\beta|\theta)$ es crucial y debe basarse tanto en consideraciones teóricas como prácticas:
+Este método de aproximación posee propiedades asintóticas. En particular, si $R$ crece más rápido que $\sqrt{N}$, el MSLE es consistente, asintóticamente normal y asintóticamente eficiente. En la práctica, con un valor $R = 200$ suele ser computacionalmente liviano y suficiente. La elección de la distribución $f(\beta|\theta)$ es crucial y debe basarse tanto en consideraciones teóricas como prácticas:
 
 **Distribuciones Comunes:**
 
