@@ -1,4 +1,4 @@
-book_filename: "bookdown-demo"
+book_filename: "apunte-marketing-engineering"
 output_dir: "docs"
 language:
   ui:
@@ -10,3 +10,4 @@ rmd_files:
   - "02-probabilisticos.Rmd"
   - "03-estructurales.Rmd"
   - "04-apéndice.Rmd"
+  - "01-regresión-recomendaciones-didacticas.Rmd"

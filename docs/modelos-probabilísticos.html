@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Capítulo 2 Modelos probabilísticos | Marketing Engineering</title>
   <meta name="description" content="Capítulo 2 Modelos probabilísticos | Marketing Engineering" />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 2 Modelos probabilísticos | Marketing Engineering" />
   <meta property="og:type" content="book" />
+  
   
   <meta property="og:description" content="Capítulo 2 Modelos probabilísticos | Marketing Engineering" />
   
@@ -23,7 +24,7 @@
 <meta name="author" content="Marcel Goic" />
 
 
-<meta name="date" content="2025-11-09" />
+<meta name="date" content="2026-03-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +33,8 @@
   
 <link rel="prev" href="modelos-de-regresión.html"/>
 <link rel="next" href="modelos-estructurales.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<script src="libs/header-attrs-2.1/header-attrs.js"></script>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -49,16 +50,13 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
 
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -117,11 +115,6 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
 <link rel="stylesheet" href="custom-style.css" type="text/css" />
@@ -259,6 +252,54 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html"><i class="fa fa-check"></i><b>4</b> Apéndices Técnicos</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html#métodos-de-estimación-y-evaluación-de-modelos"><i class="fa fa-check"></i><b>4.1</b> Métodos de Estimación y Evaluación de modelos</a></li>
+<li class="chapter" data-level="" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html#nota-de-trabajo-didáctico"><i class="fa fa-check"></i>Nota de trabajo didáctico</a></li>
+<li class="chapter" data-level="" data-path="apéndices-técnicos.html"><a href="apéndices-técnicos.html#mapa-de-mejoras-didácticas-sugeridas"><i class="fa fa-check"></i>Mapa de mejoras didácticas sugeridas</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html"><i class="fa fa-check"></i>Anexo Didáctico: Recomendaciones para Regresión</a>
+<ul>
+<li class="chapter" data-level="4.2" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#conceptos-básicos-de-regresión-1"><i class="fa fa-check"></i><b>4.2</b> Conceptos básicos de regresión</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#notación-1"><i class="fa fa-check"></i><b>4.2.1</b> Notación</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#mínimos-cuadrados-ordinarios-ols-y-supuestos-1"><i class="fa fa-check"></i><b>4.3</b> Mínimos Cuadrados Ordinarios (OLS) y supuestos</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#estimación-3"><i class="fa fa-check"></i><b>4.3.1</b> Estimación</a></li>
+<li class="chapter" data-level="4.3.2" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#propiedades-1"><i class="fa fa-check"></i><b>4.3.2</b> Propiedades</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#estrategias-de-modelamiento-1"><i class="fa fa-check"></i><b>4.4</b> Estrategias de Modelamiento</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#arte-vs.-procedimiento-1"><i class="fa fa-check"></i><b>4.4.1</b> Arte vs. Procedimiento</a></li>
+<li class="chapter" data-level="4.4.2" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#aprendizajes-preliminares-1"><i class="fa fa-check"></i><b>4.4.2</b> Aprendizajes Preliminares</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#evaluación-de-modelos-1"><i class="fa fa-check"></i><b>4.5</b> Evaluación de modelos</a>
+<ul>
+<li class="chapter" data-level="4.5.1" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#qué-buscamos-en-un-modelo-1"><i class="fa fa-check"></i><b>4.5.1</b> ¿Qué buscamos en un modelo?</a></li>
+<li class="chapter" data-level="4.5.2" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#ajuste-por-métricas-generales-1"><i class="fa fa-check"></i><b>4.5.2</b> Ajuste por métricas generales</a></li>
+<li class="chapter" data-level="4.5.3" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#ajuste-basado-en-la-probabilidad-1"><i class="fa fa-check"></i><b>4.5.3</b> Ajuste basado en la probabilidad</a></li>
+<li class="chapter" data-level="4.5.4" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#errores-dentro-y-fuera-de-la-muestra-1"><i class="fa fa-check"></i><b>4.5.4</b> Errores dentro y fuera de la muestra</a></li>
+<li class="chapter" data-level="4.5.5" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#división-de-datos-1"><i class="fa fa-check"></i><b>4.5.5</b> División de datos</a></li>
+<li class="chapter" data-level="4.5.6" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#validación-cruzada-1"><i class="fa fa-check"></i><b>4.5.6</b> Validación cruzada</a></li>
+<li class="chapter" data-level="4.5.7" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#test-de-hipótesis-1"><i class="fa fa-check"></i><b>4.5.7</b> Test de hipótesis</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#usos-y-limitaciones-del-análisis-de-regresión-1"><i class="fa fa-check"></i><b>4.6</b> Usos y limitaciones del análisis de regresión</a>
+<ul>
+<li class="chapter" data-level="4.6.1" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#aprendizaje-de-los-parámetros-1"><i class="fa fa-check"></i><b>4.6.1</b> Aprendizaje de los parámetros</a></li>
+<li class="chapter" data-level="4.6.2" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#interpretación-de-los-coeficientes-1"><i class="fa fa-check"></i><b>4.6.2</b> Interpretación de los coeficientes</a></li>
+<li class="chapter" data-level="4.6.3" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#pronósticos-1"><i class="fa fa-check"></i><b>4.6.3</b> Pronósticos</a></li>
+<li class="chapter" data-level="4.6.4" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#errores-de-pronóstico-1"><i class="fa fa-check"></i><b>4.6.4</b> Errores de pronóstico</a></li>
+<li class="chapter" data-level="4.6.5" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#principios-generales-de-pronóstico-1"><i class="fa fa-check"></i><b>4.6.5</b> Principios generales de pronóstico</a></li>
+<li class="chapter" data-level="4.6.6" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#limitaciones-de-los-modelos-de-regresión-1"><i class="fa fa-check"></i><b>4.6.6</b> Limitaciones de los modelos de regresión</a></li>
+<li class="chapter" data-level="4.6.7" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#modelos-lineales-generalizados-1"><i class="fa fa-check"></i><b>4.6.7</b> Modelos lineales generalizados</a></li>
+</ul></li>
+<li class="chapter" data-level="4.7" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#alternativas-de-machine-learning-para-la-regresión-1"><i class="fa fa-check"></i><b>4.7</b> Alternativas de Machine Learning para la regresión</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#qué-es-machine-learning-1"><i class="fa fa-check"></i><b>4.7.1</b> ¿Qué es Machine Learning?</a></li>
+<li class="chapter" data-level="4.7.2" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#la-regresión-cuenta-como-un-modelo-de-ml-1"><i class="fa fa-check"></i><b>4.7.2</b> ¿La regresión cuenta como un modelo de ML?</a></li>
+<li class="chapter" data-level="4.7.3" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#multivariate-adaptive-regression-splines-mars-1"><i class="fa fa-check"></i><b>4.7.3</b> Multivariate Adaptive Regression Splines (MARS)</a></li>
+<li class="chapter" data-level="4.7.4" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#k-nearest-neighbors-regression-knn-1"><i class="fa fa-check"></i><b>4.7.4</b> K Nearest Neighbors Regression (KNN)</a></li>
+<li class="chapter" data-level="4.7.5" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#regression-trees-1"><i class="fa fa-check"></i><b>4.7.5</b> Regression trees</a></li>
+<li class="chapter" data-level="4.7.6" data-path="anexo-didáctico-recomendaciones-para-regresión.html"><a href="anexo-didáctico-recomendaciones-para-regresión.html#bagging-y-random-forests-1"><i class="fa fa-check"></i><b>4.7.6</b> Bagging y Random forests</a></li>
+</ul></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -280,10 +321,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="modelos-probabilísticos" class="section level1 hasAnchor" number="2">
-<h1><span class="header-section-number">Capítulo 2</span> Modelos probabilísticos<a href="modelos-probabilísticos.html#modelos-probabilísticos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="introducción" class="section level2 hasAnchor" number="2.1">
-<h2><span class="header-section-number">2.1</span> Introducción<a href="modelos-probabilísticos.html#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="modelos-probabilísticos" class="section level1" number="2">
+<h1><span class="header-section-number">Capítulo 2</span> Modelos probabilísticos</h1>
+<div id="introducción" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Introducción</h2>
 <p>Usualmente, y en el contexto de Marketing, interesa estudiar el
 comportamiento de las personas, para realizar acciones estratégicas en
 función de los aprendizajes adquiridos. Así, se pueden definir dos tipos
@@ -345,8 +386,8 @@ eligen responder una campaña publicitaria y la elección de cambiar o
 no de canal de televisión.</p></li>
 </ul>
 </div>
-<div id="modelos-de-duración" class="section level2 hasAnchor" number="2.2">
-<h2><span class="header-section-number">2.2</span> Modelos de Duración<a href="modelos-probabilísticos.html#modelos-de-duración" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="modelos-de-duración" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Modelos de Duración</h2>
 <p>En años recientes, las mejoras en las tecnologías de información han
 dado como resultado un aumento en la disponibilidad de data acerca de
 los individuos en determinadas situaciones de consumo. Esta tendencia se
@@ -386,8 +427,8 @@ duración.</strong></p></li>
 <li><p><strong>Modelos de duración en tiempo continuo con dependencia en la
 duración.</strong></p></li>
 </ol>
-<div id="modelos-de-duración-de-tiempo-discreto" class="section level3 hasAnchor" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Modelos de duración de tiempo discreto<a href="modelos-probabilísticos.html#modelos-de-duración-de-tiempo-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-de-duración-de-tiempo-discreto" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Modelos de duración de tiempo discreto</h3>
 <p>Como ejemplo, se tiene el siguiente escenario: a través de una propuesta
 de valor atractiva, una empresa consigue un cliente. ¿Durante cuántos
 periodos estará afiliado a la compañía?</p>
@@ -401,8 +442,8 @@ como cliente?</p></li>
 <li><p>Un cliente se suscribe a un plan telefónico o de internet. ¿Por
 cuántos periodos se mantendrá suscrito?</p></li>
 </ul>
-<div id="modelo-geométrico-desplazado" class="section level4 unnumbered hasAnchor">
-<h4>Modelo Geométrico Desplazado<a href="modelos-probabilísticos.html#modelo-geométrico-desplazado" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="modelo-geométrico-desplazado" class="section level4 unnumbered" number="">
+<h4>Modelo Geométrico Desplazado</h4>
 <p>Como ejemplo, se asume que se tiene una cartera de clientes que van
 abandonando la relación comercial para <strong>nunca más retomarla</strong> en
 cualquier periodo definido. Al final de cada periodo, un cliente decide
@@ -636,8 +677,8 @@ representa el porcentaje de la población que pertenece al segmento 2.
 Cabe mencionar que se puede expandir a más segmentos, siempre que
 sepamos su proporción <span class="math inline">\(\pi\)</span>.</p>
 </div>
-<div id="modelo-beta-geométrico-desplazado" class="section level4 unnumbered hasAnchor">
-<h4>Modelo Beta Geométrico desplazado<a href="modelos-probabilísticos.html#modelo-beta-geométrico-desplazado" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="modelo-beta-geométrico-desplazado" class="section level4 unnumbered" number="">
+<h4>Modelo Beta Geométrico desplazado</h4>
 <p>Los modelos anteriores funcionan bien cuando la población se comporta de
 manera distinta entre clases latentes, y similar al interior de cada
 clase latente. Sin embargo, puede ser mucho más realista e interesante
@@ -720,8 +761,8 @@ es necesario realizar la comparación en base a métricas de evaluación
 mas precisas (AIC, BIC, etc.)</p>
 </div>
 </div>
-<div id="modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración" class="section level3 hasAnchor" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Modelos de duración en tiempo continuo sin dependencia en la duración<a href="modelos-probabilísticos.html#modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-de-duración-en-tiempo-continuo-sin-dependencia-en-la-duración" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Modelos de duración en tiempo continuo sin dependencia en la duración</h3>
 <p>Para algunos modelos, medir el tiempo como si fueran períodos discretos
 puede ser un buena aproximación de acuerdo a los objetivos del análisis
 que se desea llevar a cabo.</p>
@@ -741,8 +782,8 @@ funcional flexible para ser trabajada y modificada fácilmente, que logre
 ajustar a la data histórica que se tiene y proyectar el comportamiento
 futuro de los clientes, es decir, que sea un buen modelo predictivo para
 tomar acciones en función de aquello.</p>
-<div id="modelo-exponencial" class="section level4 unnumbered hasAnchor">
-<h4>Modelo Exponencial<a href="modelos-probabilísticos.html#modelo-exponencial" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="modelo-exponencial" class="section level4 unnumbered" number="">
+<h4>Modelo Exponencial</h4>
 <p>Se puede medir el tiempo que pasa desde que se lanza un producto hasta
 que el consumidor decide adquirirlo. Existen muchos factores externos
 que determinan esta decisión: exposición a publicidad, número de visitas
@@ -833,8 +874,8 @@ depende del tiempo en que aún no ha ocurrido. Se puede demostrar
 matemáticamente:</p>
 <p><span class="math display">\[P(T &gt; s + t|T&gt;s) = \frac{P(T&gt; s+t)}{P(T&gt; s)} = \frac{1-P(T \leq s+t)}{1-P(T \leq s)}= \frac{e^{-\lambda(s+t)}}{e^{-\lambda s}} = e^{-\lambda t}\]</span></p>
 </div>
-<div id="modelo-gamma-exponencial" class="section level4 hasAnchor" number="2.2.2.1">
-<h4><span class="header-section-number">2.2.2.1</span> Modelo Gamma Exponencial<a href="modelos-probabilísticos.html#modelo-gamma-exponencial" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="modelo-gamma-exponencial" class="section level4" number="2.2.2.1">
+<h4><span class="header-section-number">2.2.2.1</span> Modelo Gamma Exponencial</h4>
 <p>Análogamente al caso de duración discreta, hay casos en que el
 comportamiento de la población heterogéneo. Esto busca complejizar la
 suposición que antes se hizo al considerar un grupo de clientes que
@@ -857,8 +898,8 @@ una función de acumulación de dominio completo para la distribución
 gamma (lo que al integrarlo da 1).</p>
 </div>
 </div>
-<div id="modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración" class="section level3 hasAnchor" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Modelos de duración en tiempo continuo con dependencia en la duración<a href="modelos-probabilísticos.html#modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-de-duración-en-tiempo-continuo-con-dependencia-en-la-duración" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Modelos de duración en tiempo continuo con dependencia en la duración</h3>
 <p>Otra de las grandes limitantes del modelo <em>Exponencial</em> es que posee
 pérdida de memoria. En algunas aplicacioens se requiere incorporar esta
 distinción, es decir, la probabilidad de que un evento ocurra dado que
@@ -873,8 +914,8 @@ f(t) &amp;= \frac{d}{dt} F(t) \\
 \end{aligned}
 \]</span></p>
 <p>Gráficamente, la tasa de riesgo se comporta de la siguiente manera:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="modelos-probabilísticos.html#cb7-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">rep</span>(<span class="st">&quot;images/tasa_riesgo.png&quot;</span>))</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:my-fig"></span>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="modelos-probabilísticos.html#cb7-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/tasa_riesgo.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:my-fig"></span>
 <img src="images/tasa_riesgo.png" alt="Ejemplos de tasas de riesgo" width="50%" />
 <p class="caption">
 Figure 2.1: Ejemplos de tasas de riesgo
@@ -898,8 +939,8 @@ siguiente integral:</p>
 <p><span class="math display">\[F(t) = 1 - exp \left( -\int_{0}^{t} h(u)du \right)\]</span>Este concepto será
 útil para definir los modelos de duración en tiempo continuo en que la
 duración sí es un factor relevante</p>
-<div id="modelo-weibull" class="section level4 unnumbered hasAnchor">
-<h4>Modelo Weibull<a href="modelos-probabilísticos.html#modelo-weibull" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="modelo-weibull" class="section level4 unnumbered" number="">
+<h4>Modelo Weibull</h4>
 <p>A pesar de las generalizaciones de las funciones de tasas de riesgo para
 generar modelos de tiempo de ocurrencia, el foco será puesto en la
 distribución Weibull, debido a que es fácil de trabajar y entrega una
@@ -917,8 +958,8 @@ que la distribución Weibull es una generalización de la exponencial.
 Notar que para <span class="math inline">\(c=1\)</span>, la tasa de riesgo es constante, lo que es
 consistente con la propiedad de pérdida de memoria de la distribución
 exponencial.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="modelos-probabilísticos.html#cb8-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="fu">rep</span>(<span class="st">&quot;images/tasa_riesgo_c.png&quot;</span>))</span></code></pre></div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:riesgoc"></span>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="modelos-probabilísticos.html#cb8-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/tasa_riesgo_c.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:riesgoc"></span>
 <img src="images/tasa_riesgo_c.png" alt="Ejemplos de tasas de riesgo para distintos valores de c" width="50%" />
 <p class="caption">
 Figure 2.2: Ejemplos de tasas de riesgo para distintos valores de c
@@ -929,8 +970,8 @@ memoria no aplica como en el caso de la exponencial, es decir, la
 probabilidad de ocurrencia varía a medida que pasa el tiempo:</p>
 <p><span class="math display">\[P(T &gt; s + t|T&gt;s) = \frac{P(T&gt; s+t)}{P(T&gt; s)} = \frac{1-P(T \leq s+t)}{1-P(T \leq s)}= \frac{e^{-\lambda(s+t)^c}}{e^{-\lambda s^c}} \]</span></p>
 </div>
-<div id="modelo-gamma-weibull" class="section level4 unnumbered hasAnchor">
-<h4>Modelo Gamma Weibull<a href="modelos-probabilísticos.html#modelo-gamma-weibull" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="modelo-gamma-weibull" class="section level4 unnumbered" number="">
+<h4>Modelo Gamma Weibull</h4>
 <p>Una de las propiedades interesantes de la distribución Weibull, es que
 es sencillo introducir heterogeneidad sobre los parámetros y, de esa
 forma, capturar los distintos posibles comportamientos de la población.</p>
@@ -945,8 +986,8 @@ puede modelar a través de la</p>
 </div>
 </div>
 </div>
-<div id="modelos-de-conteo" class="section level2 hasAnchor" number="2.3">
-<h2><span class="header-section-number">2.3</span> Modelos de Conteo<a href="modelos-probabilísticos.html#modelos-de-conteo" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="modelos-de-conteo" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Modelos de Conteo</h2>
 <p>Permiten modelar cuántas veces los consumidores incurrirán en un
 comportamiento determinado en un período de tiempo (ejemplo: problema de
 exposición publicitaria).</p>
@@ -1021,8 +1062,8 @@ P(N_t = m \mid r, \alpha) &amp;= \int_{0}^{\infty} P(N_t = m|\lambda) g(\lambda)
 \quad \tag{2.5}
 \]</span></p>
 </div>
-<div id="modelos-de-elección-binaria-binomial" class="section level2 hasAnchor" number="2.4">
-<h2><span class="header-section-number">2.4</span> Modelos de Elección Binaria binomial<a href="modelos-probabilísticos.html#modelos-de-elección-binaria-binomial" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="modelos-de-elección-binaria-binomial" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Modelos de Elección Binaria binomial</h2>
 <p>Permiten modelar la probabilidad de que los individuos elijan un
 determinado comportamiento, dado que tienen varias opciones para elegir.
 Es aplicable en una situación de compras en un supermercado, exposición
@@ -1086,8 +1127,8 @@ P(X_s = x_s \mid \alpha, \beta) &amp;= \int_{0}^{1} P(X_s = x_s|m_s,\theta_s) g(
 \quad \tag{2.7}
 \]</span></p>
 </div>
-<div id="heterogeneidad-observable" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Heterogeneidad observable<a href="modelos-probabilísticos.html#heterogeneidad-observable" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="heterogeneidad-observable" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Heterogeneidad observable</h2>
 <p>Se ha expuesto modelos que intentan explicar y predecir el tiempo en que
 los individuos realizarán una determinada acción (e.g: proponer la
 probabilidad de fuga de un cliente), considerando que el comportamiento
@@ -1097,8 +1138,8 @@ duración en tiempo continuo sin dependencia en la duración. Entendemos
 por heterogeneidad observable, aquellos factores observables (que están
 en los datos) intrínsecos a los individuos que los hacen distintos,
 tales como sexo, edad, nivel socioeconómico, género, entre otras.</p>
-<div id="modelos-de-duración-en-tiempo-discreto" class="section level3 hasAnchor" number="2.5.1">
-<h3><span class="header-section-number">2.5.1</span> Modelos de duración en tiempo discreto<a href="modelos-probabilísticos.html#modelos-de-duración-en-tiempo-discreto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-de-duración-en-tiempo-discreto" class="section level3" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Modelos de duración en tiempo discreto</h3>
 <p>Sea <span class="math inline">\(T_i\)</span> la variable aleatoria que describe el instante en que el
 individuo <span class="math inline">\(i\)</span> termina su relación comercial. Se modelará dicha variable
 con una distribución Geométrica Desplazada de parámetro <span class="math inline">\(\theta_i\)</span>, que
@@ -1151,8 +1192,8 @@ LL(\theta_{params}) &amp;= \sum_{i \in \text{abandono}} \ln(\mathbb{P}(T_i = t_i
 \end{aligned}
 \]</span></p>
 </div>
-<div id="modelos-de-duración-en-tiempo-continuo-sin-dependencia-de-la-duración" class="section level3 hasAnchor" number="2.5.2">
-<h3><span class="header-section-number">2.5.2</span> Modelos de duración en tiempo continuo sin dependencia de la duración<a href="modelos-probabilísticos.html#modelos-de-duración-en-tiempo-continuo-sin-dependencia-de-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-de-duración-en-tiempo-continuo-sin-dependencia-de-la-duración" class="section level3" number="2.5.2">
+<h3><span class="header-section-number">2.5.2</span> Modelos de duración en tiempo continuo sin dependencia de la duración</h3>
 <p>Sea <span class="math inline">\(T_i\)</span> la variable aleatoria que describe el instante en que el
 individuo <span class="math inline">\(i\)</span> realiza una determinada acción. Se modelará dicha variable
 aleatoria con una distribución exponencial de parámetro <span class="math inline">\(\lambda_i\)</span>:</p>
@@ -1210,8 +1251,8 @@ LL(\theta) &amp;= \sum_{i=1}^{N} \ln(\mathbb{P} (t_i^-&lt;T_i&lt;t_i^+|\alpha,r,
 \end{aligned}
 \]</span></p>
 </div>
-<div id="modelos-de-duración-en-tiempo-continuo-con-dependencia-de-la-duración" class="section level3 hasAnchor" number="2.5.3">
-<h3><span class="header-section-number">2.5.3</span> Modelos de duración en tiempo continuo con dependencia de la duración<a href="modelos-probabilísticos.html#modelos-de-duración-en-tiempo-continuo-con-dependencia-de-la-duración" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-de-duración-en-tiempo-continuo-con-dependencia-de-la-duración" class="section level3" number="2.5.3">
+<h3><span class="header-section-number">2.5.3</span> Modelos de duración en tiempo continuo con dependencia de la duración</h3>
 <p>Cuando el tiempo en que ocurre un determinado suceso posee dependencia
 en la duración, el procedimiento es análogo que en el caso sin dicha
 dependencia, pero considerando que <span class="math inline">\(T_i\)</span> distribuye según una ley
@@ -1246,8 +1287,8 @@ LL(\theta) &amp;= \sum_{i=1}^{N} \ln(\mathbb{P}(t_i^- &lt; T_i &lt; t_i^+|\beta,
 \end{aligned}
 \]</span></p>
 </div>
-<div id="modelos-de-conteo-1" class="section level3 hasAnchor" number="2.5.4">
-<h3><span class="header-section-number">2.5.4</span> Modelos de Conteo<a href="modelos-probabilísticos.html#modelos-de-conteo-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-de-conteo-1" class="section level3" number="2.5.4">
+<h3><span class="header-section-number">2.5.4</span> Modelos de Conteo</h3>
 <p>Sea <span class="math inline">\(Y_i\)</span> la variable aleatoria que describe el número de veces que el
 individuo <span class="math inline">\(i\)</span> incurre en un determinado comportamiento durante un
 período de tiempo. Se modelará dicha variable con una distribución
@@ -1291,8 +1332,8 @@ Binomial Negativa:</p>
 LL(r, \alpha, \beta) = \sum_{i=1}^{N} \ln(\mathbb{P}(Y_i = y_i|r, \alpha, \beta))
 \]</span></p>
 </div>
-<div id="modelos-de-elección-binaria-binomial-1" class="section level3 hasAnchor" number="2.5.5">
-<h3><span class="header-section-number">2.5.5</span> Modelos de Elección Binaria binomial<a href="modelos-probabilísticos.html#modelos-de-elección-binaria-binomial-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelos-de-elección-binaria-binomial-1" class="section level3" number="2.5.5">
+<h3><span class="header-section-number">2.5.5</span> Modelos de Elección Binaria binomial</h3>
 <p>Sea <span class="math inline">\(X_i\)</span> la variable aleatoria que describe el número de “éxitos” (ej.
 respuestas a una campaña, compras) en <span class="math inline">\(m_i\)</span> intentos para un individuo o
 segmento <span class="math inline">\(i\)</span>. Se modelará dicha variable con una distribución con
@@ -1334,8 +1375,8 @@ LL(a, b) = \sum_{i=1}^{N} \ln \left( \binom{m_i}{x_i} \frac{B(\alpha_i + x_i, \b
 \]</span></p>
 </div>
 </div>
-<div id="esperanzas-condicionales" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Esperanzas Condicionales<a href="modelos-probabilísticos.html#esperanzas-condicionales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="esperanzas-condicionales" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Esperanzas Condicionales</h2>
 <p>Primero, es fundamental establecer el valor esperado de las
 distribuciones que se usaron para modelar la heterogeneidad no
 observable. A continuación, se muestra el desarrollo para obtener la
@@ -1389,8 +1430,8 @@ El desarrollo para obtener esta esperanza es el siguiente: <span class="math dis
 \end{aligned}
 \]</span></p></li>
 </ul>
-<div id="modelo-de-tiempo-discreto-combinado-con-beta" class="section level3 hasAnchor" number="2.6.1">
-<h3><span class="header-section-number">2.6.1</span> Modelo de Tiempo Discreto (Combinado con Beta)<a href="modelos-probabilísticos.html#modelo-de-tiempo-discreto-combinado-con-beta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelo-de-tiempo-discreto-combinado-con-beta" class="section level3" number="2.6.1">
+<h3><span class="header-section-number">2.6.1</span> Modelo de Tiempo Discreto (Combinado con Beta)</h3>
 <p>Para el modelo de duración en tiempo discreto, una pregunta válida es
 cuál es la probabilidad de abandono esperada para un cliente
 determinado, dado su historial con la empresa. Intuitivamente, esta
@@ -1477,8 +1518,8 @@ si su probabilidad de abandono esperada supera cierto umbral:</p>
 \mathbb{E}(\theta \mid T&gt;t) = \frac{\alpha}{\alpha + \beta + t} (\#eq:esp:discrete)
 \]</span></p>
 </div>
-<div id="modelo-de-tiempo-continuo-combinado-con-gamma" class="section level3 hasAnchor" number="2.6.2">
-<h3><span class="header-section-number">2.6.2</span> Modelo de Tiempo Continuo (Combinado con Gamma)<a href="modelos-probabilísticos.html#modelo-de-tiempo-continuo-combinado-con-gamma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelo-de-tiempo-continuo-combinado-con-gamma" class="section level3" number="2.6.2">
+<h3><span class="header-section-number">2.6.2</span> Modelo de Tiempo Continuo (Combinado con Gamma)</h3>
 <p>Para el modelo de duración en tiempo continuo, una pregunta válida es
 cuál es la tasa de eventos esperada para un cliente determinado, dado su
 historial. Intuitivamente, esta tasa debería estar entre la tasa
@@ -1524,8 +1565,8 @@ Gamma, con los parámetros actualizados.
 es simplemente la media de dicha distribución:
 <span class="math display">\[ \mathbb{E}(\lambda|T=t) = \frac{r+1}{\alpha+t} \]</span></p>
 </div>
-<div id="modelo-de-conteo-combinado-con-gamma" class="section level3 hasAnchor" number="2.6.3">
-<h3><span class="header-section-number">2.6.3</span> Modelo de Conteo (Combinado con Gamma)<a href="modelos-probabilísticos.html#modelo-de-conteo-combinado-con-gamma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelo-de-conteo-combinado-con-gamma" class="section level3" number="2.6.3">
+<h3><span class="header-section-number">2.6.3</span> Modelo de Conteo (Combinado con Gamma)</h3>
 <p>Para el modelo de conteo, una pregunta válida es cuál es la tasa de
 eventos esperada para un cliente determinado, dado su historial de
 eventos en un período de tiempo <span class="math inline">\(t\)</span>.</p>
@@ -1566,8 +1607,8 @@ Gamma, con los parámetros actualizados.
 es simplemente la media de dicha distribución:
 <span class="math display">\[ \mathbb{E}(\lambda|Y_t=y) = \frac{r+y}{\alpha+t} \]</span></p>
 </div>
-<div id="modelo-de-elección-binaria-binomial-combinado-con-beta" class="section level3 hasAnchor" number="2.6.4">
-<h3><span class="header-section-number">2.6.4</span> Modelo de Elección Binaria binomial (Combinado con Beta)<a href="modelos-probabilísticos.html#modelo-de-elección-binaria-binomial-combinado-con-beta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="modelo-de-elección-binaria-binomial-combinado-con-beta" class="section level3" number="2.6.4">
+<h3><span class="header-section-number">2.6.4</span> Modelo de Elección Binaria binomial (Combinado con Beta)</h3>
 <p>Recordando que la distribución del parámetro <span class="math inline">\(\theta\)</span> (la probabilidad
 de éxito), condicionada a los datos observados, se obtiene por el
 Teorema de Bayes:</p>
@@ -1939,6 +1980,7 @@ END: sección comentada -->
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -1949,42 +1991,37 @@ END: sección comentada -->
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": "https://github.com/rstudio/bookdown-demo/edit/master/02-probabilisticos.Rmd",
-    "text": "Edit"
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "subsection"
-  }
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/Mktengnotes/MarketingEngineering/edit/main/02-probabilisticos.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["apunte-marketing-engineering.pdf"],
+"toc": {
+"collapse": "subsection"
+}
 });
 });
 </script>
@@ -1995,7 +2032,7 @@ gitbook.start({
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');

@@ -127,11 +127,13 @@ Así, se descompone la utilidad de cada alternativa en una componente sistemáti
 
 La componente básica para estimar estadísticamente un modelo de elección discreta es la especificación de la probabilidad de elección de cada alternativa. Sea $P_{nit}$ la probabilidad de que el agente $n$ escoja la alternativa $i$ en la oportunidad de compra $t$. El supuesto de maximización de utilidades implica que $P_{nit}$ puede escribirse como:
 
+$$
 \begin{aligned}
 P_{nit} &= Pr(u_{nit}>u_{njt},\forall j \neq i)\\
 &= Pr(v_{nit} + \varepsilon_{nit} >v_{njt} + \varepsilon_{njt} ,\forall j \neq i)\\
 &= \int \textbf{1} (\varepsilon_{njt} - \varepsilon_{nit} > v_{nit} - v_{njt}) f(\varepsilon_{nt}) d \varepsilon_{nt}
 \end{aligned}
+$$
 
 donde $\textbf{1}(\cdot)$ toma el valor 1 si se cumple el argumento y el valor 0 en caso contrario. En esta expresión, $\varepsilon_{nt} = (\varepsilon_{n1t},\varepsilon_{n2t}, ...,\varepsilon_{nIt})$ es el vector de las componentes aleatorias de la elección del agente $n$ en la oportunidad $t$, y $f(·)$ la función de densidad que describe su comportamiento probabilístico. La elección de la distribución de la componente aleatoria es importante en cuanto impone restricciones a los patrones de comportamiento que pueden ser capturados por el modelo. Se concentrará la atención en los casos en que $\varepsilon_{nit}$ se distribuye valor extremo, que da origen al modelo *logit*, y normal, que da origen al modelo *probit*.
 
@@ -241,10 +243,12 @@ $$u_{nit} = \alpha_i + \beta_np_{it} + \varepsilon_{nit}$$
  $$\beta_n = \lambda_0 + \lambda_1I_n + \mu_n$$
  Donde $\lambda_0$ captura la sensibilidad base al precio, $I_n$ el nivel de ingreso del agente $n$ y $\lambda_1$ el coeficiente que indica cómo dichos niveles de ingresos afectan la sensibilidad al precio. Por último, $\mu_n$ es un valor aleatorio que captura todas las otras componentes que modifican la sensibilidad al precio más allá del nivel base y los ingresos.
  
+$$
 \begin{aligned}
 u_{nit} &= \alpha_i + (\lambda_0 + \lambda_1 I_n + \mu_n)p_{it} + \varepsilon_{nit}\\
 &= \alpha_i + \lambda_0 p_{it} + \lambda_1p_{it}I_n + \xi_{nit}
 \end{aligned}
+$$
  
  
  Donde $\xi_{nit} = \mu_np_{it} + \varepsilon_{nit}$. De esta expresión debiera ser claro que la inclusión de heterogeneidad
@@ -365,6 +369,7 @@ Con $\lambda = 0$ solo importa la elección inmediatamente anterior ($z_{nit} = 
 
 Expandiendo recursivamente la ecuación \@ref(eq:loyalty):
 
+$$
 \begin{aligned}
 z_{nit} &= \lambda z_{nit-1} + (1-\lambda) y_{nit-1}\\
 &= \lambda[\lambda z_{nit-2} + (1-\lambda)y_{nit-2}] + (1-\lambda)y_{nit-1}\\
@@ -375,6 +380,7 @@ z_{nit} &= \lambda z_{nit-1} + (1-\lambda) y_{nit-1}\\
 &= (1-\lambda)y_{nit-1} + \lambda(1-\lambda)y_{nit-2} + \lambda^2(1-\lambda)y_{nit-3} + \cdots + \lambda^{t-2}(1-\lambda)y_{ni1}\\
 &= (1-\lambda)\sum_{s=1}^{t-1} \lambda^{t-1-s} y_{nis}
 \end{aligned}
+$$
 
 Esta expresión muestra que $z_{nit}$ es un promedio ponderado de todas las elecciones pasadas, donde las elecciones más recientes reciben mayor peso exponencialmente decreciente.
 
@@ -409,10 +415,12 @@ En la mayoría de contextos de marketing, se espera $\gamma > 0$, aunque en cate
 Supóngase un mercado de yogur con 3 marcas (A, B, C) y un consumidor que en los últimos 5 períodos eligió: A, A, B, A, ? (período actual). Con $\lambda = 0.5$:
 
 Para la marca A:
+$$
 \begin{aligned}
 z_{A,t} &= (1-0.5)[1 \cdot 0.5^0 + 0 \cdot 0.5^1 + 1 \cdot 0.5^2 + 1 \cdot 0.5^3]\\
 &= 0.5[1 + 0 + 0.25 + 0.125] = 0.6875
 \end{aligned}
+$$
 
 Para la marca B: $z_{B,t} = 0.5[0 + 1 \cdot 0.5^1 + 0 + 0] = 0.25$
 
@@ -477,6 +485,7 @@ donde $\beta_2^+$ captura el efecto de precios superiores a la referencia (pérd
 Considérese un producto con la siguiente historia de precios: \$10, \$12, \$9, \$11, ?.
 Con $\lambda = 0.6$:
 
+$$
 \begin{aligned}
 RP_t &= 0.6 \cdot RP_{t-1} + 0.4 \cdot P_{t-1}\\
 RP_2 &= 0.4 \cdot 10 = 4.0\\
@@ -484,6 +493,7 @@ RP_3 &= 0.6 \cdot 4.0 + 0.4 \cdot 12 = 7.2\\
 RP_4 &= 0.6 \cdot 7.2 + 0.4 \cdot 9 = 7.92\\
 RP_5 &= 0.6 \cdot 7.92 + 0.4 \cdot 11 = 9.152
 \end{aligned}
+$$
 
 Si en el período 5 el precio es \$13 y se tiene $\beta_1 = -0.5$ y $\beta_2 = 0.8$:
 
@@ -506,10 +516,12 @@ u_{nit} = \alpha_i + \beta_1 P_{nit} - \beta_2(P_{nit} - RP_{nit}) + \gamma z_{n
 
 donde tanto $z_{nit}$ como $RP_{nit}$ se construyen recursivamente usando los datos históricos del individuo:
 
+$$
 \begin{aligned}
 z_{nit} &= \lambda_z z_{nit-1} + (1-\lambda_z) y_{nit-1}\\
 RP_{nit} &= \lambda_p RP_{nit-1} + (1-\lambda_p) P_{nit-1}
 \end{aligned}
+$$
 
 ### Apéndice{-}
 
@@ -520,20 +532,23 @@ Por definición
 $$P_{nit} = Pr(\varepsilon_{njt}<v_{nit} - v_{njt} + \varepsilon_{nit}), \forall j \neq i$$
 Fijando el valor de $\varepsilon_{nit}$, la probabilidad anterior no es más que una multiplicación de funciones de distribución de variables aleatorias valor extremo. Por lo tanto, se puede condicionar en $\varepsilon_{nit}$ y luego integrar respecto a los valores que puede tomar. Para simplificar la notación, sea $s=\varepsilon_{nit}$.
 
-
+$$
 \begin{aligned}
 P_{nit} &= \int_{-\infty}^{\infty} \left(\prod_{j\neq i}    e^{-e^{-(s + v_{ni} - v_{nj})}}\right) e^{-s} e^{-e^{-s}}ds\\
 &= \int_{-\infty}^{\infty} \left(\prod_{j}   e^{-e^{-(s + v_{ni} - v_{nj})}}\right) e^{-s}ds\\
 &= \int_{-\infty}^{\infty} exp\left(\sum_{j}  e^{-(v_{ni} - v_{nj})}\right) e^{-s}ds
 \end{aligned}
+$$
 
 Para resolver la integral, se puede recurrir a un cambio de variables $t = e^{−s}$ y $dt = e^{−s}ds$. Con esto:
 
+$$
 \begin{aligned}
 P_{nit} &= \int_{\infty}^{0} -e^{t\sum_{j}  e^{-(v_{ni} - v_{nj})}} dt\\
 &= \frac{ e^{-(v_{ni} - v_{nj})}}{\sum_{j}  e^{-(v_{ni} - v_{nj})}}\mid^{\infty}_{0}\\
 &= \frac{e^{v_{ni}}}{\sum_j e^{v_{nj}}}
 \end{aligned}
+$$
 
 
 ## Probit
@@ -617,20 +632,25 @@ Las componentes de la matriz de varianza-covarianza resultante $\hat{\Sigma}$ pu
 
 **Ejemplo:** Considérese un modelo de elección con dos alternativas y un modelo lineal con una única variable para describir la componente sistemática de la utilidad. En este caso, las utilidades por cada alternativa vienen dadas por:
 
+$$
 \begin{aligned}
 u_{n1} &= \beta_n x_{n1} + \varepsilon_{n1}\\
 u_{n2} &= \beta_n x_{n2} + \varepsilon_{n2}
 \end{aligned}
+$$
 
 donde $\varepsilon_{n1}$ y $\varepsilon_{n2}$ son términos independientes e idénticamente distribuidos con varianza $\sigma_\varepsilon$. Si se asume que el parámetro $\beta_n$ se distribuye normal con media $b$ y varianza $\sigma_\beta$, entonces se puede reescribir las utilidades como:
 
+$$
 \begin{aligned}
 u_{n1} &= b x_{n1} + \eta_{n1}\\
 u_{n2} &= b x_{n2} + \eta_{n2}
 \end{aligned}
+$$
 
 donde $\eta_{n1}$ y $\eta_{n2}$ están normalmente distribuidas. Cada una tiene esperanza cero: $\mathbb{E}(\eta_{ni}) =\mathbb{E}(\beta_nx_{ni} + \varepsilon_{ni}) = 0$, varianza igual a $\mathbb{V}ar(\eta_{ni}) = \mathbb{V}ar(\beta_n x_{ni} + \varepsilon_{ni}) = x^2_{ni}\sigma_\beta + \sigma_\varepsilon$ y covarianzas $\mathbb{C}ov(\eta_{n1}, \eta_{n2}) = x_{n1}x_{n2}\sigma_\beta$. Así, la matriz de covarianza viene dada por:
 
+$$
 \begin{aligned}
 \Sigma &= \begin{bmatrix}x^2_{n1}\sigma_\beta + \sigma_\varepsilon & x_{n1}x_{n2}\sigma_\beta\\
 x_{n1}x_{n2}\sigma_\beta & x^2_{n2}\sigma_\beta + \sigma_\varepsilon \end{bmatrix} \\
@@ -638,6 +658,7 @@ x_{n1}x_{n2}\sigma_\beta & x^2_{n2}\sigma_\beta + \sigma_\varepsilon \end{bmatri
 x_{n1}x_{n2} & x^2_{n2} \end{bmatrix} + \sigma_{\varepsilon} \begin{bmatrix}1 & 0\\
 0 & 1\end{bmatrix}
 \end{aligned}
+$$
 
 El siguiente paso es estimar. Recordando que el comportamiento no es afectado por transformaciones multiplicativas de la utilidad, es necesario escalar esta matriz. Lo recomendable es fijar $\sigma_\varepsilon = 1$, obteniendo así:
 
@@ -720,6 +741,7 @@ Motivados en las propiedades de la función de utilidad, este enfoque consiste e
 
 El primer paso en la normalización es considerar diferencias de utilidades con respecto a una alternativa de referencia, la que por simplicidad se escogerá como la primera de la lista. Al fijar esta utilidad y tomar las diferencias, se ha reducido la dimensión del vector de errores, resultando en una matriz de varianza-covarianza $\hat{Σ} = \{\hat{σ}_{ij}\}^3_{i,j=1}$ cuyas componentes vienen dadas por:
 
+$$
 \begin{aligned}
 \hat{\sigma}_{22} &= \sigma_{22} + \sigma_{11} - 2\sigma_{12}\\
 \hat{\sigma}_{33} &= \sigma_{33} + \sigma_{11} - 2\sigma_{13}\\
@@ -728,9 +750,11 @@ El primer paso en la normalización es considerar diferencias de utilidades con 
 \hat{\sigma}_{24} &= \sigma_{24} + \sigma_{11} - \sigma_{12} - \sigma_{14}\\
 \hat{\sigma}_{34} &= \sigma_{34} + \sigma_{11} - \sigma_{13} - \sigma_{14}
 \end{aligned}
+$$
 
 El segundo paso en la normalización es fijar en 1 (o cualquier otro real positivo) una de las componentes de la diagonal de la matriz de varianza covarianza para precisar la escala de la función de utilidad. Por simplicidad se escoge la primera componente de la diagonal. Para hacerla 1 basta con dividir toda la matriz por dicha componente, resultando en una matriz de varianza-covarianza  $\hat{Σ} = \{\hat{σ}_{ij}\}^3_{i,j=1}$ cuyas componentes vienen dadas por:
 
+$$
 \begin{aligned}
 \hat{\sigma}_{33} &= \frac{\sigma_{33} + \sigma_{11} - 2\sigma_{13}}{\sigma_{22} + \sigma_{11} - 2\sigma_{12}}\\
 \hat{\sigma}_{44} &= \frac{\sigma_{44} + \sigma_{11} - 2\sigma_{14}}{\sigma_{22} + \sigma_{11} - 2\sigma_{12}}\\
@@ -738,6 +762,7 @@ El segundo paso en la normalización es fijar en 1 (o cualquier otro real positi
 \hat{\sigma}_{24} &= \frac{\sigma_{24} + \sigma_{11} - \sigma_{12} - \sigma_{14}}{\sigma_{22} + \sigma_{11} - 2\sigma_{12}}\\
 \hat{\sigma}_{34} &= \frac{\sigma_{34} + \sigma_{11} - \sigma_{13} - \sigma_{14}}{\sigma_{22} + \sigma_{11} - 2\sigma_{12}}
 \end{aligned}
+$$
 
 La matriz resultante $\hat{Σ}$ es identificable. En ella es importante trazar sus componentes originales de la matriz sigma porque ayudan a darle interpretación a los resultados obtenidos en la estimación.
 
@@ -872,11 +897,13 @@ $$\exp(\lambda_k \cdot IV_k) = \exp\left(\lambda_k \cdot \ln\left[\sum_{j \in B_
 
 Sustituyendo esta expresión en el numerador de la probabilidad total:
 
+$$
 \begin{aligned}
 P_{ni} &= \frac{\exp(v_{ni}/\lambda_k)}{\sum_{j \in B_k} \exp(v_{nj}/\lambda_k)} \cdot \frac{\left[\sum_{j \in B_k} \exp(v_{nj}/\lambda_k)\right]^{\lambda_k}}{\sum_{m=1}^K \left[\sum_{j \in B_m} \exp(v_{nj}/\lambda_m)\right]^{\lambda_m}}\\
 &= \frac{\exp(v_{ni}/\lambda_k) \cdot \left[\sum_{j \in B_k} \exp(v_{nj}/\lambda_k)\right]^{\lambda_k}}{\left[\sum_{j \in B_k} \exp(v_{nj}/\lambda_k)\right] \cdot \sum_{m=1}^K \left[\sum_{j \in B_m} \exp(v_{nj}/\lambda_m)\right]^{\lambda_m}}\\
 &= \frac{\exp(v_{ni}/\lambda_k) \cdot \left[\sum_{j \in B_k} \exp(v_{nj}/\lambda_k)\right]^{\lambda_k - 1}}{\sum_{m=1}^K \left[\sum_{j \in B_m} \exp(v_{nj}/\lambda_m)\right]^{\lambda_m}}
 \end{aligned}
+$$
 
 Esto conduce a la forma compacta:
 
@@ -942,12 +969,14 @@ En una situación de elección de tipo de vivienda en una ciudad hay cuatro alte
 
 **Especificación de Utilidad:**
 
+$$
 \begin{aligned}
 v_{n,DP} &= \alpha_{DP} + \beta_1 \cdot precio_{DP} + \beta_2 \cdot distancia_{DP}\\
 v_{n,DG} &= \alpha_{DG} + \beta_1 \cdot precio_{DG} + \beta_2 \cdot distancia_{DG}\\
 v_{n,CP} &= \alpha_{CP} + \beta_1 \cdot precio_{CP} + \beta_2 \cdot distancia_{CP}\\
 v_{n,CG} &= \alpha_{CG} + \beta_1 \cdot precio_{CG} + \beta_2 \cdot distancia_{CG}
 \end{aligned}
+$$
 
 donde $\alpha_i$ son constantes alternativa-específicas, $\beta_1 < 0$ captura el efecto del precio y $\beta_2 < 0$ el efecto de la distancia al centro.
 
@@ -1119,11 +1148,13 @@ donde $b$ representa las preferencias medias de la población y $\eta_n \sim N(0
 
 Sustituyendo en la utilidad:
 
+$$
 \begin{aligned}
 u_{nit} &= (b + \eta_n)' x_{nit} + \varepsilon_{nit}\\
 &= b' x_{nit} + \eta'_n x_{nit} + \varepsilon_{nit}\\
 &= b' x_{nit} + \tilde{\varepsilon}_{nit}
 \end{aligned}
+$$
 
 donde $\tilde{\varepsilon}_{nit} = \eta'_n x_{nit} + \varepsilon_{nit}$ es la componente de error compuesta.
 
@@ -1241,10 +1272,12 @@ Sea el caso de la elección de una marca de yogur (3 marcas: A, B, C) con datos 
 
 La especificación del modelo corresponda a:
 
+$$
 \begin{aligned}
 u_{nit} &= \alpha_i + \beta_{n,precio} \cdot precio_{nit} + \beta_{display} \cdot display_{nit} + \varepsilon_{nit}\\
 \beta_{n,precio} &\sim N(b_{precio}, \sigma^2_{precio})
 \end{aligned}
+$$
 
 En un caso hipotético, donde se estima que $b_{precio} = -2.5$ y $\sigma_{precio} = 1.0$:
 

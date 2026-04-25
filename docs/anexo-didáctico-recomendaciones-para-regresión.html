@@ -4,21 +4,21 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 1 Modelos de Regresión | Marketing Engineering</title>
-  <meta name="description" content="Capítulo 1 Modelos de Regresión | Marketing Engineering" />
+  <title>Anexo Didáctico: Recomendaciones para Regresión | Marketing Engineering</title>
+  <meta name="description" content="Anexo Didáctico: Recomendaciones para Regresión | Marketing Engineering" />
   <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 1 Modelos de Regresión | Marketing Engineering" />
+  <meta property="og:title" content="Anexo Didáctico: Recomendaciones para Regresión | Marketing Engineering" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="Capítulo 1 Modelos de Regresión | Marketing Engineering" />
+  <meta property="og:description" content="Anexo Didáctico: Recomendaciones para Regresión | Marketing Engineering" />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 1 Modelos de Regresión | Marketing Engineering" />
+  <meta name="twitter:title" content="Anexo Didáctico: Recomendaciones para Regresión | Marketing Engineering" />
   
-  <meta name="twitter:description" content="Capítulo 1 Modelos de Regresión | Marketing Engineering" />
+  <meta name="twitter:description" content="Anexo Didáctico: Recomendaciones para Regresión | Marketing Engineering" />
   
 
 <meta name="author" content="Marcel Goic" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
-<link rel="next" href="modelos-probabilísticos.html"/>
+<link rel="prev" href="apéndices-técnicos.html"/>
+
 <script src="libs/header-attrs-2.1/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -321,10 +321,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="modelos-de-regresión" class="section level1" number="1">
-<h1><span class="header-section-number">Capítulo 1</span> Modelos de Regresión</h1>
-<div id="conceptos-básicos-de-regresión" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> Conceptos básicos de regresión</h2>
+<div id="anexo-didáctico-recomendaciones-para-regresión" class="section level1 unnumbered" number="">
+<h1>Anexo Didáctico: Recomendaciones para Regresión</h1>
+<div id="conceptos-básicos-de-regresión-1" class="section level2" number="4.2">
+<h2><span class="header-section-number">4.2</span> Conceptos básicos de regresión</h2>
+<blockquote>
+<p><strong>Recomendación didáctica 1: Apertura de unidad</strong></p>
+<p>Antes del primer párrafo conviene agregar un bloque corto con cuatro
+piezas: <code>para qué sirve esta unidad</code>, <code>habilidades requeridas</code>,
+<code>qué debería poder hacer el estudiante al terminar</code> y <code>cómo se conecta con el apunte de ejercicios</code>.</p>
+<p>Habilidades previas sugeridas: lectura de tablas, noción de variable
+aleatoria, interpretación de gráficos, álgebra básica y manejo de
+porcentajes.</p>
+<p>Como activación inicial, aquí encaja muy bien una versión breve de la
+pregunta <code>E7: ¿Qué es un modelo de regresión?</code> de
+<code>ApunteEjercicios/02-regresion.Rmd</code>.</p>
+</blockquote>
 <p>Como bien ya se ha estudiado en otros cursos de la carrera de ingeniería
 industrial, una <em>regresión</em> es una técnica para calcular el valor
 esperado de una variable condicional en la realización de otras. Por
@@ -338,8 +350,18 @@ Providencia, con 4 dormitorios, 170 <span class="math inline">\(m^2\)</span> de 
 si se despliega en 4 programas durante 3 semanas y el rating
 promedio de los programas es 8.7 puntos?</li>
 </ul>
-<div id="notación" class="section level3" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Notación</h3>
+<div id="notación-1" class="section level3" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Notación</h3>
+<blockquote>
+<p><strong>Recomendación didáctica 2: Apartado de definiciones</strong></p>
+<p>Justo antes de <code>Notación</code> conviene insertar un recuadro titulado
+<code>Definiciones clave</code> con 6 a 8 términos de uso recurrente:
+regresión, variable dependiente, variable explicativa, parámetro,
+coeficiente estimado, error, pronóstico y causalidad.</p>
+<p>La ventaja pedagógica es que el estudiante entra a la notación con un
+vocabulario ya estabilizado, en vez de aprender lenguaje técnico y
+símbolos al mismo tiempo.</p>
+</blockquote>
 <p>En general se denota con <span class="math inline">\(y\)</span> al vector que representa todas las
 variables dependientes en un único vector columna, mientras que <span class="math inline">\(X\)</span>
 representa la matriz que incluye todas las variables independientes
@@ -358,8 +380,8 @@ diferentes métodos, siendo uno de los más populares el método de Mínimos
 Cuadrados Ordinarios (OLS).</p>
 </div>
 </div>
-<div id="mínimos-cuadrados-ordinarios-ols-y-supuestos" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Mínimos Cuadrados Ordinarios (OLS) y supuestos</h2>
+<div id="mínimos-cuadrados-ordinarios-ols-y-supuestos-1" class="section level2" number="4.3">
+<h2><span class="header-section-number">4.3</span> Mínimos Cuadrados Ordinarios (OLS) y supuestos</h2>
 <p>OLS proporciona una estimación óptima de los parámetros de la recta de
 regresión, al encontrar la recta que minimiza la suma de los cuadrados
 de las diferencias entre los valores reales y los valores estimados de
@@ -400,8 +422,8 @@ se ajustan a los datos. El método OLS minimiza la suma de los cuadrados
 de las diferencias entre los valores reales y los valores estimados de
 la variable dependiente. Esto se logra al encontrar los valores de los
 parámetros de la recta que minimizan esta suma de cuadrados.</p>
-<div id="estimación" class="section level3" number="1.2.1">
-<h3><span class="header-section-number">1.2.1</span> Estimación</h3>
+<div id="estimación-3" class="section level3" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Estimación</h3>
 <p>Supongamos que queremos estimar los parámetros
 <span class="math inline">\(\beta_0, \beta_1, \ldots, \beta_n\)</span> de la recta de regresión
 <span class="math inline">\(Y = \beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n + \epsilon\)</span>, donde
@@ -427,8 +449,17 @@ mínimos cuadrados.</p>
 los estimadores de mínimos cuadrados de los parámetros de la recta de
 regresión.</p>
 </div>
-<div id="propiedades" class="section level3" number="1.2.2">
-<h3><span class="header-section-number">1.2.2</span> Propiedades</h3>
+<div id="propiedades-1" class="section level3" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Propiedades</h3>
+<blockquote>
+<p><strong>Recomendación didáctica 3: Primer ejemplo completamente resuelto</strong></p>
+<p>Después de <code>Propiedades</code> conviene agregar un ejemplo pequeño, con muy
+pocos datos, que muestre la diferencia entre <code>especificar un modelo</code>,
+<code>estimar coeficientes</code> e <code>interpretar un resultado</code>.</p>
+<p>No hace falta un desarrollo algebraico largo. El foco aquí debería ser
+didáctico: qué entra al modelo, qué sale del modelo y qué tipo de
+pregunta de marketing permite responder.</p>
+</blockquote>
 <p>Si se cumplen los supuestos anteriormente mencionados, mínimos cuadrados
 ordinarios cumple con las siguientes propiedades:</p>
 <ol style="list-style-type: decimal">
@@ -450,10 +481,10 @@ normales <em>coincide con el estimador de mínimos cuadrados</em>.</p></li>
 son <em>BLUE</em> (Best Linear Unbiased Estimators).</p>
 </div>
 </div>
-<div id="estrategias-de-modelamiento" class="section level2" number="1.3">
-<h2><span class="header-section-number">1.3</span> Estrategias de Modelamiento</h2>
-<div id="arte-vs.-procedimiento" class="section level3" number="1.3.1">
-<h3><span class="header-section-number">1.3.1</span> Arte vs. Procedimiento</h3>
+<div id="estrategias-de-modelamiento-1" class="section level2" number="4.4">
+<h2><span class="header-section-number">4.4</span> Estrategias de Modelamiento</h2>
+<div id="arte-vs.-procedimiento-1" class="section level3" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Arte vs. Procedimiento</h3>
 <p>El debate entre el arte y el procedimiento en el campo de la
 modelización y análisis de datos se ha intensificado en los últimos años
 con el auge de la inteligencia artificial y el aprendizaje automático.
@@ -479,8 +510,16 @@ diversas métricas de ajuste y predicción para evaluar la calidad de cada
 modelo y seleccionar el que mejor se ajuste a los datos y sea capaz de
 hacer predicciones precisas.</p>
 </div>
-<div id="aprendizajes-preliminares" class="section level3" number="1.3.2">
-<h3><span class="header-section-number">1.3.2</span> Aprendizajes Preliminares</h3>
+<div id="aprendizajes-preliminares-1" class="section level3" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Aprendizajes Preliminares</h3>
+<blockquote>
+<p><strong>Recomendación didáctica 4: Checklist de construcción</strong></p>
+<p>Esta sección ya tiene mucho valor formativo. Se puede volver todavía
+más enseñable si se transforma explícitamente en un <code>checklist de modelamiento</code> con pasos numerados y una pregunta guía por paso.</p>
+<p>Este formato dialoga muy bien con la fase previa del apunte de
+ejercicios, donde los problemas más difíciles piden justamente tomar
+decisiones antes de calcular nada.</p>
+</blockquote>
 <p>En el ámbito del modelado estadístico, existen innumerables modelos de
 regresión, lo que hace imposible determinar cuál es el mejor en términos
 absolutos.</p>
@@ -570,6 +609,14 @@ tanto la propensión a comprar como la cantidad gastada en las
 compras.</p></li>
 </ul>
 <p><em>3. Transformación de Variables</em></p>
+<blockquote>
+<p><strong>Recomendación didáctica 5: Práctica guiada de transformaciones</strong></p>
+<p>Aquí conviene insertar una microsección <code>Práctica guiada</code> con dos o
+tres miniitems de interpretación inmediata.</p>
+<p>Este es el mejor lugar para conectar con <code>E4: Regresión Log-Nivel y Log-Log</code> y con <code>E5: Capturar efectos</code> de
+<code>ApunteEjercicios/02-regresion.Rmd</code>, porque ambos funcionan como
+preparación corta antes de enfrentar especificaciones más complejas.</p>
+</blockquote>
 <p>La transformación de variables es una técnica utilizada para mejorar la
 interpretación y el ajuste del modelo. Esta técnica consiste en aplicar
 funciones matemáticas a las variables con el objetivo de modificar su
@@ -625,6 +672,13 @@ resolver antes de aplicar cualquier transformación de variables.</p>
 </tbody>
 </table>
 <p><em>4. Selección de Variables</em></p>
+<blockquote>
+<p><strong>Recomendación didáctica 6: Contraste manual vs automático</strong></p>
+<p>Al final de esta subsección conviene agregar una tabla breve con tres
+columnas: <code>criterio</code>, <code>ventaja</code>, <code>riesgo</code>.</p>
+<p>Aquí calza muy bien usar <code>E3: Selección automática de variables</code> como
+ejercicio de comprobación conceptual.</p>
+</blockquote>
 <p>En el campo de la regresión, existen diferentes enfoques para la
 selección de variables, incluyendo métodos automáticos y manuales. Uno
 de los métodos automáticos más utilizados es la regresión paso a paso
@@ -663,6 +717,13 @@ manuales, eligiendo aquellas variables que mejoran el modelo en ajuste y
 que igualmente tienen un sentido interpretativo para la resolución de la
 pregunta a responder.</p>
 <p><em>5. Selección de Índices</em></p>
+<blockquote>
+<p><strong>Recomendación didáctica 7: Puente hacia especificaciones más ricas</strong></p>
+<p>Esta sección se beneficiaría de un ejemplo de una sola página donde se
+compare una especificación simple con otra indexada, mostrando qué se
+gana en interpretación y qué se paga en cantidad de parámetros.</p>
+<p>El mejor puente aquí es <code>E6: Coeficientes y Parámetros</code>.</p>
+</blockquote>
 <p>La selección de índices en el análisis de regresión es un proceso
 discrecional que puede influir significativamente en la interpretación y
 el rendimiento de los modelos. Para abordar este problema de manera
@@ -705,8 +766,8 @@ justificación empírica, y no simplemente probando diferentes
 combinaciones de variables.</p>
 </div>
 </div>
-<div id="evaluación-de-modelos" class="section level2" number="1.4">
-<h2><span class="header-section-number">1.4</span> Evaluación de modelos</h2>
+<div id="evaluación-de-modelos-1" class="section level2" number="4.5">
+<h2><span class="header-section-number">4.5</span> Evaluación de modelos</h2>
 <p>La evaluación de modelos estadísticos es un tema amplio que involucra la
 aplicación de los mismos principios y técnicas básicas a un gran grupo
 de modelos. En la práctica, la evaluación de modelos se utiliza para
@@ -722,8 +783,16 @@ modelos para asegurar su calidad y utilidad en la toma de decisiones
 basadas en datos.</p>
 <p>En la evaluación de modelos estadísticos, se utilizan diversas técnicas
 que se verán a continuación.</p>
-<div id="qué-buscamos-en-un-modelo" class="section level3" number="1.4.1">
-<h3><span class="header-section-number">1.4.1</span> ¿Qué buscamos en un modelo?</h3>
+<div id="qué-buscamos-en-un-modelo-1" class="section level3" number="4.5.1">
+<h3><span class="header-section-number">4.5.1</span> ¿Qué buscamos en un modelo?</h3>
+<blockquote>
+<p><strong>Recomendación didáctica 8: Unificar la evaluación en una sola pieza</strong></p>
+<p>En vez de dispersar demasiadas ideas de evaluación a lo largo del
+capítulo, conviene preparar aquí un <code>sumario de evaluación de modelos</code>
+en formato cuadro.</p>
+<p>Ese sumario único debería reunir: <code>qué quiere medir la métrica</code>,
+<code>cuándo usarla</code>, <code>qué riesgo tiene si se usa sola</code> y <code>qué tipo de decisión ayuda a tomar</code>.</p>
+</blockquote>
 <p>Lo deseable en un modelo es que cualitativamente puedan contar una buena
 historia, es decir, proporcionar información útil para poder tomar
 decisiones que vayan en línea de lo que se busca estimar. Por otra
@@ -734,8 +803,8 @@ partir de lo observado.</p>
 <p>Con esto en mente, queremos un criterio bien definido para comparar
 modelos y determinar si un modelo dado es suficientemente bueno.</p>
 </div>
-<div id="ajuste-por-métricas-generales" class="section level3" number="1.4.2">
-<h3><span class="header-section-number">1.4.2</span> Ajuste por métricas generales</h3>
+<div id="ajuste-por-métricas-generales-1" class="section level3" number="4.5.2">
+<h3><span class="header-section-number">4.5.2</span> Ajuste por métricas generales</h3>
 <p>Las siguientes métricas de ajuste se basan en reducir los errores de
 predicción de los modelos, teniendo como fin cuantificar qué tanto error
 tiene un modelo al predecir un conjunto de datos dado: 1. Coeficiente de
@@ -767,8 +836,8 @@ La fórmula del RMSE es:</li>
 </ol>
 <p><span class="math display">\[ RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^n(y_i - \hat{y}_i)^2} \]</span></p>
 </div>
-<div id="ajuste-basado-en-la-probabilidad" class="section level3" number="1.4.3">
-<h3><span class="header-section-number">1.4.3</span> Ajuste basado en la probabilidad</h3>
+<div id="ajuste-basado-en-la-probabilidad-1" class="section level3" number="4.5.3">
+<h3><span class="header-section-number">4.5.3</span> Ajuste basado en la probabilidad</h3>
 <p>También es posible darle una interpretación probabilística al ajuste, es
 decir, elegir aquellos parámetros que más se asemejen a la distribución
 de probabilidad que generan los datos del modelo, para ello nos basamos
@@ -812,8 +881,8 @@ seleccione un modelo más simple y generalizable.</li>
 <p><span class="math display">\[BIC = -2\ell(\hat{\beta}) + klog(n)\]</span></p>
 <p>Con <span class="math inline">\(n\)</span> el número de observaciones en el set de datos.</p>
 </div>
-<div id="errores-dentro-y-fuera-de-la-muestra" class="section level3" number="1.4.4">
-<h3><span class="header-section-number">1.4.4</span> Errores dentro y fuera de la muestra</h3>
+<div id="errores-dentro-y-fuera-de-la-muestra-1" class="section level3" number="4.5.4">
+<h3><span class="header-section-number">4.5.4</span> Errores dentro y fuera de la muestra</h3>
 <p>En general, se busca contruir modelos que sean generalizables a otros
 datos fuera de aquellos que se utilizan para su construcción, para ello
 se suele dividir el conjunto de datos en un set de <em>calibración</em> y otro
@@ -823,24 +892,24 @@ complejización de un modelo es la poca adaptabilidad a nuevos conjuntos
 de datos, esto se conoce como sobreajuste (o overfitting), lo cual puede
 ser detectado al comparar los errores de predicción entre el set de
 calibración y validación:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="modelos-de-regresión.html#cb1-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/fitting.png&quot;</span>))</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:my-fig1"></span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="anexo-didáctico-recomendaciones-para-regresión.html#cb10-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/fitting.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:my-fig1-did"></span>
 <img src="images/fitting.png" alt="Error de calibración vs predicción" width="50%" />
 <p class="caption">
-Figure 1.1: Error de calibración vs predicción
+Figure 4.1: Error de calibración vs predicción
 </p>
 </div>
 </div>
-<div id="división-de-datos" class="section level3" number="1.4.5">
-<h3><span class="header-section-number">1.4.5</span> División de datos</h3>
+<div id="división-de-datos-1" class="section level3" number="4.5.5">
+<h3><span class="header-section-number">4.5.5</span> División de datos</h3>
 <p>La división de los datos en conjuntos de calibración y validación
 depende de la estructura de los mismos. Por lo general se utiliza el 80%
 de los datos en calibración y el 20% en validación. Si la estructura de
 datos lo permite, podemos realizar crossvalidación ejecutamos múltiples
 validaciones sobre diferentes muestras de prueba.</p>
 </div>
-<div id="validación-cruzada" class="section level3" number="1.4.6">
-<h3><span class="header-section-number">1.4.6</span> Validación cruzada</h3>
+<div id="validación-cruzada-1" class="section level3" number="4.5.6">
+<h3><span class="header-section-number">4.5.6</span> Validación cruzada</h3>
 <p>Algunos modelos, en especial en el mundo del Machine learning, requieren
 la calibración de sus hiperparámetros para una mejor predicción. Para
 ello existen múltiples técnicas, donde una de las más populares es la
@@ -852,16 +921,25 @@ proceso se repite cambiando el conjunto de validación por cada uno de
 los folds, buscando los hiperparámetros que optimizan el rendimiento
 para cada una de las combinaciones. Finalmente, el valor de los
 hiperparámetros será la media de sus valores para cada fold.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="modelos-de-regresión.html#cb2-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/cv.png&quot;</span>))</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:my-fig2"></span>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="anexo-didáctico-recomendaciones-para-regresión.html#cb11-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/cv.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:my-fig2-did"></span>
 <img src="images/cv.png" alt="Ejemplo de validación cruzada" width="70%" />
 <p class="caption">
-Figure 1.2: Ejemplo de validación cruzada
+Figure 4.2: Ejemplo de validación cruzada
 </p>
 </div>
 </div>
-<div id="test-de-hipótesis" class="section level3" number="1.4.7">
-<h3><span class="header-section-number">1.4.7</span> Test de hipótesis</h3>
+<div id="test-de-hipótesis-1" class="section level3" number="4.5.7">
+<h3><span class="header-section-number">4.5.7</span> Test de hipótesis</h3>
+<blockquote>
+<p><strong>Recomendación didáctica 9: Error frecuente de lectura</strong></p>
+<p>Después de esta sección sería muy útil incluir un recuadro corto de
+<code>Errores comunes</code>, por ejemplo:
+<code>significativo no implica importante</code>,
+<code>mejor ajuste no implica mejor pronóstico</code>,
+<code>mejor pronóstico no implica interpretación causal</code>.</p>
+<p>Ese recuadro ayudaría mucho a reducir errores de lectura en <code>E1: Signo esperado y significancia</code>.</p>
+</blockquote>
 <p>Además de la evaluación del ajuste del modelo a partir de métricas, es
 posible hacer inferencias estadísticas sobre el modelo completo:</p>
 <ol style="list-style-type: decimal">
@@ -897,15 +975,15 @@ A.</p>
 estadísticamente significativa al rendimiento del modelo.)</p>
 </div>
 </div>
-<div id="usos-y-limitaciones-del-análisis-de-regresión" class="section level2" number="1.5">
-<h2><span class="header-section-number">1.5</span> Usos y limitaciones del análisis de regresión</h2>
+<div id="usos-y-limitaciones-del-análisis-de-regresión-1" class="section level2" number="4.6">
+<h2><span class="header-section-number">4.6</span> Usos y limitaciones del análisis de regresión</h2>
 <p>Una vez que se construye y se estima un modelo, el siguiente paso es
 interpretar sus resultados. Es posible enfocarse en el <em>aprendizaje</em>
 sobre los parámetros retornados del modelo y cómo estos explican el
 fenómeno a estudiar, como también es posible realizar un <em>pronóstico</em> a
 futuro del desempeño de las variables a predecir.</p>
-<div id="aprendizaje-de-los-parámetros" class="section level3" number="1.5.1">
-<h3><span class="header-section-number">1.5.1</span> Aprendizaje de los parámetros</h3>
+<div id="aprendizaje-de-los-parámetros-1" class="section level3" number="4.6.1">
+<h3><span class="header-section-number">4.6.1</span> Aprendizaje de los parámetros</h3>
 <p>En general, la principal fuente de aprendizaje que provee un modelo de
 regresión son los coeficientes calculados, los cuales entregan
 información sobre el efecto de las variables independientes sobre lo que
@@ -920,8 +998,15 @@ se desea estudiar.</p>
 estadsticas tales como <em>t-test</em> para evaluaciones individuales o
 <em>F-test</em> para la evaluación de un conjunto de regresores.</p>
 </div>
-<div id="interpretación-de-los-coeficientes" class="section level3" number="1.5.2">
-<h3><span class="header-section-number">1.5.2</span> Interpretación de los coeficientes</h3>
+<div id="interpretación-de-los-coeficientes-1" class="section level3" number="4.6.2">
+<h3><span class="header-section-number">4.6.2</span> Interpretación de los coeficientes</h3>
+<blockquote>
+<p><strong>Recomendación didáctica 10: Detenerse en causalidad vs correlación</strong></p>
+<p>Esta es una de las partes más formativas del capítulo. Conviene
+desacelerar aquí y agregar un ejemplo donde la correlación sea útil
+sin ser causal, un contraejemplo de causalidad inversa y una mini
+pregunta de comprobación para el lector.</p>
+</blockquote>
 <p>Supongamos un modelo lineal simple definido por <span class="math inline">\(y = 12 + 1.5x\)</span>, es de
 toda lógica pensar que el efecto de <span class="math inline">\(x\)</span> sobre <span class="math inline">\(y\)</span> al incrementar en una
 unidad es, en promedio, de <span class="math inline">\(1.5\)</span>. Sin embargo, esta afirmación sería
@@ -945,11 +1030,11 @@ variable dependiente a través de una variable intermedia, conocida como
 mediador. La mediación se produce cuando la relación entre la variable
 independiente y la variable dependiente se explica por completo o
 parcialmente por la influencia del mediador.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="modelos-de-regresión.html#cb3-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/Simple_Mediation_Model.png&quot;</span>))</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:my-fig3"></span>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="anexo-didáctico-recomendaciones-para-regresión.html#cb12-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/Simple_Mediation_Model.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:my-fig3-did"></span>
 <img src="images/Simple_Mediation_Model.png" alt="Modelo de mediación" width="70%" />
 <p class="caption">
-Figure 1.3: Modelo de mediación
+Figure 4.3: Modelo de mediación
 </p>
 </div>
 <p>Es importante no confundir el análisis de mediación con un efecto de
@@ -958,8 +1043,8 @@ tercera variable. Por ejemplo, si <span class="math inline">\(z\)</span> causa <
 embargo, si <span class="math inline">\(x\)</span> causa <span class="math inline">\(z\)</span> y <span class="math inline">\(z\)</span> causa <span class="math inline">\(y\)</span>, es posible afirmar que <span class="math inline">\(z\)</span> es
 una variable mediadora entre <span class="math inline">\(x\)</span> e <span class="math inline">\(y\)</span>.</p>
 </div>
-<div id="pronósticos" class="section level3" number="1.5.3">
-<h3><span class="header-section-number">1.5.3</span> Pronósticos</h3>
+<div id="pronósticos-1" class="section level3" number="4.6.3">
+<h3><span class="header-section-number">4.6.3</span> Pronósticos</h3>
 <p>La principal razón de realizar buenas predicciones con los modelos
 construidos es la toma de decisiones mediante la evaluación de
 resultados en diversos escenarios posibles. Bajo el enfoque de regresión
@@ -975,8 +1060,8 @@ variable aleatoria, luego el resultado que se obtiene es
 <span class="math inline">\(\mathbb{E}[Y] = exp(\beta X + \frac{1}{2}S_ϵ^2)\)</span>, con <span class="math inline">\(S_{ϵ}^2\)</span> la
 varianza muestral de <span class="math inline">\(ϵ\)</span>.</p>
 </div>
-<div id="errores-de-pronóstico" class="section level3" number="1.5.4">
-<h3><span class="header-section-number">1.5.4</span> Errores de pronóstico</h3>
+<div id="errores-de-pronóstico-1" class="section level3" number="4.6.4">
+<h3><span class="header-section-number">4.6.4</span> Errores de pronóstico</h3>
 <p>El error de pronóstico contiene dos componentes: errores residuales
 (debido a la dispersión de los datos) y errores de muestra. Se puede
 escribir de la siguiente manera:</p>
@@ -987,8 +1072,8 @@ funcional de la variable dependiente. Esta variabilidad debe ser
 considerada en la evaluación de escenarios al momento de tomar una
 decisión.</p>
 </div>
-<div id="principios-generales-de-pronóstico" class="section level3" number="1.5.5">
-<h3><span class="header-section-number">1.5.5</span> Principios generales de pronóstico</h3>
+<div id="principios-generales-de-pronóstico-1" class="section level3" number="4.6.5">
+<h3><span class="header-section-number">4.6.5</span> Principios generales de pronóstico</h3>
 <ol style="list-style-type: decimal">
 <li>Incluir todas las variables que se esperan que contribuyan al
 pronóstico: A diferencia del enfoque anterior, no se está buscando
@@ -1011,8 +1096,8 @@ con esa variable, es importante considerar trabajar con mas datos
 y/o variables.</li>
 </ol>
 </div>
-<div id="limitaciones-de-los-modelos-de-regresión" class="section level3" number="1.5.6">
-<h3><span class="header-section-number">1.5.6</span> Limitaciones de los modelos de regresión</h3>
+<div id="limitaciones-de-los-modelos-de-regresión-1" class="section level3" number="4.6.6">
+<h3><span class="header-section-number">4.6.6</span> Limitaciones de los modelos de regresión</h3>
 <p>Debido a su simpleza, los modelos de regresión poseen ciertas
 limitaciones provocadas por la muestra de datos utilizadas, las
 variables escogidas para el modelo o por la naturaleza del método de
@@ -1047,8 +1132,16 @@ pero se torna estadísticamente ineficiente. Para enfrentar este
 fenómeno se recurre al uso de series de tiempo.</li>
 </ol>
 </div>
-<div id="modelos-lineales-generalizados" class="section level3" number="1.5.7">
-<h3><span class="header-section-number">1.5.7</span> Modelos lineales generalizados</h3>
+<div id="modelos-lineales-generalizados-1" class="section level3" number="4.6.7">
+<h3><span class="header-section-number">4.6.7</span> Modelos lineales generalizados</h3>
+<blockquote>
+<p><strong>Recomendación didáctica 11: Señal de transición</strong></p>
+<p>Aquí conviene agregar un bloque muy visible que diga algo como
+<code>Cuándo la regresión lineal deja de ser suficiente</code>.</p>
+<p>La conexión natural con el apunte de ejercicios es
+<code>E2: Regresión Lineal vs de Poisson</code>, que sirve como chequeo rápido
+antes de pasar a familias distintas de modelos.</p>
+</blockquote>
 <p>Muchas veces los modelos lineales son muy restrictivos, para ello se
 utilizan modelos lineales generalizados, es decir, mantiene la
 linealidad en los parámetros, pero la respuesta del modelo puede tener
@@ -1063,10 +1156,19 @@ de intentos)</li>
 </ul>
 </div>
 </div>
-<div id="alternativas-de-machine-learning-para-la-regresión" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Alternativas de Machine Learning para la regresión</h2>
-<div id="qué-es-machine-learning" class="section level3" number="1.6.1">
-<h3><span class="header-section-number">1.6.1</span> ¿Qué es Machine Learning?</h3>
+<div id="alternativas-de-machine-learning-para-la-regresión-1" class="section level2" number="4.7">
+<h2><span class="header-section-number">4.7</span> Alternativas de Machine Learning para la regresión</h2>
+<blockquote>
+<p><strong>Recomendación didáctica 12: Cierre de la unidad</strong></p>
+<p>Antes de entrar a esta sección, o bien al terminarla, conviene ubicar
+el <code>sumario único de la unidad</code>.</p>
+<p>Mi recomendación es que ese sumario cierre la parte principal del
+capítulo y contenga solo una página o dos como máximo:
+<code>ideas fuerza</code>, <code>definiciones</code>, <code>decisiones de modelamiento</code>,
+<code>métricas</code>, <code>errores comunes</code> y <code>preguntas que el estudiante debería poder responder</code>.</p>
+</blockquote>
+<div id="qué-es-machine-learning-1" class="section level3" number="4.7.1">
+<h3><span class="header-section-number">4.7.1</span> ¿Qué es Machine Learning?</h3>
 <p>El concepto de Machine Learning se ha vuelto muy popular últimamente,
 obteniendo mucha atención y usos en una gran cantidad de tareas, pero ¿A
 qué nos referimos cuando hablamos de modelos de machine learning?</p>
@@ -1080,8 +1182,8 @@ rendimiento en una tarea particular a lo largo del tiempo. Este enfoque
 permite a las máquinas adaptarse y mejorar su desempeño a medida que se
 exponen a más información.</p>
 </div>
-<div id="la-regresión-cuenta-como-un-modelo-de-ml" class="section level3" number="1.6.2">
-<h3><span class="header-section-number">1.6.2</span> ¿La regresión cuenta como un modelo de ML?</h3>
+<div id="la-regresión-cuenta-como-un-modelo-de-ml-1" class="section level3" number="4.7.2">
+<h3><span class="header-section-number">4.7.2</span> ¿La regresión cuenta como un modelo de ML?</h3>
 <p>Si bien la regresión utiliza datos para aprender a partir de ellos, no
 se suele considerar completamente un modelo de aprendizaje automático.
 El hecho de tener que seleccionar las variables adecuadas, aplicar
@@ -1094,8 +1196,8 @@ formas, los límites son difusos, en este curso se entenderá como ML a
 cualquier modelo que pueda aprender automáticamente sobre el conjunto de
 variables predictivas y sus formas funcionales.</p>
 </div>
-<div id="multivariate-adaptive-regression-splines-mars" class="section level3" number="1.6.3">
-<h3><span class="header-section-number">1.6.3</span> Multivariate Adaptive Regression Splines (MARS)</h3>
+<div id="multivariate-adaptive-regression-splines-mars-1" class="section level3" number="4.7.3">
+<h3><span class="header-section-number">4.7.3</span> Multivariate Adaptive Regression Splines (MARS)</h3>
 <p>MARS extiende OLS generando para cada variable independiente <span class="math inline">\(x\)</span> una
 función bisagra (hinge)
 <span class="math inline">\(h(x, a) = \{ \max\{0, x-a\}, \max\{0, a-x\} \}\)</span>. De esta forma, un
@@ -1112,16 +1214,16 @@ pequeño, este punto se convierte en el primer corte (knot) <span class="math in
 modelo. Este procedimiento continúa hasta que se encuentren los demás
 puntos de corte. Para evitar el sobreajuste, MARS elimina términos que
 provoquen una pequeña contribución a la mejora del ajuste.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="modelos-de-regresión.html#cb4-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/mars.png&quot;</span>))</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:mars"></span>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="anexo-didáctico-recomendaciones-para-regresión.html#cb13-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/mars.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:mars-did"></span>
 <img src="images/mars.png" alt="Regresión MARS para distinto número de bisagras" width="70%" />
 <p class="caption">
-Figure 1.4: Regresión MARS para distinto número de bisagras
+Figure 4.4: Regresión MARS para distinto número de bisagras
 </p>
 </div>
 </div>
-<div id="k-nearest-neighbors-regression-knn" class="section level3" number="1.6.4">
-<h3><span class="header-section-number">1.6.4</span> K Nearest Neighbors Regression (KNN)</h3>
+<div id="k-nearest-neighbors-regression-knn-1" class="section level3" number="4.7.4">
+<h3><span class="header-section-number">4.7.4</span> K Nearest Neighbors Regression (KNN)</h3>
 <p>En la regresión con KNN, el objetivo es predecir un valor numérico para
 una variable dependiente basándose en los valores de las variables
 independientes. A diferencia de la regresión lineal, que ajusta una
@@ -1146,8 +1248,8 @@ empleadas según el tipo de datos y el problema específico
 (Manhattan, Coseno, Mahalanobis, etc.)</p></li>
 </ol>
 </div>
-<div id="regression-trees" class="section level3" number="1.6.5">
-<h3><span class="header-section-number">1.6.5</span> Regression trees</h3>
+<div id="regression-trees-1" class="section level3" number="4.7.5">
+<h3><span class="header-section-number">4.7.5</span> Regression trees</h3>
 <p>Los arboles de regresión solo tienen sentido cuando el problema tiene
 múltiples regresores, el objetivo es dividir el espacio de regresores en
 subconjuntos y luego utilizar un modelo simple (constante) dentro de
@@ -1163,25 +1265,25 @@ sobreajuste.</p>
 <p><em>Ejemplo:</em> Sea <span class="math inline">\(y = f(x_1, x_2)\)</span>. Los valores de <span class="math inline">\(x_1\)</span> y <span class="math inline">\(x_2\)</span> se pueden
 representar en el plano mientras que los valores de <span class="math inline">\(y\)</span> se representan
 con colores (cuanto más grandes, más oscuros)</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="modelos-de-regresión.html#cb5-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/tree1.png&quot;</span>))</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:ej1"></span>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="anexo-didáctico-recomendaciones-para-regresión.html#cb14-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/tree1.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:ej1-did"></span>
 <img src="images/tree1.png" alt="Región de ejemplo" width="40%" />
 <p class="caption">
-Figure 1.5: Región de ejemplo
+Figure 4.5: Región de ejemplo
 </p>
 </div>
 <p>Luego, un arbol que representa la separación en regiones según <span class="math inline">\(x_1\)</span> y
 <span class="math inline">\(x_2\)</span> es:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="modelos-de-regresión.html#cb6-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/tree2.png&quot;</span>))</span></code></pre></div>
-<div class="figure" style="text-align: center"><span id="fig:ej2"></span>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="anexo-didáctico-recomendaciones-para-regresión.html#cb15-1"></a>knitr<span class="op">::</span><span class="kw">include_graphics</span>(<span class="kw">rep</span>(<span class="st">&quot;images/tree2.png&quot;</span>))</span></code></pre></div>
+<div class="figure" style="text-align: center"><span id="fig:ej2-did"></span>
 <img src="images/tree2.png" alt="Árbol de ejemplo" width="20%" />
 <p class="caption">
-Figure 1.6: Árbol de ejemplo
+Figure 4.6: Árbol de ejemplo
 </p>
 </div>
 </div>
-<div id="bagging-y-random-forests" class="section level3" number="1.6.6">
-<h3><span class="header-section-number">1.6.6</span> Bagging y Random forests</h3>
+<div id="bagging-y-random-forests-1" class="section level3" number="4.7.6">
+<h3><span class="header-section-number">4.7.6</span> Bagging y Random forests</h3>
 <p>Un problema de los árboles de regresión es que son sensibles a pequeñas
 variaciones en los datos. En general para solucionar este problema se
 crean varios árboles y se promedian los resultados obtenidos, a esto se
@@ -1218,8 +1320,8 @@ los árboles, lo que agrega más diversidad al conjunto de árboles.</p>
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="modelos-probabilísticos.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="apéndices-técnicos.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -1250,7 +1352,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/Mktengnotes/MarketingEngineering/edit/main/01-regresión.Rmd",
+"link": "https://github.com/Mktengnotes/MarketingEngineering/edit/main/01-regresión-recomendaciones-didacticas.Rmd",
 "text": "Edit"
 },
 "history": {
